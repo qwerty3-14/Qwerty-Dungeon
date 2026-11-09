@@ -1,0 +1,240 @@
+res://addons/TileMapDual/ghost_material.tres::c2ff3ce64964a2fddbdbf768a13add78::1767479491::res://.godot/exported/133200997/export-b09d823a04a4f3f02ec76e2f07487086-ghost_material.res
+res://Combat Events/charge_attack_event.tscn::ab718a9a466ff315e820cee5cdaf60f0::1793903160::res://.godot/exported/133200997/export-629587dbd4dd1e97adc889173358d34b-charge_attack_event.scn
+res://Combat Events/cone_of_fire_event.tscn::15938c5578f4845bd408dae8d61462c2::1792965735::res://.godot/exported/133200997/export-7398733eefd56cc172c65fea4a6efd87-cone_of_fire_event.scn
+res://Combat Events/drowned_event.tscn::4a6b47543fecb65bde1b8fdde1ee8ef2::1774805749::res://.godot/exported/133200997/export-8061870eec05ad5238e006e67ca30419-drowned_event.scn
+res://Combat Events/end_action.tscn::573ba157f3917a2d07ebdc9a5f0c0871::1793553767::res://.godot/exported/133200997/export-8c748118fd22f58c02d4bfb973c44923-end_action.scn
+res://Combat Events/end_turn_event.tscn::b7adc3c81ccb4962b4a2f414f8dc2a72::1792874339::res://.godot/exported/133200997/export-16c2598f386622cd3e3af363bf573158-end_turn_event.scn
+res://Combat Events/fatigue_bolt_event.tscn::bc99f1cddc42770419a9b10879f9c455::1787438128::res://.godot/exported/133200997/export-0adf8d32da05541f8baccfe98b58ae49-fatigue_bolt_event.scn
+res://Combat Events/fireball_event.tscn::3498974f4d71168016c8c109e5249417::1792861880::res://.godot/exported/133200997/export-108ec53fc4ac707c90f22645cda3da65-fireball_event.scn
+res://Combat Events/fireball_explosion.tscn::74d2f779e22f174056e197846e765d0a::1792962410::res://.godot/exported/133200997/export-7aff60123920b0d8954bb4fff87a553f-fireball_explosion.scn
+res://Combat Events/impalement_blades.tscn::d2b7ab26a8652bb731f995f5464ab821::1792860940::res://.godot/exported/133200997/export-b7539740bba0b66f1cbe65ccebf71d40-impalement_blades.scn
+res://Combat Events/impalement_event.tscn::ed6e2ae2eebca2f4636fa45c538acfd5::1787156801::res://.godot/exported/133200997/export-fd63857c69be5a2621525aeb15bc8604-impalement_event.scn
+res://Combat Events/initiative_rearangment_event.tscn::d761c439c54f925cea4691687224f80a::1777129164::res://.godot/exported/133200997/export-fa441739b93cf65639bccebf7c586954-initiative_rearangment_event.scn
+res://Combat Events/killed_event.tscn::9a149e341ca01d02ce7ad47151af30cd::1793899492::res://.godot/exported/133200997/export-6651ecbf40bfbf4155c4a2dfffc4ec9b-killed_event.scn
+res://Combat Events/killing_flow_event.tscn::7735a8939ad858c21d5879eaa2f24a41::1792858777::res://.godot/exported/133200997/export-e2676375b0151cb377d1debf695ab2df-killing_flow_event.scn
+res://Combat Events/miasma_event.tscn::2be6f746d3b19080eebdf662201a6c46::1792861717::res://.godot/exported/133200997/export-b05bd000b6d915c2cbe804da765132a5-miasma_event.scn
+res://Combat Events/shadow_strike_event.tscn::fba5229a798930150a47de83daedb381::1777233028::res://.godot/exported/133200997/export-373f5e56a1709dc5ca78b8a0049db2f7-shadow_strike_event.scn
+res://Combat Events/step_event.tscn::a9cfcce32303c6b1de752fc2e7b24527::1793897966::res://.godot/exported/133200997/export-0bf1f7816026f6e84cb2b7ad02bfb56a-step_event.scn
+res://Combat Events/suplex_event.tscn::1698b86645ec247e28ba3f09a91fcea0::1793605160::res://.godot/exported/133200997/export-ce84c08bf62292e41c4e02a3752e5be6-suplex_event.scn
+res://Combat Events/throw_event.tscn::8c4d76add409b4c86256caf85c50d087::1792950298::res://.godot/exported/133200997/export-8f20d8313b149fb09d051c8639909881-throw_event.scn
+res://Combat Events/vault_event.tscn::f7d4fdb10495f441abbcff29ec0cdb8b::1777762791::res://.godot/exported/133200997/export-841cd62d12eedbbce1d2329fe1703528-vault_event.scn
+res://Combat Events/weapon_attack_event.tscn::f0e6f6d65c3f745a4e5f6b24aa2a51c6::1793902824::res://.godot/exported/133200997/export-87f46f807c6a23e7d8fb93c35180857b-weapon_attack_event.scn
+res://Combat Objects/Generic/actor.tscn::26383791e8fb15bea06abeb575cc500c::1793602275::res://.godot/exported/133200997/export-015589840fcd00579b1488f549f18a69-actor.scn
+res://Combat Objects/Player Characters/bronze.tscn::81ab8861b215be9d13e029bddf759c37::1792718772::res://.godot/exported/133200997/export-0661b90c3123330073c1b2b019d65e37-bronze.scn
+res://Combat Objects/Player Characters/bronze_info.tres::8c6da08103660b8814cb76ce481d0f14::1792719334::res://.godot/exported/133200997/export-9c982590cd3ee30f56fd21c48302850f-bronze_info.res
+res://Combat Objects/Player Characters/narine.tscn::f27c2c38312b9ce4b9891642aecc5600::1792878913::res://.godot/exported/133200997/export-8c97fc0114f2bd2ecf513118f0044f42-narine.scn
+res://Combat Objects/Player Characters/narine_info.tres::dae9be64f3162a232494cb026414257c::1792719614::res://.godot/exported/133200997/export-b4121cdcafe63c4f13acced8a7d0e339-narine_info.res
+res://Combat Objects/Player Characters/scarlet.tscn::965f27779d7ee8bbb19865a408990b0f::1793552445::res://.godot/exported/133200997/export-5e0f777117cad064ed1f27752aa5e66e-scarlet.scn
+res://Combat Objects/Player Characters/scarlet_info.tres::44fad6a45485975bda33760b1173a87b::1792719334::res://.godot/exported/133200997/export-3a9e2dd4dc2b8e6cbed4a7bd0061b4c4-scarlet_info.res
+res://Combat Objects/Player Characters/sydney.tscn::7e9bd0205a882be32a9710e069e56397::1793026493::res://.godot/exported/133200997/export-fea07f78ba9d95cfed2688041cc42a30-sydney.scn
+res://Combat Objects/Player Characters/sydney_info.tres::aec37c47db57fe1c84bdc19a89dd5afb::1792719334::res://.godot/exported/133200997/export-d814d02fb0c6f1fc9cdd756d954e81c7-sydney_info.res
+res://Combat Objects/Scavengers/armored_scavenger.tscn::efb38ea7d1c98b14fa132b94be00d601::1792718888::res://.godot/exported/133200997/export-5b69e9ea56ed00ee42abe1167ba7ea0d-armored_scavenger.scn
+res://Combat Objects/Scavengers/reanimated_noble_f.tscn::c85dc99aaa980706bb458d05a9b563a8::1793899528::res://.godot/exported/133200997/export-35bfffc62f111bc71ff3f77a6e93e3b9-reanimated_noble_f.scn
+res://Combat Objects/Scavengers/reanimated_noble_m.tscn::050e8bf78c9b83f5b827edf1b3a13aba::1793899528::res://.godot/exported/133200997/export-d0eabcdd11d9b54dff276f28c5c53f49-reanimated_noble_m.scn
+res://Combat Objects/Scavengers/scavenger_arcanist.tscn::e9aa795ab9063190eb54f534a74ebde0::1792875103::res://.godot/exported/133200997/export-b13d2f30ab4bf351fdb4fa69e36b236f-scavenger_arcanist.scn
+res://Combat Objects/Scavengers/scavenger_archer.tscn::b700ba6dd855c351be05585dd621daf0::1793211368::res://.godot/exported/133200997/export-ab6cc34afc2d3f4b6f5504cb2df11b01-scavenger_archer.scn
+res://Combat Objects/Scavengers/scavenger_fencer.tscn::ab0660ac22562d0858a1e416a778c30e::1792719265::res://.godot/exported/133200997/export-602008c4b16043421674a015bbce3fe3-scavenger_fencer.scn
+res://Health/Health.tscn::d4246e4937e0910c19529876afa3129c::1771798297::res://.godot/exported/133200997/export-3388683754d509c2ea2260708e6fcbfc-Health.scn
+res://Resources/Themes/BluePanel.tres::8edd7b607f07497f4ae42e9dd256116a::1775498413::res://.godot/exported/133200997/export-7be28510b7c510a8279f3eddda2f7444-BluePanel.res
+res://Resources/Themes/BluePanelBoxTexture.tres::830e4be9144e9b498d16128cb98fc21a::1786908918::res://.godot/exported/133200997/export-d8587816d4fabbe5a8a2cf721b7399dd-BluePanelBoxTexture.res
+res://Resources/Themes/default_theme.tres::3a63496c7582213f733b959cc4d879b3::1793987064::res://.godot/exported/133200997/export-698754c1cec2ab122aacd7f585d896a8-default_theme.res
+res://Resources/Themes/elder_particles.tres::94c921fb42b49b9434b534d8135b8be3::1793987064::res://.godot/exported/133200997/export-e6f38d99917f24a4a21aa95af0135a6d-elder_particles.res
+res://Resources/Themes/InfoPanel.tres::5ef571b1111d4fe9a7f19fba1f44b921::1793987064::res://.godot/exported/133200997/export-bd332b8e0fbed7938a0c3b635fd60e21-InfoPanel.res
+res://Resources/Themes/ScrollBar.tres::6531713ba63eee48a482f270addd8ac2::1786908918::res://.godot/exported/133200997/export-8eb63617a6721d828b7c52919cbacc06-ScrollBar.res
+res://Resources/Themes/ScrollBarExpanded.tres::594a079ed4812f588b44008e087aab0a::1786908918::res://.godot/exported/133200997/export-4fedb9fa3b7dc6f4c1de449d69e5b8bb-ScrollBarExpanded.res
+res://Resources/Themes/Tab.tres::50f2d54f6131b3d6a311d7b6f4157338::1786908918::res://.godot/exported/133200997/export-a4ffaa62061a3158ab3c4df68a93249b-Tab.res
+res://Resources/Themes/TinyBar.tres::77aee5eb166e3feb72c433c78b7c21c9::1793987064::res://.godot/exported/133200997/export-42e4ac2a9c5f97fd11f397c448baefcd-TinyBar.res
+res://Resources/Themes/TransparentButton.tres::df4a65aca7a5471e5ad16bcdface577a::1793987064::res://.godot/exported/133200997/export-36abbb9b1bcf96a4facae5d20c1c8ed9-TransparentButton.res
+res://Resources/Themes/TransparentToggleButton.tres::471454e48d25edb6cbde2595d25e6628::1793987064::res://.godot/exported/133200997/export-cc793213210a391c7be20d51e7e608d2-TransparentToggleButton.res
+res://Resources/Themes/WoodButtonNormal.tres::d9b8f592a290c29887c30f232a66fb7b::1786908918::res://.godot/exported/133200997/export-5d43ff0b4f672cdbbdd35a5c6b657a1b-WoodButtonNormal.res
+res://Resources/Themes/WoodButtonPressed.tres::92d9fa36aec96b17496e863f2e1ffa47::1786908918::res://.godot/exported/133200997/export-aa01192ea99507db1534e9b13bf5e659-WoodButtonPressed.res
+res://Resources/Tile Sets/bridge_tiles.tres::c28537f0e77ffd9de41d32baf8cd0bfa::1794029871::res://.godot/exported/133200997/export-963fe4958465c913bc16172797bbe7d7-bridge_tiles.res
+res://Resources/Tile Sets/CastleGrass.tres::6f31da29f36963617aa2370cf65db6d3::1794029871::res://.godot/exported/133200997/export-ed8dc8cf77d9369cd58da56cb79f0388-CastleGrass.res
+res://Resources/Tile Sets/castle_ruins_tiles.tres::54673ae8cb90218419b23fdb513cbbdb::1786909052::res://.godot/exported/133200997/export-0d636a99fec70c44b9930c4c6d03b78f-castle_ruins_tiles.res
+res://Resources/Tile Sets/functional_tile_set.tres::3d43ac493cf7537bc931187bc18f9d77::1794029871::res://.godot/exported/133200997/export-038b3866d337d080cc36c85b07fce54b-functional_tile_set.res
+res://Resources/Tile Sets/test_tiles.tres::bddb3a9053c66b76e17eae162f8137c0::1793987064::res://.godot/exported/133200997/export-56b0f6d8209d485d596bc0098bfea267-test_tiles.res
+res://Rooms/Components/player_start_point.tscn::edfedcabaa771cf59a5222affa14680c::1786310447::res://.godot/exported/133200997/export-6d13e9a7d6fb4474d7a250bdb897917a-player_start_point.scn
+res://Rooms/castle_bridge.tscn::19cbbb00037a960ba6c07800f8c0f2f8::1793550823::res://.godot/exported/133200997/export-b6096a39e32c11aab348f08b61f1dc00-castle_bridge.scn
+res://Rooms/castle_hallways.tscn::58e9ce786b2688f3ff34086752e0cb64::1793550793::res://.godot/exported/133200997/export-df140617746ed182ecf47583644629f4-castle_hallways.scn
+res://Rooms/enemy_pathing_test.tscn::4813d64d40e47260c68bbd09f047ed4a::1786909052::res://.godot/exported/133200997/export-ebd24271de540d591c856d3f686e91d9-enemy_pathing_test.scn
+res://Runes/Components/attr_rune.tscn::a6e58ce8697f19f051b4af0c6733fe25::1793290324::res://.godot/exported/133200997/export-8821e5aee79879d719248883a59edf9b-attr_rune.scn
+res://Runes/Components/RuneSquare.tres::3b46d0e38d5dbc1910347944235c7391::1781477044::res://.godot/exported/133200997/export-60663b215f9e513c9ab4654603892211-RuneSquare.res
+res://Runes/Interactives/rune_board.tscn::bb359654dd3deca60436ee5e7523d308::1782168575::res://.godot/exported/133200997/export-017180d354ef1d8e1162e975446644c3-rune_board.scn
+res://Runes/Interactives/rune_container.tscn::51111092cc6fe2965d93f7d2ebbeabfc::1782168580::res://.godot/exported/133200997/export-27e7be1a999af1f0acada50fac06b555-rune_container.scn
+res://Runes/Interactives/rune_grabber.tscn::dce0c0ab8ea05406a3d61f9fcb2558b0::1783801087::res://.godot/exported/133200997/export-e691604595250e1cdfe23fa4d59c7653-rune_grabber.scn
+res://Runes/Interactives/rune_loot.tscn::132ec14958524cbe878daa85b18b78ff::1794068328::res://.godot/exported/133200997/export-7536bca0db8dc1d86f39d164486d6716-rune_loot.scn
+res://Runes/Interactives/rune_playground.tscn::fcb560614789f1d3c084da416a712207::1782170058::res://.godot/exported/133200997/export-c533e117fd208b040f8ccd13ba6fd95d-rune_playground.scn
+res://Runes/small_con_rune.tscn::b9d1f38a7f207b710c18597165d8f244::1793290309::res://.godot/exported/133200997/export-c927fa9d6e61fc8cd3070ec7da3e3482-small_con_rune.scn
+res://Runes/small_int_rune.tscn::b4266faf85b255e1af54baf15c608015::1785536693::res://.godot/exported/133200997/export-48095c4899d6a044d8415ed7304e64c6-small_int_rune.scn
+res://Runes/small_lck_rune.tscn::c1a5447bb5fec9af4b04ac12e04b8695::1785536693::res://.godot/exported/133200997/export-a795c26be552af91d416a86b244db745-small_lck_rune.scn
+res://Runes/small_mgt_rune.tscn::d669709b6c39662f8b20b86ca20e9513::1785536693::res://.godot/exported/133200997/export-cb6ca0f894b0b1d0d1a9a3b471711b09-small_mgt_rune.scn
+res://Runes/small_pot_rune.tscn::37a38d98dbd03ffaeec82d707416aa07::1785536693::res://.godot/exported/133200997/export-f3994819b66a39c26f75c9a90abfe4f0-small_pot_rune.scn
+res://Runes/small_res_rune.tscn::7fcad90ead2a803dfb4354a0bb52fc4a::1785536693::res://.godot/exported/133200997/export-83e351f514d2691e7a91b276956f455c-small_res_rune.scn
+res://Runes/small_spd_rune.tscn::5438f6bce25771c953ee3163d3c9830d::1785536693::res://.godot/exported/133200997/export-9edf2ca00f64462ea320ec7aed158829-small_spd_rune.scn
+res://Skill Trees/Components/chain.tscn::6a3c642e4d205d060a1860fcb57223f0::1785600430::res://.godot/exported/133200997/export-5996029a2c03d026e195f7e59962b46e-chain.scn
+res://Skill Trees/Components/curved_link_arrow.tscn::dd6bd9f8b512a7ed30e9e507e9c6e1ba::1781452437::res://.godot/exported/133200997/export-963079fdada478a0e5250540448f5b44-curved_link_arrow.scn
+res://Skill Trees/Components/link_arrow.tscn::c6f473761ff1e789202832561ae8a4a6::1781452604::res://.godot/exported/133200997/export-ab789f375b1620ee12ba23e5d9b92838-link_arrow.scn
+res://Skill Trees/Components/skill_tree_slot.tscn::e6d8a44c6e158cd92114dbaf58926d70::1793604766::res://.godot/exported/133200997/export-980349af77a777a2e06f616f49bbce24-skill_tree_slot.scn
+res://Skill Trees/arcanist_skill_tree.tscn::27ef3fdcbf522992fba9d7bf4ca11e51::1793604721::res://.godot/exported/133200997/export-0887d535a9a8a46e1a67c9c5e5918dbb-arcanist_skill_tree.scn
+res://Skill Trees/brewer_skill_tree.tscn::f9bb0e18c78eaec6a2844812636a2682::1793033727::res://.godot/exported/133200997/export-af3e50b61e19512919179815e4ccb55b-brewer_skill_tree.scn
+res://Skill Trees/fire_fighter_skill_tree.tscn::37acf6a69d7c34ca87bc8c3040f966df::1792963287::res://.godot/exported/133200997/export-6509fab699b53967c72952fa06afc349-fire_fighter_skill_tree.scn
+res://Skill Trees/infantry_skill_tree.tscn::adbc2db3a1c143e2d9c92a07ea3682d4::1793900632::res://.godot/exported/133200997/export-56337b925f3bd40c41b80b69e50facff-infantry_skill_tree.scn
+res://SkillResources/SkillInfo/Actions/Alchemy/defense_potion_info.tres::956f77d893a162b77de120aa8e6b9a1a::1793026478::res://.godot/exported/133200997/export-40841f65e0c2ce4a1d0c5aad3e9d7985-defense_potion_info.res
+res://SkillResources/SkillInfo/Actions/Alchemy/imbue_info.tres::399117939cbafeb83923481c541f33f0::1793026486::res://.godot/exported/133200997/export-01674172d2d00b45040c26d26b2fe755-imbue_info.res
+res://SkillResources/SkillInfo/Actions/Alchemy/poision_potion_info.tres::eafad5c0cbb4a31b84b38f74626bca24::1793026493::res://.godot/exported/133200997/export-41e51e8062ba6da8d544de67a97352b0-poision_potion_info.res
+res://SkillResources/SkillInfo/Actions/Alchemy/spellbane_potion_info.tres::69110688e046d089ba8a8aa5a6eac8e1::1793032740::res://.godot/exported/133200997/export-5dbf79f1ef11a6ca8a30fbd6fb326a41-spellbane_potion_info.res
+res://SkillResources/SkillInfo/Actions/Alchemy/weak_potion_info.tres::3999d9d808410eab98d105917f8130c1::1793026518::res://.godot/exported/133200997/export-e4e56fbfb9bf5f8c66b6aae6ec4d0058-weak_potion_info.res
+res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/axe_attack_info.tres::b5b11b747fd14ace4f3d9bc5bf6fc4b9::1792714314::res://.godot/exported/133200997/export-89f6433feeea52fb10a92d0b4ac1b043-axe_attack_info.res
+res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/bow_attack_info.tres::82217de631e113e389f4b9e74c975182::1792714314::res://.godot/exported/133200997/export-32e49f5a6b50712e8e009763a0d679c4-bow_attack_info.res
+res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/polearm_attack_info.tres::16ddfb15fbdc7799475851fd083b3cae::1792714314::res://.godot/exported/133200997/export-96bea066b4719fee64436c3baa1144fc-polearm_attack_info.res
+res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/shortsword_attack_info.tres::d25ca339a42addfe0463d5658ad19137::1792714314::res://.godot/exported/133200997/export-f9214cfa5552f6e998609cccc5cd8768-shortsword_attack_info.res
+res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/unarmed_attack_info.tres::75817151d0d8eb7cc7b6b4b1760fdf42::1792714314::res://.godot/exported/133200997/export-43d19d0f798fe404e20a880465a28329-unarmed_attack_info.res
+res://SkillResources/SkillInfo/Actions/Elder Magic/fatigue_bolt_info.tres::daf39b6bfda5a5b644522170f1b567bb::1792714314::res://.godot/exported/133200997/export-3d795d984d49de15e08eb63104ce7694-fatigue_bolt_info.res
+res://SkillResources/SkillInfo/Actions/Elder Magic/impalement_info.tres::46206ed87f275d551ed24c16e7353cae::1793592908::res://.godot/exported/133200997/export-ab101f8e972b548cadbd2eeb69f3189a-impalement_info.res
+res://SkillResources/SkillInfo/Actions/Elder Magic/miasma_info.tres::77f89972a0f48ded36e089446e94aee2::1793593198::res://.godot/exported/133200997/export-918814affb664d5bc3d4e432032c892d-miasma_info.res
+res://SkillResources/SkillInfo/Actions/Elder Magic/shadowstrike_info.tres::22fb70437bea6861a858eea86d145724::1792714314::res://.godot/exported/133200997/export-9d5a7745e33cff6371fa0514ca088ddb-shadowstrike_info.res
+res://SkillResources/SkillInfo/Actions/Fire Magic/cone_of_fire_info.tres::c7668147a0aad1976296435487704b9f::1793593143::res://.godot/exported/133200997/export-3ad695419d777f24d9facda0d46e094c-cone_of_fire_info.res
+res://SkillResources/SkillInfo/Actions/Fire Magic/fireball_info.tres::016d91d6b9e057aa165a80e69ef961be::1792714314::res://.godot/exported/133200997/export-71523832f6447104f30690b29812d683-fireball_info.res
+res://SkillResources/SkillInfo/Actions/Martial Arts/suplex_info.tres::1fe0d315bbff4528366e68cb46e07384::1793593287::res://.godot/exported/133200997/export-1c5a2118c189138d8cf0b192bd86b551-suplex_info.res
+res://SkillResources/SkillInfo/Actions/Martial Arts/throw_info.tres::ceb324774e97cc6b454f2630961cc228::1792949748::res://.godot/exported/133200997/export-9b3e133ac3ace9d4f5b301cf0e0b3e24-throw_info.res
+res://SkillResources/SkillInfo/Actions/Martial Arts/vault_info.tres::40f01952a96a52b3b835a96920182b79::1792714314::res://.godot/exported/133200997/export-f7ce60dab995abd632aed94aaee01ed2-vault_info.res
+res://SkillResources/SkillInfo/Actions/Modified Weapon Attacks/charge_info.tres::6fa0d73bcd78149c42d6a75aab4dfb29::1792714314::res://.godot/exported/133200997/export-c13891b80c00140c8cc47a1102d6a8ae-charge_info.res
+res://SkillResources/SkillInfo/Actions/Modified Weapon Attacks/cripple_info.tres::9b544d7da073b50a2e794825556577ee::1793593584::res://.godot/exported/133200997/export-7dd49014519bafc07aae27d7ebed9421-cripple_info.res
+res://SkillResources/SkillInfo/Actions/Modified Weapon Attacks/lucky_attack_info.tres::cf7d50b8c08465a6888b11a00b5fa96f::1793593500::res://.godot/exported/133200997/export-3e5834e8aeef7759f7b69c4ee4d76119-lucky_attack_info.res
+res://SkillResources/SkillInfo/Passives/block_info.tres::2f5e999b33e2d369d5409c24ea354265::1793497258::res://.godot/exported/133200997/export-b68b18d9b3d1836870380437806900e9-block_info.res
+res://SkillResources/SkillInfo/Passives/buildup_info.tres::9678062618c32cc673b52bdf523c178b::1792714314::res://.godot/exported/133200997/export-7232e4f3ddabf53af0ef97ade24beaca-buildup_info.res
+res://SkillResources/SkillInfo/Passives/cloak_info.tres::7955b1ef08430a5c8d190413603447c7::1792714314::res://.godot/exported/133200997/export-7829f2b06f6875f789235dae96a5d5cb-cloak_info.res
+res://SkillResources/SkillInfo/Passives/full_armor_info.tres::db33839858e9f19b68e3332fbcdd97d8::1792714314::res://.godot/exported/133200997/export-4d98bb9d9fd8b2a0cc08d5265310a8e9-full_armor_info.res
+res://SkillResources/SkillInfo/Passives/get_to_the_frontlines_info.tres::def9369908a8b6296d6a4f5d22dc7b2a::1792714314::res://.godot/exported/133200997/export-4c141329eae6ec41c9e05f15b668d7f6-get_to_the_frontlines_info.res
+res://SkillResources/SkillInfo/Passives/killing_flow.tres::0fabb45c634ddb1795ed80c1efd11acc::1793592471::res://.godot/exported/133200997/export-c0c178b5b8c97b0cf7d598fa42447891-killing_flow.res
+res://SkillResources/SkillInfo/Passives/optimal_positioning_info.tres::68e872ba0050eb73ed0b1b7204521ff4::1792714314::res://.godot/exported/133200997/export-907d432076ffe4cf2bf5ff1bb78bccfd-optimal_positioning_info.res
+res://SkillResources/SkillInfo/Passives/perseverence_info.tres::e512673fab87c7cea3859b3c36343446::1793900632::res://.godot/exported/133200997/export-0da229bed42e9819ab7efd4dee1c92cb-perseverence_info.res
+res://SkillResources/SkillInfo/Passives/physical_tank_info.tres::4fd414454c9d176511e011674524a4b5::1793592307::res://.godot/exported/133200997/export-db9d3959610ef3067fe7d683aae81b82-physical_tank_info.res
+res://SkillResources/SkillInfo/Passives/plate_armor_info.tres::d93fb009b9f0454d2af1bbba75310a36::1792714314::res://.godot/exported/133200997/export-374843ccd12085a7bcc930bf5af0375d-plate_armor_info.res
+res://SkillResources/SkillInfo/Passives/shadowstab.tres::e2db423df5d109b871cb3998a794dc57::1792714314::res://.godot/exported/133200997/export-4a888877a7a2496fe753a41d5b265ddc-shadowstab.res
+res://SkillResources/SkillInfo/Passives/surge_info.tres::7ac5beda7d7beb813aba6c28c0e34a67::1793592674::res://.godot/exported/133200997/export-c757f72ea422a05e49911ebb58740a51-surge_info.res
+res://SkillResources/SkillInfo/Passives/toughness_info.tres::456b9432230014f653627c29d12308c9::1792714314::res://.godot/exported/133200997/export-d826f922d41ca3ffe5d2ab25e4944c40-toughness_info.res
+res://SkillResources/SkillInfo/Reactions/opprotunist_info.tres::ef66ca88921d6954de29ceecf4d89a21::1793592123::res://.godot/exported/133200997/export-b1f6a4023b5fe25a1df55dc504340f1d-opprotunist_info.res
+res://Skills/Actions/Alchemy/DefensePotion.tscn::c9b72fdfa22c91336a1337db57939648::1793594396::res://.godot/exported/133200997/export-6337bfecdba141912730bb0ef0206528-DefensePotion.scn
+res://Skills/Actions/Alchemy/imbue.tscn::6481898be4f3aa52a42c9b790ac15276::1793026486::res://.godot/exported/133200997/export-ff0fa9833fbf6c2a5a01e2334e22456d-imbue.scn
+res://Skills/Actions/Alchemy/poison_potion.tscn::449c259c3e0a60c30dd473e8c4756c16::1793026493::res://.godot/exported/133200997/export-f600eebe67c8f256a81750ed968939d1-poison_potion.scn
+res://Skills/Actions/Alchemy/spellbane_potion.tscn::d74061f42e7cce41b1f6044828ab3240::1793033763::res://.godot/exported/133200997/export-0b7c7e3ed8ca1fd1b929ab18ba928986-spellbane_potion.scn
+res://Skills/Actions/Alchemy/weak_potion.tscn::2040ec7c33831ad083171732500b4a64::1793032756::res://.godot/exported/133200997/export-a44680e61f58350f58e8aad51fd66e93-weak_potion.scn
+res://Skills/Actions/Weapon Attacks/axe_attack.tscn::3d0c4c987b2e46371d821ad8817ab5d0::1792715946::res://.godot/exported/133200997/export-7b6965653697ef48380c9b61cccff5d4-axe_attack.scn
+res://Skills/Actions/Weapon Attacks/bow_attack.tscn::8b51bfc438c4f7cf05fa65ae8cab3974::1792715946::res://.godot/exported/133200997/export-2b9ef3ec1446479aef072b5f4bfa5edb-bow_attack.scn
+res://Skills/Actions/Weapon Attacks/charge.tscn::b17fb4be7e62e1112847de2494af8f99::1793903417::res://.godot/exported/133200997/export-17536ef0f634433adad4394e25e0b5ed-charge.scn
+res://Skills/Actions/Weapon Attacks/cripple.tscn::1257140d3bdecdab1e7cfd29f340c93b::1792715946::res://.godot/exported/133200997/export-fc1c6b8f2b7d6253b1cc9d9d72925b25-cripple.scn
+res://Skills/Actions/Weapon Attacks/lucky_attack.tscn::603df44c4d48d8d23b7fee4c9e5b7a21::1792715946::res://.godot/exported/133200997/export-812e2503b5eb9838bf94be03ccfc9a11-lucky_attack.scn
+res://Skills/Actions/Weapon Attacks/polearm_attack.tscn::7dc27e105af832c59a995a22a672bbf3::1792715946::res://.godot/exported/133200997/export-fb6b8d2e0234be2ea1c970b1fac5bbd1-polearm_attack.scn
+res://Skills/Actions/Weapon Attacks/shortsword_attack.tscn::2479b8632d130e32e261c4f5c38e38d9::1792715946::res://.godot/exported/133200997/export-4f07e44545e9e301e271adf3bbaf2b8b-shortsword_attack.scn
+res://Skills/Actions/Weapon Attacks/unarmed_attack.tscn::5c9d10803d1319878be923cefc0dff4b::1792715968::res://.godot/exported/133200997/export-ded3a866e1e8c906743ed6a9f65739f6-unarmed_attack.scn
+res://Skills/Actions/cone_of_fire.tscn::41eaf942b59e1731f31aa6bcfdd801b9::1792982637::res://.godot/exported/133200997/export-6a03448da0f0cf0d353e908c5e19ca48-cone_of_fire.scn
+res://Skills/Actions/fatigue_bolt.tscn::940b7cef92ea12d2fb6cec5fcfc871e0::1792878300::res://.godot/exported/133200997/export-d8d55f56a98dfd9d4a52e5907ba6214b-fatigue_bolt.scn
+res://Skills/Actions/fireball.tscn::b27a67e9ae8b0da9a6f1898a4aa29cb5::1792958681::res://.godot/exported/133200997/export-a701be51b7b30b8d3e524418275b0c4b-fireball.scn
+res://Skills/Actions/impalement.tscn::1bcc03b853c7ee40a58f6f76adcb2f77::1793603732::res://.godot/exported/133200997/export-26ca7b4608c152142a49c09d28e662b4-impalement.scn
+res://Skills/Actions/miasma.tscn::c5cbd7ac9ea42de2865e7a8036cc1237::1792861649::res://.godot/exported/133200997/export-f2e2a74b20726788acffdd6e5447645f-miasma.scn
+res://Skills/Actions/shadow_strike.tscn::35aabf4199ae2a996fbf8e414d8d3ae4::1792861048::res://.godot/exported/133200997/export-909e10f985d2957b053ec92d7f6c686a-shadow_strike.scn
+res://Skills/Actions/suplex.tscn::f92595a00c782287e5c11808b8d7f911::1793605330::res://.godot/exported/133200997/export-84861e138d488d0fb3b036e3d9ab4d13-suplex.scn
+res://Skills/Actions/throw.tscn::03eaddaf4298785add89c2ead14d75a7::1794032651::res://.godot/exported/133200997/export-73d76ae72aef931abe0b624f41252332-throw.scn
+res://Skills/Actions/vault.tscn::b25e6e8507907d43b78ee91f5dcc0c21::1792716451::res://.godot/exported/133200997/export-9f3e1f33424e4678602ef5fe5679a63b-vault.scn
+res://Skills/Components/Weapon Attack/base_weapon_attack.tscn::b2ad1e4481ad6afe15c271b51dcf08ab::1793902819::res://.godot/exported/133200997/export-bb8c4485adc167ab70fd7f2cf54e0936-base_weapon_attack.scn
+res://Skills/Components/Weapon Attack/modified_weapon_attack.tscn::6030e1bb4eaa3610f47f8ca4186c5770::1793387083::res://.godot/exported/133200997/export-999259438ec129a07cc586a1920223c8-modified_weapon_attack.scn
+res://Skills/Components/Weapon Attack/weapon_attack.tscn::c09e7f4e464d9294b8c92da0a349afab::1786064262::res://.godot/exported/133200997/export-28ad9ce08c0193c3b64c1cb624921e96-weapon_attack.scn
+res://Skills/Components/Weapon Attack/weapon_attack_ai.tscn::1d3509c3fee59575cb3171d497e45b2f::1792876893::res://.godot/exported/133200997/export-9d95e1c44d73d63da054d41f631909db-weapon_attack_ai.scn
+res://Skills/Components/Weapon Attack/weapon_attack_damage.tscn::d0ed54e982db3bf978f7e54fc8bf2cbf::1779983525::res://.godot/exported/133200997/export-fd1e3d629927633c79a95a0cff2dd04e-weapon_attack_damage.scn
+res://Skills/Components/action.tscn::0c40491f1aa1b0a246d72c996d77453b::1792695066::res://.godot/exported/133200997/export-b60d01dcdb2f12f549497077432fd916-action.scn
+res://Skills/Components/damage_reciever.tscn::4564dcd16db4d3c46479f7672869f702::1792691355::res://.godot/exported/133200997/export-fd19ebd5c48f2db1a2cb046bdbfc367f-damage_reciever.scn
+res://Skills/Components/movement_reciever.tscn::ff98df7da9bd95d84bd910d4dd92b714::1793596055::res://.godot/exported/133200997/export-7561f175f80aa25831d8a2056630af03-movement_reciever.scn
+res://Skills/Components/potion.tscn::90cfae9379853ef1208ea78125701016::1774284500::res://.godot/exported/133200997/export-2f292c30f4455f10509beea6348ac175-potion.scn
+res://Skills/Components/reaction.tscn::a868041623fd3bad0a1681ea24f052a6::1777740013::res://.godot/exported/133200997/export-c663a3da094a9f73c8d0a188448c9f9a-reaction.scn
+res://Skills/Components/single_target_attack_ai.tscn::cbb3e144e4ebdc35ab7190ffe6590b9f::1793585898::res://.godot/exported/133200997/export-b053f53fef418df3e095ba21001b6c66-single_target_attack_ai.scn
+res://Skills/Components/target_range.tscn::34d691b5e2653424475ea28a3ea298e1::1777832260::res://.godot/exported/133200997/export-5b3db3214a82226ff4493d9286b5686e-target_range.scn
+res://Skills/Passives/block.tscn::0a28f443c3ed345c23401a19bbb0b934::1792872046::res://.godot/exported/133200997/export-8b2db8ae5e730dc6cda2ebfb0ca129c6-block.scn
+res://Skills/Passives/buildup.tscn::8f892dd8768d6c0fcc0decaeb4a80058::1792716451::res://.godot/exported/133200997/export-bd953ba8b927ac3c766f85d86b8382c4-buildup.scn
+res://Skills/Passives/cloak.tscn::7cb21280e80df78916b7f8f9cd10c06b::1792716451::res://.godot/exported/133200997/export-9152aec2de122059363a41968f2ec885-cloak.scn
+res://Skills/Passives/fragile.tscn::1c30fd1919d47711157ef879a9d5f9d5::1792871406::res://.godot/exported/133200997/export-1f61a265a8cdc55510e597efbc797581-fragile.scn
+res://Skills/Passives/full_armor.tscn::0e37247fd581ca6627c54d5848618dfe::1792716451::res://.godot/exported/133200997/export-4a6b0f04cb50e7e533eea7e0a923be6b-full_armor.scn
+res://Skills/Passives/get_to_the_frontlines.tscn::c52aa630588ba391d24993bd93f2555f::1792716451::res://.godot/exported/133200997/export-3df9d098ffc1facb41f5ceeb0aa3ab91-get_to_the_frontlines.scn
+res://Skills/Passives/killing_flow.tscn::1d51d4e850c37c39601b2a46f37741b1::1792862953::res://.godot/exported/133200997/export-f63ccfd829e3fe4a4b00ca9319717dce-killing_flow.scn
+res://Skills/Passives/optimal_positioning.tscn::c99e98ee41ea36411d3a373c4a5eb2bc::1792716451::res://.godot/exported/133200997/export-e9382c7e311cb86975f3504e555e6bfd-optimal_positioning.scn
+res://Skills/Passives/perserverance.tscn::c72ec06193c1c620d88fd8ca7610c9b0::1792716451::res://.godot/exported/133200997/export-8e67c4136751397dcaa5a74d796ba6a6-perserverance.scn
+res://Skills/Passives/physical_tank.tscn::f8c539e71af35bfbacf384a56dcc3272::1792716451::res://.godot/exported/133200997/export-c0193fbc4da6cb86ca92d10f9f8ed5cf-physical_tank.scn
+res://Skills/Passives/plate_armor.tscn::d8542bc137191272714449e12c8f4d3c::1792716451::res://.godot/exported/133200997/export-73c03260848e457098011a3d2de64812-plate_armor.scn
+res://Skills/Passives/shadowstab.tscn::492e8686efd5a25d420c85c775519ec3::1792716451::res://.godot/exported/133200997/export-f9dcbf33d03985cce8e4f5af3e6405fe-shadowstab.scn
+res://Skills/Passives/surge.tscn::973a0e21a21dae111c0c790a6481580a::1792864569::res://.godot/exported/133200997/export-392154605a2871881e32fb17f57d3af0-surge.scn
+res://Skills/Passives/toughness.tscn::1ca808ec73439aae6d6b61dc71386238::1792716450::res://.godot/exported/133200997/export-2cf9755fdb0e57a803c8e5d175cd8288-toughness.scn
+res://Skills/Reactions/opprotunist.tscn::b25eebe8af8c8b102a42227b1d1fe994::1793596414::res://.godot/exported/133200997/export-58e37b4496d3d4ce89ad017943d655b1-opprotunist.scn
+res://Status Effects/Components/imbue.tscn::bc1a6108ed1f3bb72b00b67d80dd46b6::1793031686::res://.godot/exported/133200997/export-982783c39cd076618b5b4342a67e0e14-imbue.scn
+res://Status Effects/Potions/defense_potion_imbue_status.tscn::6d88c028701ba82e6ecb1b860a71249c::1793029941::res://.godot/exported/133200997/export-4da7e6d3ecf83b5536b744e4eafa0e10-defense_potion_imbue_status.scn
+res://Status Effects/Potions/defense_potion_status.tscn::b00735d7554b281fd18b727984eeff89::1793026993::res://.godot/exported/133200997/export-f1133adfaaa581f0ddd9342be2993c1a-defense_potion_status.scn
+res://Status Effects/Potions/poison_imbue_status.tscn::80c0e6e14b5a68715d9e007dd59ca1fc::1793027003::res://.godot/exported/133200997/export-ba6cb8dfb8278baf7fae4632b4986112-poison_imbue_status.scn
+res://Status Effects/Potions/poison_status.tscn::3dc9567deaee8c0617714b6502bd6a61::1793027003::res://.godot/exported/133200997/export-a927f075f025da5879f9bc9413695e74-poison_status.scn
+res://Status Effects/Potions/spellbane_imbue.tscn::d04e95331bc38a54db9c9048393c4c68::1793032205::res://.godot/exported/133200997/export-00ef164953cb9e016816e00e8a2f61bc-spellbane_imbue.scn
+res://Status Effects/Potions/spellbane_status.tscn::ae4cab17b8112726355de8dc86be9b9c::1793032031::res://.godot/exported/133200997/export-bec3b25ad93073515cf326459b756e99-spellbane_status.scn
+res://Status Effects/Potions/weak_imbue.tscn::b04eba828faadbe06b28748abf25844a::1793031695::res://.godot/exported/133200997/export-1ac99e6db0b27437368cc89ca453807b-weak_imbue.scn
+res://Status Effects/Potions/weak_status.tscn::b4cc7bdc96b3f6beab02d0bda1e51137::1793029867::res://.godot/exported/133200997/export-f650b52d52fe126895365314353350bc-weak_status.scn
+res://Status Effects/buildup_charge.tscn::fb726ab49995747e772636be7a885fdf::1787425717::res://.godot/exported/133200997/export-51e11c124c729fda902c1df8265a2a04-buildup_charge.scn
+res://Status Effects/cripple_status.tscn::3c1e3325a2272c91500dfaa4fc289848::1777847481::res://.godot/exported/133200997/export-8648dbe3f9048de4dc076bb653f37dc5-cripple_status.scn
+res://Status Effects/lucky_charge.tscn::3d1d1447739cdc5d40a6fe7b3012df6c::1786924989::res://.godot/exported/133200997/export-6ee65165797fd1b3bcfe73d1cd1ae31d-lucky_charge.scn
+res://Status Effects/miasma_status.tscn::6e7ec7b359f6622b6dc473fd8b9fb8d2::1786972083::res://.godot/exported/133200997/export-fc2fc69d4ceb47c969f413a42d77d2d5-miasma_status.scn
+res://UI/Appendex/skill_appendex.tscn::dd70508048033648dcb4f780749e5414::1792712934::res://.godot/exported/133200997/export-816f47f8f5b7ddafcf6bf2ca9a6dc0a3-skill_appendex.scn
+res://UI/Appendex/skill_list_item.tscn::68471f07fe8e689bbd5504c251e32bae::1792698739::res://.godot/exported/133200997/export-d3f79f32082422a967c95e3b1d57c79f-skill_list_item.scn
+res://UI/CharacterMenus/availbile_skill_slot.tscn::d2c2e94cd6f5283ac5cd7695008e7851::1786908918::res://.godot/exported/133200997/export-6ac07ae419151fda30ed9849aaa37690-availbile_skill_slot.scn
+res://UI/CharacterMenus/character_menus.tscn::70ba690f78ab972cd2d53ee952143624::1793206585::res://.godot/exported/133200997/export-910ea5496889bf40a855569de7c57ef8-character_menus.scn
+res://UI/CharacterMenus/character_title.tscn::fa1a2cff6d7a95b7b5922ed53f9939c8::1786908918::res://.godot/exported/133200997/export-e5c0610fd173a2c83f69f9b7888e99c2-character_title.scn
+res://UI/CharacterMenus/charcter_rune_board.tscn::0f7a69f64431b92c74340ec41eed4ee6::1786908980::res://.godot/exported/133200997/export-c93f7a6a664f268718f7ab71ae354ff2-charcter_rune_board.scn
+res://UI/CharacterMenus/hotbar_setup_tab.tscn::538e0d7215fdd3ccf6f6811a69222507::1793629025::res://.godot/exported/133200997/export-afba5d47185e486170f238f27ef28e18-hotbar_setup_tab.scn
+res://UI/CharacterMenus/setup_skill_slot.tscn::8a089ae9cc9461207b3fe2f53408ebb9::1786908918::res://.godot/exported/133200997/export-df7bda81d5c3d9d560e690e1ed782c50-setup_skill_slot.scn
+res://UI/CharacterMenus/skill_tree_tab.tscn::ad0e84a876408bdd22979c0480c140ad::1793629556::res://.godot/exported/133200997/export-651fb33cbd5f1842cd87c492b155d0e5-skill_tree_tab.scn
+res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attributes_list.tscn::e70decd34f53e70160b07135d4af2644::1793293081::res://.godot/exported/133200997/export-e1684bd58a21e7a6fdd38ec3592b87ee-attributes_list.scn
+res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attribute_label.tscn::773daed6b11e9446e2b319dd05b5755a::1786908980::res://.godot/exported/133200997/export-fa353743e96db3d6f457681741d5d10e-attribute_label.scn
+res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attribute_sign.tscn::242000d1da902267faec584872e42f8d::1793290864::res://.godot/exported/133200997/export-d7524da9b15d168d8c958195175faeef-attribute_sign.scn
+res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attribute_source_panel.tscn::022b98b140d169ad583a151f41ce34d5::1786908980::res://.godot/exported/133200997/export-70443640bfdf938b2f6c409cf0bb4370-attribute_source_panel.scn
+res://UI/Combat Main/Left Side/Actions Menu/AttributesList/def_and_ward.tscn::f2305e161909ae4d178cc53b78138c0f::1793543507::res://.godot/exported/133200997/export-5aef92ab53ec18267b5c43787b96a3e7-def_and_ward.scn
+res://UI/Combat Main/Left Side/Actions Menu/actions_menu.tscn::0c2f1bb1cf37896bb7f83549e3cb836a::1786973818::res://.godot/exported/133200997/export-e719c6df43e0e49445cd0c55e37ec23f-actions_menu.scn
+res://UI/Combat Main/Left Side/Actions Menu/effect_display.tscn::1178f24a4ee6f1ae97f6d1da5b25e25b::1786908980::res://.godot/exported/133200997/export-5526a8847286a2b6352371d07958b5f4-effect_display.scn
+res://UI/Combat Main/Left Side/Actions Menu/skill_hotbar_slot.tscn::d6c3640b8c8876c3f05b9f735c35a2f5::1786908980::res://.godot/exported/133200997/export-77e7f2ddbb3bddf71b58a7bc1fbbdd62-skill_hotbar_slot.scn
+res://UI/Combat Main/Left Side/Actions Menu/spotted_cycle_higlighter.tscn::e99a923bdc5bbba86d907c2be00038c7::1786908980::res://.godot/exported/133200997/export-6b1c4005ba916faf485b82049292e129-spotted_cycle_higlighter.scn
+res://UI/Combat Main/Middle UI/OverRoomRenders/damage_number_popup.tscn::0f1f3b05ab7e190fe33925106c0c9639::1787162262::res://.godot/exported/133200997/export-1c80bdc2d93cd4f84b6a0f9574a47e2b-damage_number_popup.scn
+res://UI/Combat Main/Middle UI/OverRoomRenders/forcast_popup.tscn::74d07a1da417f0648ae7e87e6a461219::1786984560::res://.godot/exported/133200997/export-f72240af6c07187768bf508134957f18-forcast_popup.scn
+res://UI/Combat Main/Middle UI/OverRoomRenders/line_arrow.tscn::78adefcac51fcb0d9a1b7de797ef3e31::1786908980::res://.godot/exported/133200997/export-47efe51016be82647be885e5a40b676a-line_arrow.scn
+res://UI/Combat Main/Middle UI/OverRoomRenders/object_highlighter.tscn::3e83d23d735349d697343a104cad88cc::1786908980::res://.godot/exported/133200997/export-95148ca263e94322f7cd5a4db59f6fa9-object_highlighter.scn
+res://UI/Combat Main/Middle UI/OverRoomRenders/over_room_renders.tscn::6ec857c03d8c47dee025f7e0570336b6::1793291698::res://.godot/exported/133200997/export-33d13dbad08265146d39cfc1b62b1985-over_room_renders.scn
+res://UI/Combat Main/Middle UI/OverRoomRenders/text_popup.tscn::28f17c176e651e4dcde16168c8588b17::1786236679::res://.godot/exported/133200997/export-427cba650ee8a69890a7aa9eb729040b-text_popup.scn
+res://UI/Combat Main/Middle UI/OverRoomRenders/tile_highlighter.tscn::c5ab4fc2f169208380499f2237254ca3::1786908980::res://.godot/exported/133200997/export-caf841f1f25e1dfa8aec09c27f052392-tile_highlighter.scn
+res://UI/Combat Main/Middle UI/combat_end_popup.tscn::0f3582d6ebde440eaa70d003a28067ee::1793588511::res://.godot/exported/133200997/export-30a0ec12d82f001d759b770e04afcdaf-combat_end_popup.scn
+res://UI/Combat Main/Middle UI/path_drawer.tscn::49fb4776504eb7a02891d6366f0feb5b::1786908980::res://.godot/exported/133200997/export-6e42d2ecff98e8ce31a8f79812b06383-path_drawer.scn
+res://UI/Combat Main/Middle UI/tile_cursor.tscn::807a09dc7c39334d923e63182b700b1f::1786974678::res://.godot/exported/133200997/export-7942ccf5c0ed7fa8080b49dd9f421411-tile_cursor.scn
+res://UI/Combat Main/Right Side/Initiative List/delay_pin.tscn::7606175d69e13c8ce555e58cfddbce4c::1786908980::res://.godot/exported/133200997/export-33f019d9223c43d2efb35e48c836c5fc-delay_pin.scn
+res://UI/Combat Main/Right Side/Initiative List/expanding_spacer.tscn::ba7b752a911bd5bd7d96d48f09bc957c::1786908980::res://.godot/exported/133200997/export-c5c997ccc1dcd124c71d429db9a40999-expanding_spacer.scn
+res://UI/Combat Main/Right Side/Initiative List/initiative_list.tscn::99e68df18d4e50f63d50fefa2c71e715::1793380387::res://.godot/exported/133200997/export-00be86f8ffda91b781a4a364fcdfea9b-initiative_list.scn
+res://UI/Combat Main/Right Side/Initiative List/shrinking_spacer.tscn::799a4adfdf38fead6a7a37668d6ff7b8::1786908980::res://.godot/exported/133200997/export-1d1762a2b08fc79eb78ae4cf54145a68-shrinking_spacer.scn
+res://UI/Combat Main/Right Side/Initiative List/small_initiative_portrait.tscn::41216844fbbdc3933b87921a5b18e2c4::1786908980::res://.godot/exported/133200997/export-60eb8244f5be113d54195a194a6a099e-small_initiative_portrait.scn
+res://UI/Combat Main/a_star_manager.tscn::b87f14378984c2e9de3c9cf280749213::1793898936::res://.godot/exported/133200997/export-1d4d0e468fd4e2fffab80b8d9967bd7f-a_star_manager.scn
+res://UI/Combat Main/combat_main.tscn::1e9e83854b63561543f7eb73e1a231d9::1794067621::res://.godot/exported/133200997/export-4c7117edc6ae77534707f222913789bb-combat_main.scn
+res://UI/Combat Main/cursor_manager.tscn::faeaf11c21c0c859cf13c368a0179855::1792882365::res://.godot/exported/133200997/export-e060c40e88bca6ea1d6a3b600d20000c-cursor_manager.scn
+res://UI/Common UI/InfoPanel/info_panel.tscn::46757b0a170490a2e9dafbba4751773d::1793592865::res://.godot/exported/133200997/export-3cc58b42c0937d7bc3e548ec92d492ea-info_panel.scn
+res://UI/Common UI/IntegerProgressBar/integer_progress_bar.tscn::54cdc247dc3700386646f6cb2dfb542d::1786973814::res://.godot/exported/133200997/export-790a2cc08f7f1c7719fdbeeaa57efa69-integer_progress_bar.scn
+res://UI/Common UI/wood_border.tscn::c4124ffc050a2177dfc0decf7b3175ff::1786908918::res://.godot/exported/133200997/export-379eb6c0f9cddff679e498ee1f19c266-wood_border.scn
+res://UI/Common UI/wood_sign.tscn::481dcbde95d440963fd06415add8e537::1786908918::res://.godot/exported/133200997/export-2f72edc0b6227f601fa94bf07d8447e6-wood_sign.scn
+res://UI/Deprecated UI/initiative_portrait.tscn::1845f33c8a0813188c4acd540383feb7::1786908965::res://.godot/exported/133200997/export-917d0ca6506de34bcfb4f304903b7e1f-initiative_portrait.scn
+res://UI/Deprecated UI/skill_info_panel.tscn::5de846967d48935b350fbdf10888153b::1786973814::res://.godot/exported/133200997/export-2e95fb6d28d0cd941bdd389afca059f8-skill_info_panel.scn
+res://UI/MainMenu/character_select.tscn::5b7abc5741f22f05792b39e8f36bee01::1793300414::res://.godot/exported/133200997/export-a13c4483bd0cf65a22f8375971ee8bbf-character_select.scn
+res://UI/MainMenu/character_select_button.tscn::e8e901de6c7f38abd0b1b35ad1836535::1786908918::res://.godot/exported/133200997/export-e3516b982450f1768346cd05f999c6b5-character_select_button.scn
+res://UI/MainMenu/credits.tscn::1f719f7883a1befeff2e1eafe8412f8a::1793592041::res://.godot/exported/133200997/export-5ff9788573e3afe3b5e094346d8327e1-credits.scn
+res://UI/MainMenu/main_menu.tscn::40461de45bb4711988cbd2e7e551da43::1794029913::res://.godot/exported/133200997/export-70f070c99f903ed8f7f0073d5bf17d64-main_menu.scn
+res://UI/StoryWriter/story_writer.tscn::3d5aef417186fbeb8d129a032775898f::1794031504::res://.godot/exported/133200997/export-38432e07e54d7ab7b2fb166e971908b8-story_writer.scn
+res://Combat Events/lightning_effect.tscn::f96d6980df833b7234d5dd1504329589::1793553694::res://.godot/exported/133200997/export-18d6388a8b4aa726ccc214b3dd385c3a-lightning_effect.scn
+res://Combat Events/lightning_event.tscn::a5480a5b81ae8dad60363b4a2640d2c1::1793553723::res://.godot/exported/133200997/export-bfd3463928873181deaadfbdcca2ad8f-lightning_event.scn
+res://Combat Objects/Scavengers/scavenger_meterologist.tscn::82a3de786f862afefa677a67cbc68bee::1793899528::res://.godot/exported/133200997/export-7eb553e17642ef2d641ee681e1592ac1-scavenger_meterologist.scn
+res://Resources/Tile Sets/castle_floor.tres::2ae9d44ec2f0236d38efd071143cff52::1793602275::res://.godot/exported/133200997/export-98df36cdae9f66dfd5e68b9ada9f229f-castle_floor.res
+res://Resources/Tile Sets/castle_water.tres::547aaff3baf1e0c7d273ecdf50fe8518::1794029871::res://.godot/exported/133200997/export-456c31c3ad917ce17486699b81bf9fcf-castle_water.res
+res://Rooms/castle_side.tscn::3030d01b1404b0863a79fd6559887906::1793590981::res://.godot/exported/133200997/export-9d43c97f1cb0353ef61033f4281f6079-castle_side.scn
+res://SkillResources/SkillInfo/Actions/Meteorology/lightning_info.tres::9bf224d2db5711575788e87aa2612a25::1793548195::res://.godot/exported/133200997/export-51dba23dde5e7db9fb657853ea28d448-lightning_info.res
+res://Skills/Actions/Meteorology/lightning.tscn::0470a12429c8d8f116ba04b2d354f961::1793550252::res://.godot/exported/133200997/export-ced13581bc174b49666b8bef3c112d74-lightning.scn
+res://Resources/Curves/hop_curve.tres::3fc66988f147bc3ec5fac2f95b1d05de::1793897403::res://.godot/exported/133200997/export-e7f5122a2f64905c3c3fed781ac49da4-hop_curve.res
+res://Rooms/Tests/opprotunist_test.tscn::d45aac4a131632edaa6efc6bd0055383::1793900552::res://.godot/exported/133200997/export-50194e38e97c12eafb0b01f1a6a64e86-opprotunist_test.scn
+res://Rooms/Tests/range_test.tscn::4f42f023f56fdd4059bda31fc2dc3993::1793989286::res://.godot/exported/133200997/export-27714604f03d492531daef990e7056de-range_test.scn
+res://Rooms/Tests/test_room.tscn::1fd8030ebf2071d985e9a358ff0b9590::1786909052::res://.godot/exported/133200997/export-674fabde09f6eadad0b32dbb8f89333a-test_room.scn
+res://SkillResources/SkillInfo/Tests/between_tiles_test_info.tres::d4d3e80fa22ec574cdd6ea23e49318c3::1793987361::res://.godot/exported/133200997/export-547400bfcc19c4e5b3e2f366e8212d33-between_tiles_test_info.res
+res://Skills/Tests/between_tiles_test.tscn::17988a2b637d57a44dd2231b701eda39::1793987507::res://.godot/exported/133200997/export-e25b6445630c8df83514e3d39203369b-between_tiles_test.scn

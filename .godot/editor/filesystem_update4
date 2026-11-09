@@ -1,0 +1,50 @@
+res://Skills/Actions/Meteorology/personal_rain_cloud.gd
+res://Skills/Components/single_target_attack_ai.tscn
+res://Resources/Themes/default_theme.tres
+res://Resources/Shaders/damage_number_popup.gdshader
+res://Resources/Themes/TransparentButton.tres
+res://Resources/Themes/InfoPanel.tres
+res://Resources/Tile Sets/CastleGrass.tres
+res://addons/TileMapDual/tile_map_dual.gd
+res://Resources/Tile Sets/castle_water.tres
+res://Resources/Tile Sets/functional_tile_set.tres
+res://Resources/Tile Sets/castle_floor.tres
+res://Resources/Themes/TinyBar.tres
+res://Resources/Themes/elder_particles.tres
+res://Skills/Components/single_target_attack_ai.gd
+res://Skills/Actions/Meteorology/personal_rain_cloud.tscn
+res://Skills/Actions/Elder/fatigue_bolt.gd
+res://Skills/Components/Weapon Attack/weapon_attack_ai.gd
+res://Skills/Actions/Meteorology/lightning.tscn
+res://Skills/Actions/Meteorology/lightning.gd
+res://Skills/Components/Weapon Attack/weapon_attack_ai.tscn
+res://Skills/Actions/Elder/fatigue_bolt.tscn
+res://Combat Objects/Scavengers/scavenger_meterologist.tscn
+res://Rooms/castle_side.tscn
+res://Status Effects/personal_rain_cloud_status.tscn
+res://Status Effects/personal_rain_cloud_status.gd
+res://Skills/Actions/Weapon Attacks/mace_attack.tscn
+res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/mace_attack_info.tres
+res://Combat Objects/Scavengers/scavenger_bruiser.tscn
+res://Skills/Components/Weapon Attack/base_weapon_attack.tscn
+res://Skills/Components/Weapon Attack/base_weapon_attack.gd
+res://Skills/Actions/Weapon Attacks/cripple.gd
+res://Skills/Actions/Weapon Attacks/cripple.tscn
+res://Skills/Components/Weapon Attack/modified_weapon_attack.tscn
+res://Skills/Components/Weapon Attack/modified_weapon_attack.gd
+res://Combat Objects/Scavengers/scavenger_bruiser.gd
+res://UI/Common UI/InfoPanel/info_panel.tscn
+res://UI/Common UI/InfoPanel/info_panel.gd
+res://Combat Objects/Generic/actor.tscn
+res://Combat Objects/Generic/actor.gd
+res://UI/Combat Main/Right Side/Initiative List/initiative_list.tscn
+res://UI/Combat Main/combat_main.gd
+res://UI/CharacterMenus/charcter_rune_board.tscn
+res://Rune Stuff/Components/Rune.gd
+res://Rune Stuff/Interactives/RuneManager.gd
+res://UI/CharacterMenus/character_menus.gd
+res://UI/CharacterMenus/character_menus.tscn
+res://UI/Combat Main/combat_main.tscn
+res://Resources/Tile Sets/bridge_tiles.tres
+res://Skill Trees/Components/SkillTree.gd
+res://Resources/Themes/TransparentToggleButton.tres
