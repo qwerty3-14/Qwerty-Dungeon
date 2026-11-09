@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://kkbbva7om18e"]
+
+[ext_resource type="Script" uid="uid://6ie8jaflu08y" path="res://Skills/Reactions/opprotunist.gd" id="1_kiv4d"]
+[ext_resource type="Resource" uid="uid://xnp54pphwnr1" path="res://SkillResources/SkillInfo/Reactions/opprotunist_info.tres" id="2_us7tf"]
+[ext_resource type="PackedScene" uid="uid://38n4pwhivik4" path="res://Skills/Components/Weapon Attack/modified_weapon_attack.tscn" id="3_ce2tj"]
+[ext_resource type="PackedScene" uid="uid://ciw8hlrsnu3ws" path="res://Skills/Components/reaction.tscn" id="4_n0txj"]
+[ext_resource type="PackedScene" uid="uid://ctessd0jw6yyo" path="res://Skills/Components/movement_reciever.tscn" id="5_ce2tj"]
+
+[node name="Opprotunist" type="Node" unique_id=94705255]
+script = ExtResource("1_kiv4d")
+skill_info = ExtResource("2_us7tf")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="ModifiedWeaponAttack" parent="." unique_id=847325741 instance=ExtResource("3_ce2tj")]
+unique_name_in_owner = true
+
+[node name="Reaction" parent="." unique_id=1969346675 instance=ExtResource("4_n0txj")]
+unique_name_in_owner = true
+ap_cost = 1
+
+[node name="MovementReciever" parent="." unique_id=9850205 instance=ExtResource("5_ce2tj")]
+
+[connection signal="object_moved" from="MovementReciever" to="." method="_on_movement_reciever_object_moved"]

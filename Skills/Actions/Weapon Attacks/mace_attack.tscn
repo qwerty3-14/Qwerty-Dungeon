@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://chpwo0sbp87fv"]
+
+[ext_resource type="Script" uid="uid://cp7q46m67ufv7" path="res://Skills/Components/skill.gd" id="1_ir5yy"]
+[ext_resource type="Resource" uid="uid://dovw4nqoi5ym0" path="res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/mace_attack_info.tres" id="2_m24c4"]
+[ext_resource type="PackedScene" uid="uid://b0ovc75aun67a" path="res://Skills/Components/Weapon Attack/weapon_attack.tscn" id="4_8xbwv"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="5_5dr5k"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="6_7sbhu"]
+
+[node name="MaceAttack" type="Node" unique_id=1445087951]
+script = ExtResource("1_ir5yy")
+skill_info = ExtResource("2_m24c4")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="WeaponAttack" parent="." unique_id=1381722177 node_paths=PackedStringArray("action", "target_range") instance=ExtResource("4_8xbwv")]
+action = NodePath("../Action")
+target_range = NodePath("../TargetRange")
+damage_type = 1
+
+[node name="TargetRange" parent="." unique_id=746520125 instance=ExtResource("5_5dr5k")]
+attack_range = 1.5
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("6_7sbhu")]
+type = 1
+ap_cost = 2

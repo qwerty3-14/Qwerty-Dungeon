@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://x1rby4eicvl2"]
+
+[ext_resource type="Script" uid="uid://laofr0f6blrf" path="res://Combat Events/ActionEvents/SpellEvents/Fire/cone_of_fire_event.gd" id="1_3qe1u"]
+
+[node name="ConeOfFireEvent" type="Timer" unique_id=4919631]
+wait_time = 1.5
+one_shot = true
+script = ExtResource("1_3qe1u")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"

@@ -1,0 +1,13 @@
+[gd_resource type="Theme" format=3 uid="uid://dutkltoyuei8g"]
+
+[ext_resource type="Texture2D" uid="uid://cdowuo6mdviwn" path="res://UI/Common UI/WoodBorder.png" id="1_vl2u5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4aruy"]
+texture = ExtResource("1_vl2u5")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+
+[resource]
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_4aruy")

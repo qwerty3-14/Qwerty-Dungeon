@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://chgbv7u7c5ryl"]
+
+[ext_resource type="Texture2D" uid="uid://cwa1wtuh653do" path="res://Skills/Passives/Surge.png" id="1_yp0ta"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_rxlxo"]
+
+[resource]
+script = ExtResource("2_rxlxo")
+icon = ExtResource("1_yp0ta")
+display_name = "Surge"
+description = "Grants a <L> of spells dealing triple damage
+
+{CL}%"
+skill_path = "uid://ckuf1hnj65e0y"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

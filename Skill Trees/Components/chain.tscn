@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d27mtjx2w00pu"]
+
+[ext_resource type="Texture2D" uid="uid://un0i3mfajj6e" path="res://Skill Trees/Components/Chain.png" id="1_hl3r8"]
+
+[node name="Chain" type="NinePatchRect" unique_id=1031715725]
+offset_right = 10.0
+offset_bottom = 7.0
+texture = ExtResource("1_hl3r8")
+patch_margin_top = 7
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

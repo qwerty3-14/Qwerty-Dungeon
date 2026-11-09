@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://c322rdloyi1u7"]
+
+[ext_resource type="Texture2D" uid="uid://2mi3wcjc3h8g" path="res://UI/Combat Main/Left Side/Actions Menu/DefAndWard.png" id="1_vbhkb"]
+[ext_resource type="Script" uid="uid://etmanj7g2gp1" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/def_and_ward.gd" id="2_0il5t"]
+[ext_resource type="PackedScene" uid="uid://bx4t3ur1rv1gn" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attribute_label.tscn" id="2_row08"]
+[ext_resource type="Script" uid="uid://coib7ank6hyo0" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/def_hover.gd" id="3_j2dts"]
+[ext_resource type="Script" uid="uid://bwyk1jh0a30j2" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/ward_hover.gd" id="4_8ee4j"]
+
+[node name="DefAndWard" type="TextureRect" unique_id=161761816]
+custom_minimum_size = Vector2(44, 18)
+offset_right = 44.0
+offset_bottom = 18.0
+tooltip_text = "You should not be reading this!"
+texture = ExtResource("1_vbhkb")
+stretch_mode = 1
+script = ExtResource("2_0il5t")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1768520333]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DefHover" type="Control" parent="HBoxContainer" unique_id=249783864]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("3_j2dts")
+
+[node name="WardHover" type="Control" parent="HBoxContainer" unique_id=425960067]
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("4_8ee4j")
+
+[node name="DefenseLabel" parent="." unique_id=1199182097 instance=ExtResource("2_row08")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 18.0
+offset_bottom = 17.0
+
+[node name="WardingLabel" parent="." unique_id=764565523 instance=ExtResource("2_row08")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 26.0
+offset_top = 1.0
+offset_right = 42.0
+offset_bottom = 17.0

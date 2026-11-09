@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b47oifrpcp4ft"]
+
+[ext_resource type="Texture2D" uid="uid://duy65ri1bnqlr" path="res://Skill Trees/Components/LinkArrow.png" id="1_myadd"]
+
+[node name="LinkArrow" type="NinePatchRect" unique_id=986622274]
+offset_right = 14.0
+offset_bottom = 9.0
+texture = ExtResource("1_myadd")
+patch_margin_left = 7
+patch_margin_top = 2
+patch_margin_right = 7
+patch_margin_bottom = 7
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

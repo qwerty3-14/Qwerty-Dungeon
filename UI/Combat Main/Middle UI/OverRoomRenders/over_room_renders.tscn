@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d1ikbewe3ea1q"]
+
+[ext_resource type="Script" uid="uid://cxo2hneigokkm" path="res://UI/Combat Main/Middle UI/OverRoomRenders/over_room_renders.gd" id="1_ivfd2"]
+[ext_resource type="PackedScene" uid="uid://b60f6mxdl6o3h" path="res://UI/Common UI/InfoPanel/info_panel.tscn" id="3_2ut72"]
+
+[node name="OverRoomRenders" type="Node2D" unique_id=1307470091]
+script = ExtResource("1_ivfd2")
+
+[node name="ap_movement" type="Node2D" parent="." unique_id=1393746460]
+
+[node name="mp_movement" type="Node2D" parent="." unique_id=1730637512]
+unique_name_in_owner = true
+
+[node name="DamageNumbers" type="Node2D" parent="." unique_id=1523728468]
+unique_name_in_owner = true
+
+[node name="DamageForecasts" type="Node2D" parent="." unique_id=254685914]
+unique_name_in_owner = true
+z_index = 1
+
+[node name="CombatEventEffects" type="Node2D" parent="." unique_id=1520856944]
+unique_name_in_owner = true
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=604719596]
+custom_minimum_size = Vector2(224, 256)
+custom_maximum_size = Vector2(224, 256)
+offset_left = 16.0
+offset_right = 240.0
+offset_bottom = 256.0
+
+[node name="InfoPanel" parent="CenterContainer" unique_id=1604432641 instance=ExtResource("3_2ut72")]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+layout_mode = 2

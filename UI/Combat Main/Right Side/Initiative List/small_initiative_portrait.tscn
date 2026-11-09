@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://dbic8y5202ji8"]
+
+[ext_resource type="Script" uid="uid://lndxf5pcijaf" path="res://UI/Combat Main/Right Side/Initiative List/small_initiative_portrait.gd" id="1_ol3gg"]
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="2_b761u"]
+[ext_resource type="Theme" uid="uid://cd4bmxpiwwovo" path="res://Resources/Themes/TinyBar.tres" id="3_b761u"]
+
+[node name="SmallInitiativePortrait" type="Control" unique_id=834757580]
+custom_minimum_size = Vector2(43, 27)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -437.0
+offset_bottom = -243.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_ol3gg")
+
+[node name="WoodBorder" parent="." unique_id=1053470623 instance=ExtResource("2_b761u")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(43, 27)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InititiveDisplayFrame" parent="WoodBorder" unique_id=1645731088 instance=ExtResource("2_b761u")]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_right = 22.0
+offset_bottom = 22.0
+
+[node name="InitiativeLabel" type="Label" parent="WoodBorder/InititiveDisplayFrame" unique_id=243502475]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="IconFrame" parent="WoodBorder" unique_id=344465899 instance=ExtResource("2_b761u")]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 1
+offset_left = 21.0
+offset_right = 39.431
+offset_bottom = 18.004
+
+[node name="Icon" type="TextureRect" parent="WoodBorder/IconFrame" unique_id=2051364531]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="FadeTimer" type="Timer" parent="WoodBorder" unique_id=441548373]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true
+
+[node name="HealthBar" type="ProgressBar" parent="WoodBorder" unique_id=373234204]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 2.0
+offset_top = 21.0
+offset_right = 41.0
+offset_bottom = 25.0
+mouse_filter = 2
+theme = ExtResource("3_b761u")
+max_value = 37.0
+step = 1.0
+value = 16.0
+show_percentage = false
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="WoodBorder/FadeTimer" to="." method="_on_fade_timer_timeout"]

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dt0eoav2f0mpc"]
+
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="1_25lyv"]
+[ext_resource type="Script" uid="uid://b3gnr82nj8xxn" path="res://UI/CharacterMenus/availbile_skill_slot.gd" id="1_qmgvr"]
+
+[node name="AvailbileSkillSlot" type="Control" unique_id=193482008]
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -458.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qmgvr")
+
+[node name="WoodBorder" parent="." unique_id=1053470623 instance=ExtResource("1_25lyv")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="WoodBorder" unique_id=4977399]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[connection signal="mouse_entered" from="WoodBorder/Icon" to="." method="_on_icon_mouse_entered"]

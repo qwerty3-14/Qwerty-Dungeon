@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://chuqbv4ep4mba"]
+
+[ext_resource type="Script" uid="uid://dlps8gfl0cv6f" path="res://Skills/Passives/fragile.gd" id="1_jxnx6"]
+[ext_resource type="Texture2D" uid="uid://djfrf3hpcr4tr" path="res://Skills/Passives/Fragile.png" id="2_07p8k"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="3_epyqc"]
+
+[sub_resource type="Resource" id="Resource_0yd1l"]
+script = ExtResource("3_epyqc")
+icon = ExtResource("2_07p8k")
+display_name = "Fragile"
+description = "-16 Max hp
+-2 phase ap"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"
+
+[node name="Fragile" type="Node" unique_id=1897741381]
+script = ExtResource("1_jxnx6")
+skill_info = SubResource("Resource_0yd1l")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

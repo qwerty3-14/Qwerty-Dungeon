@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://gebvwko13dta"]
+
+[ext_resource type="Script" uid="uid://cai30dqghc0hr" path="res://UI/Combat Main/Middle UI/OverRoomRenders/tile_highlighter.gd" id="1_8ad7w"]
+
+[node name="TileHighlighter" type="Node2D" unique_id=1509528734]
+script = ExtResource("1_8ad7w")

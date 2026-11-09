@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dvcfm8kegkph0"]
+
+[ext_resource type="Script" uid="uid://8qwav4n74et0" path="res://Skills/Tests/between_tiles_test.gd" id="1_hkgyv"]
+[ext_resource type="Resource" uid="uid://cf1vx0pli4ann" path="res://SkillResources/SkillInfo/Tests/between_tiles_test_info.tres" id="2_sctri"]
+[ext_resource type="Script" uid="uid://mgqvtedchk8o" path="res://Skills/Components/action.gd" id="3_sctri"]
+
+[node name="BetweenTilesTest" type="Node" unique_id=1296511985]
+script = ExtResource("1_hkgyv")
+skill_info = ExtResource("2_sctri")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="Action" type="Node" parent="." unique_id=1183788307]
+script = ExtResource("3_sctri")
+metadata/_custom_type_script = "uid://mgqvtedchk8o"
+
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="inputs_done" from="Action" to="." method="_on_action_inputs_done"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

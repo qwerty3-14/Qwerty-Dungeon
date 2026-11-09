@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://jtmun2bpkx4g"]
+
+[ext_resource type="Script" uid="uid://c5ijgtdqrptud" path="res://Skills/Actions/Meteorology/personal_rain_cloud.gd" id="1_gd00x"]
+[ext_resource type="Resource" uid="uid://dmet0phh8nyqj" path="res://SkillResources/SkillInfo/Actions/Meteorology/personal_rain_cloud_info.tres" id="2_gd00x"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="3_pyx2d"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="4_wm140"]
+[ext_resource type="PackedScene" uid="uid://dvabcexqa6x3g" path="res://Skills/Components/single_target_attack_ai.tscn" id="5_wm140"]
+
+[node name="PersonalRainCloud" type="Node" unique_id=1362628259]
+script = ExtResource("1_gd00x")
+skill_info = ExtResource("2_gd00x")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("3_pyx2d")]
+unique_name_in_owner = true
+phase_cooldown = -1
+type = 7
+ap_cost = 4
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("4_wm140")]
+unique_name_in_owner = true
+attack_range = 12.0
+action = NodePath("../Action")
+los_block_tiles = Array[int]([])
+
+[node name="SingleTargetAttackAI" parent="." unique_id=863810320 instance=ExtResource("5_wm140")]
+unique_name_in_owner = true
+attack_name = "Personal Rain Cloud"
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_action_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]
+[connection signal="about_to_score" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_about_to_score"]
+[connection signal="ready_to_use_action" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_ready_to_use_action"]
+[connection signal="update_my_damage" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_update_my_damage"]

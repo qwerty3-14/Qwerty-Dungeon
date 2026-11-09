@@ -1,0 +1,93 @@
+[gd_scene format=3 uid="uid://6op388gnk5m"]
+
+[ext_resource type="Script" uid="uid://b333r00vx8fhd" path="res://UI/MainMenu/credits.gd" id="1_ct2ey"]
+[ext_resource type="FontFile" uid="uid://da2wpryqo4hnb" path="res://Resources/TTF/dogicabold.ttf" id="1_kvwo3"]
+
+[node name="Credits" type="Control" unique_id=1716521568]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ct2ey")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=617254085]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopPadding" type="Control" parent="VBoxContainer" unique_id=2079598114]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Game created" type="Label" parent="VBoxContainer" unique_id=568077759]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kvwo3")
+text = "Game created by:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Game created2" type="Label" parent="VBoxContainer" unique_id=240172662]
+layout_mode = 2
+text = "qwerty3.14"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MiddlePadding" type="Control" parent="VBoxContainer" unique_id=983975932]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Font Used" type="Label" parent="VBoxContainer" unique_id=1957781653]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kvwo3")
+text = "Font used: Dogica Pixel"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Font Used2" type="Label" parent="VBoxContainer" unique_id=905102805]
+layout_mode = 2
+text = "Created by: Roberto Mocci"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MiddlePadding2" type="Control" parent="VBoxContainer" unique_id=732331475]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="Font Used3" type="Label" parent="VBoxContainer" unique_id=84583658]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_kvwo3")
+text = "Software Used:"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Engine" type="Label" parent="VBoxContainer" unique_id=532210669]
+layout_mode = 2
+text = "Game Engine: Godot"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pixel art" type="Label" parent="VBoxContainer" unique_id=245417394]
+layout_mode = 2
+text = "Art made in: Aseprite"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomPadding" type="Control" parent="VBoxContainer" unique_id=44300381]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control" type="HBoxContainer" parent="VBoxContainer" unique_id=497489182]
+layout_mode = 2
+
+[node name="ReturnButton" type="Button" parent="VBoxContainer/Control" unique_id=1874577950]
+layout_mode = 2
+text = "Return"
+
+[connection signal="pressed" from="VBoxContainer/Control/ReturnButton" to="." method="_on_return_button_pressed"]

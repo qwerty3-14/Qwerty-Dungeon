@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://o1prlukjfaef"]
+
+[ext_resource type="Script" uid="uid://bbxbpcdbslub8" path="res://Skills/Actions/throw.gd" id="1_h8wws"]
+[ext_resource type="Resource" uid="uid://b52k3qovxmt7o" path="res://SkillResources/SkillInfo/Actions/Martial Arts/throw_info.tres" id="2_4syq3"]
+[ext_resource type="Script" uid="uid://b4inwl502rygp" path="res://Skills/Components/target_range.gd" id="4_3swwm"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="5_n4s6y"]
+
+[node name="Throw" type="Node" unique_id=917539208]
+script = ExtResource("1_h8wws")
+skill_info = ExtResource("2_4syq3")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="GrabRange" type="Node" parent="." unique_id=1066118240 node_paths=PackedStringArray("action")]
+unique_name_in_owner = true
+script = ExtResource("4_3swwm")
+group_name = "GrabRange"
+action = NodePath("../Action")
+metadata/_custom_type_script = "uid://b4inwl502rygp"
+
+[node name="ThrowRange" type="Node" parent="." unique_id=2084749573 node_paths=PackedStringArray("action")]
+unique_name_in_owner = true
+script = ExtResource("4_3swwm")
+attack_range = 5.0
+group_name = "ThrowRange"
+action = NodePath("../Action")
+metadata/_custom_type_script = "uid://b4inwl502rygp"
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("5_n4s6y")]
+unique_name_in_owner = true
+phase_cooldown = 1
+type = 3
+ap_cost = 1
+
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="inputs_done" from="Action" to="." method="_on_action_inputs_done"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_action_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

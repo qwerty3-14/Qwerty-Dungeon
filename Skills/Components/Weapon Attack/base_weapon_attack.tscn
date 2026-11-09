@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c42c1c5a7ki1r"]
+
+[ext_resource type="Script" uid="uid://bnr8lvm2yggmg" path="res://Skills/Components/Weapon Attack/base_weapon_attack.gd" id="1_ulgfq"]
+
+[node name="BaseWeaponAttack" type="Node" unique_id=1949775213]
+script = ExtResource("1_ulgfq")

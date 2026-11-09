@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://dhanntoxagmpu"]
+
+[ext_resource type="Script" uid="uid://brfrj8sg0u8kn" path="res://combat_object.gd" id="1_qfy21"]
+[ext_resource type="Texture2D" uid="uid://kyiqk5j4g10v" path="res://Combat Objects/Scavengers/ScavengerMeteorologist.png" id="2_s7s6r"]
+[ext_resource type="PackedScene" uid="uid://c2ba4l83aa8j6" path="res://Combat Objects/Generic/actor.tscn" id="3_scq4r"]
+[ext_resource type="Texture2D" uid="uid://dju3f0mhksng4" path="res://Combat Objects/Generic/PlaceholderPortrait.png" id="4_mvhou"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="5_uyfh4"]
+[ext_resource type="PackedScene" uid="uid://dc2by1qa41378" path="res://Skills/Actions/Meteorology/lightning.tscn" id="6_s7s6r"]
+[ext_resource type="PackedScene" uid="uid://jtmun2bpkx4g" path="res://Skills/Actions/Meteorology/personal_rain_cloud.tscn" id="7_scq4r"]
+
+[sub_resource type="Resource" id="Resource_0yd1l"]
+script = ExtResource("5_uyfh4")
+base_might = 1
+base_potency = 7
+base_constitution = 1
+base_resilience = 6
+base_intelligence = 3
+base_speed = 5
+base_luck = 5
+icon = ExtResource("2_s7s6r")
+character_name = "Scavenger"
+combat_class = "Meteorologist"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"
+
+[node name="ScavengerMeterologist" type="Node2D" unique_id=1969616351]
+script = ExtResource("1_qfy21")
+blocks_friendlies = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=385917914]
+texture = ExtResource("2_s7s6r")
+
+[node name="Actor" parent="." unique_id=60533830 node_paths=PackedStringArray("hotbar_skills") instance=ExtResource("3_scq4r")]
+actor_info = SubResource("Resource_0yd1l")
+prefered_range_max = 9.0
+prefered_range_min = 7.0
+hotbar_skills = {
+0: NodePath("Lightning"),
+1: NodePath("PersonalRainCloud")
+}
+
+[node name="Lightning" parent="Actor" unique_id=479316557 instance=ExtResource("6_s7s6r")]
+
+[node name="PersonalRainCloud" parent="Actor" unique_id=1362628259 instance=ExtResource("7_scq4r")]

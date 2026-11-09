@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://lyo86g2eqqw0"]
+
+[ext_resource type="Script" uid="uid://bls15mv848qe3" path="res://Skills/Passives/cloak.gd" id="1_p237q"]
+[ext_resource type="Resource" uid="uid://mgf4j1ilirlj" path="res://SkillResources/SkillInfo/Passives/cloak_info.tres" id="2_28n2r"]
+
+[node name="Cloak" type="Node" unique_id=1030159903]
+script = ExtResource("1_p237q")
+skill_info = ExtResource("2_28n2r")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

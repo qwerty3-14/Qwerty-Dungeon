@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://dfqdxuprj0lao"]
+
+[ext_resource type="Texture2D" uid="uid://cvqy42j8ofwel" path="res://Skills/Actions/Weapon Attacks/ShortswordAttack.png" id="1_l6frx"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_fhtyi"]
+
+[resource]
+script = ExtResource("2_fhtyi")
+icon = ExtResource("1_l6frx")
+display_name = "Shortsword Attack"
+description = "Deals <PD>
+
+{DM}"
+skill_type = 1
+target_range = 1.5
+ap_cost = 2
+action_type = 1
+skill_path = "uid://dod43oll11b5t"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

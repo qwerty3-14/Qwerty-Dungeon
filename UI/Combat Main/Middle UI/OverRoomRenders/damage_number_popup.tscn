@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://yeg7fnx3bwgm"]
+
+[ext_resource type="Script" uid="uid://bgttwt2so0h0w" path="res://UI/Combat Main/Middle UI/OverRoomRenders/damage_number_popup.gd" id="1_kwne1"]
+[ext_resource type="Shader" uid="uid://dkcidxo2usc0a" path="res://Resources/Shaders/damage_number_popup.gdshader" id="2_h1362"]
+
+[sub_resource type="Curve" id="Curve_h1362"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.7535545, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wljsl"]
+shader = ExtResource("2_h1362")
+
+[node name="DamageNumberPopup" type="Node2D" unique_id=833340197]
+script = ExtResource("1_kwne1")
+alpha_curve = SubResource("Curve_h1362")
+
+[node name="Duration" type="Timer" parent="." unique_id=912745907]
+unique_name_in_owner = true
+one_shot = true
+autostart = true
+
+[node name="Label" type="Label" parent="." unique_id=214269068]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_wljsl")
+offset_left = -8.0
+offset_top = -4.0
+offset_right = 8.0
+offset_bottom = 3.0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Duration" to="." method="_on_duration_timeout"]

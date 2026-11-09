@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://b5bihuukcd1k7"]
+
+[ext_resource type="Texture2D" uid="uid://kmkkip4i8lh5" path="res://UI/Common UI/WoodSign.png" id="1_8dyge"]
+[ext_resource type="Script" uid="uid://plyhr1xyovxg" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attribute_sign.gd" id="2_l02yj"]
+[ext_resource type="PackedScene" uid="uid://bx4t3ur1rv1gn" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attribute_label.tscn" id="3_gtk37"]
+
+[node name="AttributeSign" type="NinePatchRect" unique_id=1524647781]
+custom_minimum_size = Vector2(44, 12)
+offset_right = 44.0
+offset_bottom = 12.0
+tooltip_text = "You Shouldn't be seeing this!"
+mouse_filter = 1
+texture = ExtResource("1_8dyge")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_l02yj")
+
+[node name="AttributeLabel" parent="." unique_id=1199182097 instance=ExtResource("3_gtk37")]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -6.0
+offset_right = -3.0
+offset_bottom = 6.0
+grow_horizontal = 0
+grow_vertical = 2
+text = "0"
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

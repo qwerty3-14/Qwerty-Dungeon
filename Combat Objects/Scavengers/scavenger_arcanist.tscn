@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://belhghfdfg4ou"]
+
+[ext_resource type="Script" uid="uid://dt8e8n6blka0c" path="res://Combat Objects/Scavengers/scavenger_arcanist.gd" id="1_w4111"]
+[ext_resource type="Script" uid="uid://dj4w38c4vjxn" path="res://Combat Objects/Generic/actor.gd" id="2_0cerg"]
+[ext_resource type="Texture2D" uid="uid://dbungvy8e0sgf" path="res://Combat Objects/Scavengers/ScabengerArcanist.png" id="2_64h57"]
+[ext_resource type="Texture2D" uid="uid://dju3f0mhksng4" path="res://Combat Objects/Generic/PlaceholderPortrait.png" id="3_64h57"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="4_w4111"]
+[ext_resource type="PackedScene" uid="uid://cnpfqiulbjgbc" path="res://Skills/Actions/Weapon Attacks/unarmed_attack.tscn" id="6_w4111"]
+[ext_resource type="PackedScene" uid="uid://gssc7sqfnt5t" path="res://Skills/Actions/Elder/fatigue_bolt.tscn" id="7_o1ou0"]
+
+[sub_resource type="Resource" id="Resource_0yd1l"]
+script = ExtResource("4_w4111")
+base_might = 2
+base_potency = 4
+base_constitution = 2
+base_resilience = 3
+base_intelligence = 6
+base_speed = 5
+base_luck = 4
+icon = ExtResource("2_64h57")
+character_name = "Scavenger"
+combat_class = "Arcanist"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"
+
+[node name="ScavengerArcanist" type="Node2D" unique_id=1512564168]
+script = ExtResource("1_w4111")
+blocks_friendlies = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1581042843]
+texture = ExtResource("2_64h57")
+
+[node name="Actor" type="Node" parent="." unique_id=1980747306 node_paths=PackedStringArray("hotbar_skills")]
+script = ExtResource("2_0cerg")
+actor_info = SubResource("Resource_0yd1l")
+prefered_range_max = 8.0
+prefered_range_min = 6.0
+hotbar_skills = {
+0: NodePath("UnarmedAttack"),
+1: NodePath("FatigueBolt")
+}
+metadata/_custom_type_script = "uid://dj4w38c4vjxn"
+
+[node name="UnarmedAttack" parent="Actor" unique_id=2139241734 instance=ExtResource("6_w4111")]
+
+[node name="FatigueBolt" parent="Actor" unique_id=2069703919 instance=ExtResource("7_o1ou0")]

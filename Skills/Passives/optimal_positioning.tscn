@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://tb8i03hs43mq"]
+
+[ext_resource type="Script" uid="uid://brb4k0jbbve3y" path="res://Skills/Passives/optimal_positioning.gd" id="1_0lnnp"]
+[ext_resource type="Resource" uid="uid://diuaki3amsx44" path="res://SkillResources/SkillInfo/Passives/optimal_positioning_info.tres" id="2_oi57p"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_xh68k"]
+[ext_resource type="PackedScene" uid="uid://ctessd0jw6yyo" path="res://Skills/Components/movement_reciever.tscn" id="4_oi57p"]
+
+[node name="OptimalPositioning" type="Node" unique_id=658340050]
+script = ExtResource("1_0lnnp")
+skill_info = ExtResource("2_oi57p")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="TargetRange" parent="." unique_id=746520125 instance=ExtResource("3_xh68k")]
+unique_name_in_owner = true
+
+[node name="MovementReciever" parent="." unique_id=9850205 instance=ExtResource("4_oi57p")]
+
+[connection signal="object_moved" from="MovementReciever" to="." method="_on_movement_reciever_object_moved"]

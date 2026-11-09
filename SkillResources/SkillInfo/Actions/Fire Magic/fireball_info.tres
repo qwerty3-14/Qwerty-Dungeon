@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://djr4yl6vljg0t"]
+
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_iyjut"]
+[ext_resource type="Texture2D" uid="uid://db31ox8py3af0" path="res://Skills/Actions/Fireball.png" id="1_xxx2s"]
+
+[resource]
+script = ExtResource("1_iyjut")
+icon = ExtResource("1_xxx2s")
+display_name = "Fireball"
+description = "Deals <FD> in an area
+
+{DP}x3"
+skill_type = 1
+target_range = 8.0
+aoe = 1.5
+ap_cost = 8
+action_cooldown = 3
+action_type = 5
+skill_path = "uid://onw6dwjchrmv"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

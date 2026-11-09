@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://kyaxpj5tulfn"]
+
+[ext_resource type="Script" uid="uid://b0f1y0uha27cx" path="res://Combat Events/ActionEvents/weapon_attack_event.gd" id="1_aeymi"]
+
+[node name="WeaponAttackEvent" type="Timer" unique_id=1599456187]
+wait_time = 0.5
+script = ExtResource("1_aeymi")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

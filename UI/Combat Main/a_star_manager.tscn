@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://66f07qdj8ok"]
+
+[ext_resource type="Script" uid="uid://d0ir1303ogmcs" path="res://UI/Combat Main/a_star_manager.gd" id="1_47my4"]
+
+[node name="AStarManager" type="Node" unique_id=760358032]
+script = ExtResource("1_47my4")

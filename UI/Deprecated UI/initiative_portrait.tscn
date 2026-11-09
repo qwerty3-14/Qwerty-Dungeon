@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://ddnmfpm3uxgch"]
+
+[ext_resource type="Script" uid="uid://diffpsfgn6ksf" path="res://UI/Deprecated UI/initiative_portrait.gd" id="1_7eos5"]
+[ext_resource type="Texture2D" uid="uid://bbbjnbcmnhgd7" path="res://UI/Deprecated UI/PortraitFrame.png" id="1_iubtq"]
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="2_7n5we"]
+
+[node name="InitiativePortrait" type="Control" unique_id=1086126805]
+custom_minimum_size = Vector2(51, 38)
+layout_mode = 3
+anchor_right = 0.106000006
+anchor_bottom = 0.141
+offset_right = -6.880005
+offset_bottom = -6.0699997
+script = ExtResource("1_7eos5")
+
+[node name="WoodBorder2" parent="." unique_id=1053470623 instance=ExtResource("2_7n5we")]
+layout_mode = 1
+offset_left = 13.0
+offset_right = 46.767
+offset_bottom = 32.376
+
+[node name="Portrait" type="TextureRect" parent="." unique_id=886909356]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -16.0
+offset_right = -3.0
+offset_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="WoodBorder" parent="." unique_id=650592093 instance=ExtResource("2_7n5we")]
+layout_mode = 1
+anchor_right = 0.36400002
+anchor_bottom = 0.437
+offset_top = 20.0
+offset_right = -0.5640011
+offset_bottom = 21.394
+
+[node name="InitiativeLabel" type="Label" parent="." unique_id=1533933579]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.059000004
+anchor_top = 0.632
+anchor_right = 0.333
+anchor_bottom = 0.92100006
+offset_left = -1.0090003
+offset_top = -0.016000748
+offset_right = -0.9829998
+offset_bottom = 0.0019989014
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Frame" type="TextureRect" parent="." unique_id=1747120020]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_iubtq")
+
+[node name="FadeTimer" type="Timer" parent="." unique_id=671859301]
+unique_name_in_owner = true
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="FadeTimer" to="." method="_on_fade_timer_timeout"]

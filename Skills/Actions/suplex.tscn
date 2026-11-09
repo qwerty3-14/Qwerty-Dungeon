@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://lo8hy63er5gg"]
+
+[ext_resource type="Script" uid="uid://cxi2um51dlmnu" path="res://Skills/Actions/suplex.gd" id="1_2t85d"]
+[ext_resource type="Resource" uid="uid://c33n1jq3mr2qn" path="res://SkillResources/SkillInfo/Actions/Martial Arts/suplex_info.tres" id="2_5v7p8"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="2_h6na3"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_5v7p8"]
+
+[node name="Suplex" type="Node" unique_id=1709145225]
+script = ExtResource("1_2t85d")
+skill_info = ExtResource("2_5v7p8")
+
+[node name="GrabRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("2_h6na3")]
+unique_name_in_owner = true
+include_self = null
+group_name = "GrabRange"
+action = NodePath("../Action")
+
+[node name="ThrowRange" parent="." unique_id=468643952 node_paths=PackedStringArray("action") instance=ExtResource("2_h6na3")]
+unique_name_in_owner = true
+include_self = null
+group_name = "ThrowRange"
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_5v7p8")]
+unique_name_in_owner = true
+phase_cooldown = 1
+type = 3
+ap_cost = 2
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="inputs_done" from="Action" to="." method="_on_action_inputs_done"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

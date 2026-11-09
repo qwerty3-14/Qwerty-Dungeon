@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dvabcexqa6x3g"]
+
+[ext_resource type="Script" uid="uid://bammhtkvheiiq" path="res://Skills/Components/single_target_attack_ai.gd" id="1_ekw3j"]
+
+[node name="SingleTargetAttackAI" type="Node" unique_id=863810320]
+script = ExtResource("1_ekw3j")

@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://depp3m24le8r5"]
+
+[ext_resource type="Script" uid="uid://rto7crtsw07" path="res://UI/Common UI/IntegerProgressBar/integer_progress_bar.gd" id="1_e2utv"]
+[ext_resource type="Texture2D" uid="uid://y5s0fhe2ehoi" path="res://UI/Common UI/IntegerProgressBar/Bar_background.png" id="2_er8uv"]
+[ext_resource type="Texture2D" uid="uid://bwy80n51yvhne" path="res://UI/Common UI/IntegerProgressBar/AP_Notch.png" id="3_ii2n7"]
+
+[node name="IntegerProgressBar" type="NinePatchRect" unique_id=693049536]
+custom_minimum_size = Vector2(4, 12)
+anchors_preset = -1
+offset_right = 4.0
+offset_bottom = 12.0
+grow_vertical = 2
+texture = ExtResource("2_er8uv")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_bottom = 1
+axis_stretch_horizontal = 1
+script = ExtResource("1_e2utv")
+notch = ExtResource("3_ii2n7")
+max_value = 12
+value = 6
+
+[node name="OpaqueNotches" type="NinePatchRect" parent="." unique_id=311338465]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(4, 12)
+layout_mode = 1
+anchors_preset = -1
+offset_right = 4.0
+offset_bottom = 12.0
+grow_vertical = 2
+texture = ExtResource("3_ii2n7")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_bottom = 1
+axis_stretch_horizontal = 1
+
+[node name="PulsingNotches" type="NinePatchRect" parent="." unique_id=510642002]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(4, 12)
+layout_mode = 1
+anchors_preset = -1
+offset_right = 4.0
+offset_bottom = 12.0
+texture = ExtResource("3_ii2n7")
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_bottom = 1
+axis_stretch_horizontal = 1

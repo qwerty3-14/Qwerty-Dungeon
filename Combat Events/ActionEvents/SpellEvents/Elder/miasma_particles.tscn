@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://84jqqvk8o76n"]
+
+[ext_resource type="Script" uid="uid://b6yieysi1m716" path="res://Combat Events/ActionEvents/SpellEvents/Elder/miasma_particles.gd" id="1_6d87b"]
+[ext_resource type="Texture2D" uid="uid://b6xfaksf3hspi" path="res://Combat Events/ActionEvents/SpellEvents/Elder/MiasmaCloud.png" id="1_v8ehq"]
+
+[sub_resource type="Curve" id="Curve_sc5ad"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.6666667, 0.8089888), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_kps3k"]
+curve = SubResource("Curve_sc5ad")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0yd1l"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(8, 8, 1)
+gravity = Vector3(0, -30, 0)
+alpha_curve = SubResource("CurveTexture_kps3k")
+
+[node name="MiasmaParticles" type="Node2D" unique_id=375564264]
+script = ExtResource("1_6d87b")
+
+[node name="CloudParticles" type="GPUParticles2D" parent="." unique_id=1223227096]
+unique_name_in_owner = true
+amount = 24
+texture = ExtResource("1_v8ehq")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_0yd1l")

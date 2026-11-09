@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://coc0aucdmxllo"]
+
+[ext_resource type="Texture2D" uid="uid://duibkmi1irphu" path="res://Skills/Actions/Elder/Miasma.png" id="1_1h8pe"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_qkrpr"]
+
+[resource]
+script = ExtResource("1_qkrpr")
+icon = ExtResource("1_1h8pe")
+display_name = "Miasma"
+description = "Inflicts miasma in an area.
+Miasma lasts for 5 phases dealing <ED> at the end of each. 
+
+{DP}"
+skill_type = 1
+target_range = 8.0
+aoe = 2.9
+ap_cost = 5
+action_cooldown = 5
+action_type = 6
+skill_path = "uid://qgd2evhhoyj2"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

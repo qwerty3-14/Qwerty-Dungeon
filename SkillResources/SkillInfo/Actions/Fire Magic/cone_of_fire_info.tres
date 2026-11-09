@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://cy4l18gjpoqck"]
+
+[ext_resource type="Texture2D" uid="uid://cir76a8kw5gmb" path="res://Skills/Actions/ConeoOfFire.png" id="1_hhir2"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_2vmil"]
+
+[resource]
+script = ExtResource("2_2vmil")
+icon = ExtResource("1_hhir2")
+display_name = "Cone of Fire"
+description = "Deals <FD> in a cone.
+
+{DP}"
+skill_type = 1
+target_range = 1.5
+aoe = 1.5
+ap_cost = 2
+action_cooldown = 2
+action_type = 5
+skill_path = "uid://dc3koevicfecg"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

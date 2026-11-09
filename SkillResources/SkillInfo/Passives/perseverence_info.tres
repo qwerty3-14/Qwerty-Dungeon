@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://bhff2ib60d4yr"]
+
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_1eyqq"]
+[ext_resource type="Texture2D" uid="uid://byka60xdeoet0" path="res://Skills/Passives/Perserverance.png" id="1_e30bg"]
+
+[resource]
+script = ExtResource("1_1eyqq")
+icon = ExtResource("1_e30bg")
+display_name = "Perseverance"
+description = "Grants +6 Resilience when below half health."
+skill_path = "uid://br6xgmndkjthx"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

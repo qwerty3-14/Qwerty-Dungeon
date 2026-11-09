@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dc2by1qa41378"]
+
+[ext_resource type="Script" uid="uid://6xw0cfkk6idy" path="res://Skills/Actions/Meteorology/lightning.gd" id="1_6f16w"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="2_h3t5c"]
+[ext_resource type="Resource" uid="uid://x6wnh6o0hey8" path="res://SkillResources/SkillInfo/Actions/Meteorology/lightning_info.tres" id="2_xn231"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="4_nl843"]
+[ext_resource type="PackedScene" uid="uid://dvabcexqa6x3g" path="res://Skills/Components/single_target_attack_ai.tscn" id="5_ktm8t"]
+
+[node name="Lightning" type="Node" unique_id=479316557]
+script = ExtResource("1_6f16w")
+skill_info = ExtResource("2_xn231")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("2_h3t5c")]
+unique_name_in_owner = true
+type = 7
+ap_cost = 2
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("4_nl843")]
+unique_name_in_owner = true
+attack_range = 8.0
+action = NodePath("../Action")
+
+[node name="SingleTargetAttackAI" parent="." unique_id=863810320 instance=ExtResource("5_ktm8t")]
+unique_name_in_owner = true
+attack_name = "Lightning"
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_action_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]
+[connection signal="ready_to_use_action" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_ready_to_use_action"]
+[connection signal="update_my_damage" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_update_my_damage"]

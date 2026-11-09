@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://gocnbysw6hkf"]
+
+[ext_resource type="Script" uid="uid://drsxob13orchi" path="res://Combat Events/ActionEvents/suplex_event.gd" id="1_ui414"]
+[ext_resource type="Script" uid="uid://cnjvvlx7a78t0" path="res://Abstract Classes/timer_watcher.gd" id="2_3ktqs"]
+
+[sub_resource type="Curve" id="Curve_p4i8h"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.505, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_r580y"]
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.5, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="SuplexEvent" type="Timer" unique_id=1079800254]
+script = ExtResource("1_ui414")
+attacker_y = SubResource("Curve_p4i8h")
+lerp_weight = SubResource("Curve_r580y")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"
+
+[node name="TargetTileTransfer" type="Node" parent="." unique_id=887056121]
+script = ExtResource("2_3ktqs")
+activation_threshold = 0.5
+metadata/_custom_type_script = "uid://cnjvvlx7a78t0"
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
+[connection signal="threshold_reached" from="TargetTileTransfer" to="." method="_on_target_tile_transfer_threshold_reached"]

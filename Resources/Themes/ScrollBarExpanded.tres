@@ -1,0 +1,16 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cuq8qknhp670h"]
+
+[ext_resource type="Texture2D" uid="uid://bcjqdcw2hlpsv" path="res://UI/Common UI/WoodScroll.png" id="1_xl4o0"]
+
+[resource]
+texture = ExtResource("1_xl4o0")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

@@ -1,0 +1,214 @@
+[gd_scene format=3 uid="uid://q883qb0pjeop"]
+
+[ext_resource type="Script" uid="uid://f6w2dbgukxhy" path="res://UI/Combat Main/Left Side/Actions Menu/actions_menu.gd" id="1_mmrpm"]
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="1_tob6x"]
+[ext_resource type="PackedScene" uid="uid://b8xwvfw8jdhl5" path="res://UI/Common UI/wood_sign.tscn" id="1_y846p"]
+[ext_resource type="Texture2D" uid="uid://b35vit47a3rys" path="res://UI/Common UI/IntegerProgressBar/Bar_Slim.png" id="3_en8f4"]
+[ext_resource type="Texture2D" uid="uid://bc7mfby15fxe2" path="res://UI/Common UI/IntegerProgressBar/HP_Notch.png" id="3_mmrpm"]
+[ext_resource type="PackedScene" uid="uid://depp3m24le8r5" path="res://UI/Common UI/IntegerProgressBar/integer_progress_bar.tscn" id="3_xc5bh"]
+[ext_resource type="Texture2D" uid="uid://bqmxuv2q373rb" path="res://UI/Common UI/IntegerProgressBar/MP_Notch.png" id="4_0m8xc"]
+[ext_resource type="PackedScene" uid="uid://bc0ktg547bvkx" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attributes_list.tscn" id="8_gqrw7"]
+[ext_resource type="PackedScene" uid="uid://c322rdloyi1u7" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/def_and_ward.tscn" id="8_oofb2"]
+
+[node name="ActionsMenu" type="ColorRect" unique_id=1473416957]
+custom_minimum_size = Vector2(112, 270)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -368.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_mmrpm")
+
+[node name="Contents" type="Control" parent="." unique_id=723169092]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ResourceBars" type="Control" parent="Contents" unique_id=764245241]
+anchors_preset = 0
+offset_left = 37.0
+offset_top = 1.0
+offset_right = 77.0
+offset_bottom = 41.0
+
+[node name="HPBar" parent="Contents/ResourceBars" unique_id=693049536 instance=ExtResource("3_xc5bh")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 14.0
+offset_right = 74.68
+offset_bottom = 10.24
+texture = ExtResource("3_en8f4")
+patch_margin_right = 1
+notch = ExtResource("3_mmrpm")
+max_value = 1
+value = 1
+
+[node name="HPAmount" type="Label" parent="Contents/ResourceBars/HPBar" unique_id=870402349]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WoodSign" parent="Contents/ResourceBars" unique_id=1067532115 instance=ExtResource("1_y846p")]
+layout_mode = 0
+offset_left = -5.0
+offset_right = 16.0
+
+[node name="HP Label" type="Label" parent="Contents/ResourceBars/WoodSign" unique_id=1452091731]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 45.0
+offset_bottom = 9.0
+text = "HP"
+
+[node name="APBar" parent="Contents/ResourceBars" unique_id=790450469 instance=ExtResource("3_xc5bh")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 14.0
+offset_top = 12.0
+offset_right = 74.68
+offset_bottom = 22.24
+max_value = 4
+value = 4
+
+[node name="WoodSign2" parent="Contents/ResourceBars" unique_id=1747828975 instance=ExtResource("1_y846p")]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 12.0
+offset_right = 16.0
+offset_bottom = 24.0
+
+[node name="AP Label" type="Label" parent="Contents/ResourceBars/WoodSign2" unique_id=406043289]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 45.0
+offset_bottom = 9.0
+text = "AP"
+
+[node name="MPBar" parent="Contents/ResourceBars" unique_id=1020192713 instance=ExtResource("3_xc5bh")]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 14.0
+offset_top = 24.0
+offset_right = 74.68
+offset_bottom = 34.24
+notch = ExtResource("4_0m8xc")
+max_value = 1
+value = 0
+
+[node name="WoodSign3" parent="Contents/ResourceBars" unique_id=1945727536 instance=ExtResource("1_y846p")]
+layout_mode = 0
+offset_left = -5.0
+offset_top = 24.0
+offset_right = 16.0
+offset_bottom = 36.0
+
+[node name="MP Label" type="Label" parent="Contents/ResourceBars/WoodSign3" unique_id=1870178409]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 2.0
+offset_right = 45.0
+offset_bottom = 9.0
+text = "MP"
+
+[node name="PortraitBorder" parent="Contents" unique_id=1053470623 instance=ExtResource("1_tob6x")]
+custom_minimum_size = Vector2(38, 38)
+layout_mode = 1
+offset_right = 28.703999
+offset_bottom = -1.9599991
+
+[node name="Portrait" type="TextureRect" parent="Contents/PortraitBorder" unique_id=1173604492]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 35.0
+offset_bottom = 35.0
+flip_h = true
+
+[node name="NameSign" parent="Contents" unique_id=1557690719 instance=ExtResource("1_y846p")]
+layout_mode = 0
+offset_top = 38.0
+offset_right = 112.0
+offset_bottom = 50.0
+
+[node name="Name Label" type="Label" parent="Contents/NameSign" unique_id=1406523359]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = " Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ClassSign" parent="Contents" unique_id=339773988 instance=ExtResource("1_y846p")]
+layout_mode = 0
+offset_top = 50.0
+offset_right = 112.0
+offset_bottom = 62.0
+
+[node name="Class Label" type="Label" parent="Contents/ClassSign" unique_id=1290011194]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = " Class"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TabContainer" type="TabContainer" parent="Contents" unique_id=355254297]
+layout_mode = 0
+offset_top = 61.0
+offset_right = 112.0
+offset_bottom = 254.0
+current_tab = 0
+tab_0/title = "Skls"
+tab_1/title = "Eft"
+
+[node name="Skills" type="HBoxContainer" parent="Contents/TabContainer" unique_id=1427923270]
+layout_mode = 2
+metadata/_tab_index = 0
+metadata/_tab_name = "Skls"
+
+[node name="Stats" type="VBoxContainer" parent="Contents/TabContainer/Skills" unique_id=92965523]
+layout_mode = 2
+
+[node name="DefAndWard" parent="Contents/TabContainer/Skills/Stats" unique_id=161761816 instance=ExtResource("8_oofb2")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AttributesList" parent="Contents/TabContainer/Skills/Stats" unique_id=825787806 instance=ExtResource("8_gqrw7")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SkillHotbarRegion" type="ColorRect" parent="Contents/TabContainer/Skills" unique_id=1418967742]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(66, 176)
+layout_mode = 2
+color = Color(0.36862746, 1, 1, 1)
+
+[node name="Effects" type="VBoxContainer" parent="Contents/TabContainer" unique_id=802757879]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+metadata/_tab_name = "Eft"

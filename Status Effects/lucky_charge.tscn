@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b1vwaags3cp7w"]
+
+[ext_resource type="Script" uid="uid://b2eyq1qqhv6sb" path="res://Status Effects/lucky_charge.gd" id="1_rye22"]
+[ext_resource type="Texture2D" uid="uid://ov0hxvtc0b6h" path="res://Status Effects/LuckyCharge.png" id="2_eu3nt"]
+
+[node name="LuckyCharge" type="Node" unique_id=429774024]
+script = ExtResource("1_rye22")
+icon = ExtResource("2_eu3nt")
+display_name = "Lucky Charge"
+duration = 1
+time_based = false
+stack_duration = true
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[connection signal="ready" from="." to="." method="_on_ready"]

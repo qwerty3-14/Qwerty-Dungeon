@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dkl1tdak6djdq"]
+
+[ext_resource type="Script" uid="uid://bm43do50klk8m" path="res://Status Effects/Potions/spellbane_imbue.gd" id="1_1ys3y"]
+[ext_resource type="Texture2D" uid="uid://cfk7e50wpwu81" path="res://Status Effects/Potions/SpellbaneImbue.png" id="2_n6hvn"]
+[ext_resource type="PackedScene" uid="uid://bgvi1yneek4ht" path="res://Status Effects/Components/imbue.tscn" id="3_y565q"]
+[ext_resource type="PackedScene" uid="uid://seqfi3ik4ad4" path="res://Status Effects/Potions/spellbane_status.tscn" id="4_mrnh2"]
+
+[node name="SpellbaneImbue" type="Node" unique_id=1666009325]
+script = ExtResource("1_1ys3y")
+icon = ExtResource("2_n6hvn")
+display_name = "Spellbane Potion Imbue"
+duration = 3
+time_based = false
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[node name="Imbue" parent="." unique_id=602581403 instance=ExtResource("3_y565q")]
+status_effect = ExtResource("4_mrnh2")
+resistable = true

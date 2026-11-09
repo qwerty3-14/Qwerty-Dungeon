@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://clhm0ojdvudmt"]
+
+[ext_resource type="Script" uid="uid://dyr81cfd3065g" path="res://UI/MainMenu/character_select_button.gd" id="1_0v7y1"]
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="1_k306u"]
+[ext_resource type="Theme" uid="uid://c5krbld1x0rlo" path="res://Resources/Themes/TransparentToggleButton.tres" id="2_0v7y1"]
+
+[node name="CharacterSelectButton" type="Control" unique_id=1225082146]
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -458.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0v7y1")
+
+[node name="WoodBorder" parent="." unique_id=1053470623 instance=ExtResource("1_k306u")]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="." unique_id=1299831792]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="Button" type="Button" parent="." unique_id=1962839234]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+theme = ExtResource("2_0v7y1")
+toggle_mode = true
+
+[connection signal="toggled" from="Button" to="." method="_on_button_toggled"]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://6uccfqrg4eod"]
+
+[ext_resource type="Script" uid="uid://b4inwl502rygp" path="res://Skills/Components/target_range.gd" id="1_xr7w2"]
+
+[node name="TargetRange" type="Node" unique_id=746520125]
+script = ExtResource("1_xr7w2")

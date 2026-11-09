@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://6a1mb0wesmrn"]
+
+[ext_resource type="Script" uid="uid://puteuksf16ia" path="res://Status Effects/Potions/weak_imbue.gd" id="1_rw70a"]
+[ext_resource type="Texture2D" uid="uid://by2triyshvu5w" path="res://Status Effects/Potions/WeakImbue.png" id="2_kf54c"]
+[ext_resource type="PackedScene" uid="uid://bgvi1yneek4ht" path="res://Status Effects/Components/imbue.tscn" id="3_7iiti"]
+[ext_resource type="PackedScene" uid="uid://1mb83ep2hq0q" path="res://Status Effects/Potions/weak_status.tscn" id="4_w3yiu"]
+
+[node name="WeakImbue" type="Node" unique_id=167377888]
+script = ExtResource("1_rw70a")
+icon = ExtResource("2_kf54c")
+display_name = "Weak Potion Imbue"
+duration = 3
+time_based = false
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[node name="Imbue" parent="." unique_id=602581403 instance=ExtResource("3_7iiti")]
+status_effect = ExtResource("4_w3yiu")
+resistable = true
+
+[connection signal="ready" from="." to="." method="_on_ready"]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c2ba4l83aa8j6"]
+
+[ext_resource type="Script" uid="uid://dj4w38c4vjxn" path="res://Combat Objects/Generic/actor.gd" id="1_hr3hk"]
+
+[node name="Actor" type="Node" unique_id=60533830]
+script = ExtResource("1_hr3hk")

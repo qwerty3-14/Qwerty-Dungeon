@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cnfyqirr1itf6"]
+
+[ext_resource type="Script" uid="uid://dyvnw7ml64flo" path="res://Skills/Passives/plate_armor.gd" id="1_cinvu"]
+[ext_resource type="Resource" uid="uid://b624hr75owxt6" path="res://SkillResources/SkillInfo/Passives/plate_armor_info.tres" id="2_m0aey"]
+
+[node name="PlateArmor" type="Node" unique_id=2101931980]
+script = ExtResource("1_cinvu")
+skill_info = ExtResource("2_m0aey")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://dc10rfq3kd63n"]
+
+[ext_resource type="Script" uid="uid://bvuxrk0fhqv3v" path="res://UI/Combat Main/Middle UI/OverRoomRenders/object_highlighter.gd" id="1_e3cm8"]
+[ext_resource type="Texture2D" uid="uid://ewthn51nowbi" path="res://UI/Combat Main/Middle UI/OverRoomRenders/HighlightArrows.png" id="1_va4gt"]
+
+[node name="ObjectHighlighter" type="Node2D" unique_id=304507679]
+script = ExtResource("1_e3cm8")
+
+[node name="TopArrow" type="Sprite2D" parent="." unique_id=1823883893]
+unique_name_in_owner = true
+position = Vector2(0, -12)
+texture = ExtResource("1_va4gt")
+hframes = 4
+vframes = 2
+frame = 4
+
+[node name="RightArrow" type="Sprite2D" parent="." unique_id=1752866586]
+unique_name_in_owner = true
+position = Vector2(12, 0)
+texture = ExtResource("1_va4gt")
+hframes = 4
+vframes = 2
+frame = 5
+
+[node name="LeftArrow" type="Sprite2D" parent="." unique_id=965866660]
+unique_name_in_owner = true
+position = Vector2(-12, 0)
+texture = ExtResource("1_va4gt")
+hframes = 4
+vframes = 2
+frame = 7
+
+[node name="BottomArrow" type="Sprite2D" parent="." unique_id=1221036983]
+unique_name_in_owner = true
+position = Vector2(0, 12)
+texture = ExtResource("1_va4gt")
+hframes = 4
+vframes = 2
+frame = 6

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://7roh64s5v25f"]
+
+[ext_resource type="Script" uid="uid://dv0c1hgmr7ltb" path="res://Skills/Components/Weapon Attack/weapon_attack_ai.gd" id="1_e53mr"]
+[ext_resource type="PackedScene" uid="uid://dvabcexqa6x3g" path="res://Skills/Components/single_target_attack_ai.tscn" id="2_4mq32"]
+
+[node name="WeaponAttackAI" type="Node" unique_id=769469301]
+script = ExtResource("1_e53mr")
+
+[node name="SingleTargetAttackAI" parent="." unique_id=863810320 instance=ExtResource("2_4mq32")]
+unique_name_in_owner = true
+
+[connection signal="about_to_score" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_about_to_score"]
+[connection signal="ready_to_use_action" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_ready_to_use_action"]
+[connection signal="update_my_damage" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_update_my_damage"]

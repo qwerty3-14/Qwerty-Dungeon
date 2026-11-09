@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://crf5x3y2arsad"]
+
+[ext_resource type="Script" uid="uid://dkg2btlrwm5yf" path="res://Skills/Actions/Alchemy/spellbane_potion.gd" id="1_dilri"]
+[ext_resource type="Resource" uid="uid://centtyutkxd08" path="res://SkillResources/SkillInfo/Actions/Alchemy/spellbane_potion_info.tres" id="2_0n34r"]
+[ext_resource type="Texture2D" uid="uid://b0f7ofkxfvrl4" path="res://Skills/Actions/Alchemy/SpellbanePotion.png" id="2_tkfi3"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="3_ub7at"]
+[ext_resource type="PackedScene" uid="uid://b4pj5t3pnx10x" path="res://Skills/Components/potion.tscn" id="4_xsusp"]
+[ext_resource type="Texture2D" uid="uid://jtprfkvxke3v" path="res://Skills/Actions/Alchemy/SpellbanePotionImbue.png" id="6_nhypn"]
+
+[node name="SpellbanePotion" type="Node" unique_id=1577239644]
+script = ExtResource("1_dilri")
+skill_info = ExtResource("2_0n34r")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("3_ub7at")]
+unique_name_in_owner = true
+phase_cooldown = -1
+type = 4
+ap_cost = 2
+
+[node name="Potion" parent="." unique_id=1264552933 node_paths=PackedStringArray("action") instance=ExtResource("4_xsusp")]
+unique_name_in_owner = true
+default_icon = ExtResource("2_tkfi3")
+imbue_icon = ExtResource("6_nhypn")
+action = NodePath("../Action")
+
+[connection signal="used" from="Action" to="." method="_on_action_used"]
+[connection signal="imbue_confirmed" from="Potion" to="." method="_on_potion_imbue_confirmed"]

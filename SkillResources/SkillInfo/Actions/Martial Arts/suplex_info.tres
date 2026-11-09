@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://c33n1jq3mr2qn"]
+
+[ext_resource type="Texture2D" uid="uid://b80s4iu2pbj4f" path="res://Skills/Actions/Suplex.png" id="1_46bvr"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_j1j48"]
+
+[resource]
+script = ExtResource("1_j1j48")
+icon = ExtResource("1_46bvr")
+display_name = "Suplex"
+description = "Deals <CD>, and moves the target to a different adjacent tile
+{Actor}'s might must be higher than the target's weight/con
+
+{DM}"
+skill_type = 1
+target_range = 1.0
+ap_cost = 2
+action_cooldown = 1
+action_type = 3
+skill_path = "uid://lo8hy63er5gg"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

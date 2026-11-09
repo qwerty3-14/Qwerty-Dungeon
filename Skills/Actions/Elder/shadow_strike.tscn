@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b67mejxlyjce5"]
+
+[ext_resource type="Script" uid="uid://cmrfjtprql3fu" path="res://Skills/Actions/Elder/shadow_strike.gd" id="1_vj7s1"]
+[ext_resource type="Resource" uid="uid://df7t5y87jvxuw" path="res://SkillResources/SkillInfo/Actions/Elder Magic/shadowstrike_info.tres" id="2_8x86m"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_as06n"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_8x86m"]
+
+[node name="ShadowStrike" type="Node" unique_id=171247750]
+script = ExtResource("1_vj7s1")
+skill_info = ExtResource("2_8x86m")
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_as06n")]
+unique_name_in_owner = true
+attack_range = 1.5
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_8x86m")]
+unique_name_in_owner = true
+phase_cooldown = 1
+type = 6
+ap_cost = 2
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

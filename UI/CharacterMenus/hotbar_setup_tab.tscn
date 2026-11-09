@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://cnauogkji13df"]
+
+[ext_resource type="Script" uid="uid://csvsvw6s250by" path="res://UI/CharacterMenus/hotbar_setup_tab.gd" id="1_ggfjj"]
+[ext_resource type="PackedScene" uid="uid://de6qmm8n8rp06" path="res://UI/CharacterMenus/character_title.tscn" id="2_ggfjj"]
+[ext_resource type="PackedScene" uid="uid://b8xwvfw8jdhl5" path="res://UI/Common UI/wood_sign.tscn" id="3_tug2d"]
+[ext_resource type="PackedScene" uid="uid://b60f6mxdl6o3h" path="res://UI/Common UI/InfoPanel/info_panel.tscn" id="4_m7o4s"]
+
+[node name="HotbarSetupTab" type="VBoxContainer" unique_id=1555804939]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ggfjj")
+
+[node name="CharacterTitle" parent="." unique_id=1287509331 instance=ExtResource("2_ggfjj")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="." unique_id=641868227]
+layout_mode = 2
+
+[node name="WoodSign" parent="HBoxContainer3" unique_id=715848403 instance=ExtResource("3_tug2d")]
+custom_minimum_size = Vector2(66, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer3/WoodSign" unique_id=1672372812]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hotbar"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="WoodSign2" parent="HBoxContainer3" unique_id=437466107 instance=ExtResource("3_tug2d")]
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer3/WoodSign2" unique_id=381814762]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "All Skills"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="." unique_id=1547841382]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer2" unique_id=1868160189]
+layout_mode = 2
+
+[node name="SkillHotbarRegion" type="ColorRect" parent="HBoxContainer2/CenterContainer" unique_id=83031383]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(66, 176)
+layout_mode = 2
+color = Color(0.36862746, 1, 1, 1)
+
+[node name="AllSkillsRegion" type="ColorRect" parent="HBoxContainer2" unique_id=393796205]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(132, 0)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SkillFlowContainer" type="HFlowContainer" parent="HBoxContainer2/AllSkillsRegion" unique_id=1355717140]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="HBoxContainer2" unique_id=1802275249]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfoPanel" parent="HBoxContainer2/CenterContainer2" unique_id=1604432641 instance=ExtResource("4_m7o4s")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+
+[node name="CursorFollow" type="Node2D" parent="." unique_id=590107943]
+unique_name_in_owner = true
+visible = false
+
+[node name="FollowIcon" type="TextureRect" parent="CursorFollow" unique_id=1053036446]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+mouse_filter = 2

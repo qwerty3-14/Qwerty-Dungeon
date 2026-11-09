@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cegw6hc6qttr0"]
+
+[ext_resource type="Script" uid="uid://p7vbqxh8qcks" path="res://Combat Events/ActionEvents/SpellEvents/Elder/miasma_event.gd" id="1_oym8m"]
+
+[node name="MiasmaEvent" type="Timer" unique_id=1025900141]
+wait_time = 2.0
+script = ExtResource("1_oym8m")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"

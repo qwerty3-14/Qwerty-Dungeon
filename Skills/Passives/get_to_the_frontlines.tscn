@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://d1wxv4mjklcbe"]
+
+[ext_resource type="Script" uid="uid://ixk03tdfwc4c" path="res://Skills/Passives/get_to_the_frontlines.gd" id="1_sipyq"]
+[ext_resource type="Resource" uid="uid://bnugpalvilcn6" path="res://SkillResources/SkillInfo/Passives/get_to_the_frontlines_info.tres" id="2_sipyq"]
+
+[node name="GetToTheFrontlines" type="Node" unique_id=1090952356]
+script = ExtResource("1_sipyq")
+skill_info = ExtResource("2_sipyq")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

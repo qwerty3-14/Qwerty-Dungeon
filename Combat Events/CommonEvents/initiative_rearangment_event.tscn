@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://gp8ks1a2mkj5"]
+
+[ext_resource type="Script" uid="uid://djgmsx6jk8ayx" path="res://Combat Events/CommonEvents/initiative_rearangment_event.gd" id="1_pq3sh"]
+
+[node name="InitiativeRearangmentEvent" type="Timer" unique_id=731007141]
+one_shot = true
+script = ExtResource("1_pq3sh")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

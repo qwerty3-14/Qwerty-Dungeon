@@ -1,0 +1,80 @@
+[gd_scene format=3 uid="uid://poojrxax5l52"]
+
+[ext_resource type="Script" uid="uid://dx1ua8q7d7tw8" path="res://UI/MainMenu/main_menu.gd" id="1_nhkf3"]
+
+[node name="MainMenu" type="Control" unique_id=792119205]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_nhkf3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1759026807]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=2001341317]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer6" type="CenterContainer" parent="VBoxContainer" unique_id=1956643779]
+visible = false
+layout_mode = 2
+
+[node name="Continue" type="Button" parent="VBoxContainer/CenterContainer6" unique_id=845733643]
+layout_mode = 2
+text = "Continue"
+
+[node name="CenterContainer" type="CenterContainer" parent="VBoxContainer" unique_id=2001828634]
+layout_mode = 2
+
+[node name="NewGame" type="Button" parent="VBoxContainer/CenterContainer" unique_id=1148177195]
+layout_mode = 2
+text = "New Game"
+
+[node name="CenterContainer2" type="CenterContainer" parent="VBoxContainer" unique_id=1427307388]
+layout_mode = 2
+
+[node name="Appendex" type="Button" parent="VBoxContainer/CenterContainer2" unique_id=489353855]
+layout_mode = 2
+text = "Appendix
+"
+
+[node name="CenterContainer3" type="CenterContainer" parent="VBoxContainer" unique_id=283773611]
+layout_mode = 2
+
+[node name="Settings" type="Button" parent="VBoxContainer/CenterContainer3" unique_id=2032776430]
+layout_mode = 2
+text = "Settings
+"
+
+[node name="CenterContainer4" type="CenterContainer" parent="VBoxContainer" unique_id=144626960]
+layout_mode = 2
+
+[node name="Credits" type="Button" parent="VBoxContainer/CenterContainer4" unique_id=1151246846]
+layout_mode = 2
+text = "Credits
+"
+
+[node name="CenterContainer5" type="CenterContainer" parent="VBoxContainer" unique_id=1025505145]
+layout_mode = 2
+
+[node name="Quit" type="Button" parent="VBoxContainer/CenterContainer5" unique_id=1440833371]
+layout_mode = 2
+text = "Quit
+"
+
+[node name="Control2" type="Control" parent="VBoxContainer" unique_id=1434009181]
+layout_mode = 2
+size_flags_vertical = 3
+
+[connection signal="pressed" from="VBoxContainer/CenterContainer/NewGame" to="." method="_on_new_game_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer2/Appendex" to="." method="_on_appendex_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer4/Credits" to="." method="_on_credits_pressed"]
+[connection signal="pressed" from="VBoxContainer/CenterContainer5/Quit" to="." method="_on_quit_pressed"]

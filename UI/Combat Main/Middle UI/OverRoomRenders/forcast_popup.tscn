@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://bwl1lija18y7r"]
+
+[ext_resource type="Texture2D" uid="uid://caunbm7mrpa5" path="res://UI/Combat Main/Middle UI/OverRoomRenders/ForecastArrow.png" id="1_dr1o4"]
+[ext_resource type="Script" uid="uid://cc0hni30v64yb" path="res://UI/Combat Main/Middle UI/OverRoomRenders/forcast_popup.gd" id="1_sg5vx"]
+
+[node name="ForcastPopup" type="Node2D" unique_id=1839589618]
+script = ExtResource("1_sg5vx")
+
+[node name="PopupPanel" type="PanelContainer" parent="." unique_id=743919102]
+anchors_preset = -1
+anchor_right = 0.1
+anchor_bottom = 0.074
+offset_left = 8.0
+offset_top = -7.0
+offset_right = 21.0
+offset_bottom = 7.0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PopupLabel" type="RichTextLabel" parent="PopupPanel" unique_id=598537867]
+unique_name_in_owner = true
+clip_contents = false
+layout_mode = 2
+mouse_filter = 2
+bbcode_enabled = true
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="PopupArrow" type="NinePatchRect" parent="." unique_id=882252346]
+offset_top = -7.0
+offset_right = 9.0
+offset_bottom = 7.0
+texture = ExtResource("1_dr1o4")
+patch_margin_left = 9
+patch_margin_top = 14
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

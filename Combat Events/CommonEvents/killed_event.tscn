@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dksqi6ebsmjdg"]
+
+[ext_resource type="Script" uid="uid://bqa1gvkq7trlh" path="res://Combat Events/CommonEvents/killed_event.gd" id="1_htxs6"]
+
+[node name="KilledEvent" type="Timer" unique_id=1691046973]
+wait_time = 0.5
+script = ExtResource("1_htxs6")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

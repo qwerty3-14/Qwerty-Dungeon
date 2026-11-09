@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://b624hr75owxt6"]
+
+[ext_resource type="Texture2D" uid="uid://nl7c5thcn0ax" path="res://Skills/Passives/PlateArmor.png" id="1_70qcm"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_l4bys"]
+
+[resource]
+script = ExtResource("1_l4bys")
+icon = ExtResource("1_70qcm")
+display_name = "Plate Armor"
+description = "Grants 2 Defense"
+skill_path = "uid://cnfyqirr1itf6"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

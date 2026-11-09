@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://bjvg1bvistqhk"]
+
+[ext_resource type="Script" uid="uid://crwvn487ick33" path="res://Skills/Actions/Weapon Attacks/bow_attack.gd" id="1_f4t52"]
+[ext_resource type="Resource" uid="uid://cgujedswfqusq" path="res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/bow_attack_info.tres" id="2_0e4lf"]
+[ext_resource type="Texture2D" uid="uid://dv1j562bd21q4" path="res://Skills/Actions/Weapon Attacks/BowAttack.png" id="2_t8wo7"]
+[ext_resource type="PackedScene" uid="uid://b0ovc75aun67a" path="res://Skills/Components/Weapon Attack/weapon_attack.tscn" id="3_0e4lf"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="4_060ay"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="5_t8bju"]
+
+[node name="BowAttack" type="Node" unique_id=1714006223]
+script = ExtResource("1_f4t52")
+skill_info = ExtResource("2_0e4lf")
+icon = ExtResource("2_t8wo7")
+display_name = "Bow Attack"
+description = "Deals <PD>
+
+{DM}"
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="WeaponAttack" parent="." unique_id=1381722177 node_paths=PackedStringArray("action", "target_range") instance=ExtResource("3_0e4lf")]
+action = NodePath("../Action")
+target_range = NodePath("../TargetRange")
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("4_060ay")]
+attack_range = 8.0
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("5_t8bju")]
+type = 1
+ap_cost = 2

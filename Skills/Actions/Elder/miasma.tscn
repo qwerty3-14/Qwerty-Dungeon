@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://qgd2evhhoyj2"]
+
+[ext_resource type="Script" uid="uid://cns152v4gpvrx" path="res://Skills/Actions/Elder/miasma.gd" id="1_0vbyp"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="2_p1s4w"]
+[ext_resource type="Resource" uid="uid://coc0aucdmxllo" path="res://SkillResources/SkillInfo/Actions/Elder Magic/miasma_info.tres" id="2_rl87b"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="3_rl87b"]
+
+[node name="Miasma" type="Node" unique_id=765854511]
+script = ExtResource("1_0vbyp")
+skill_info = ExtResource("2_rl87b")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("2_p1s4w")]
+unique_name_in_owner = true
+attack_range = 8.0
+include_self = true
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("3_rl87b")]
+unique_name_in_owner = true
+phase_cooldown = 5
+type = 6
+ap_cost = 5
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="inputs_done" from="Action" to="." method="_on_action_inputs_done"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_action_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://deyyx2vf8yrbc"]
+
+[sub_resource type="Gradient" id="Gradient_3qe1u"]
+offsets = PackedFloat32Array(0, 0.45112783, 1)
+colors = PackedColorArray(0.9372549, 0.9254902, 0.69803923, 1, 0.7643226, 0.31853163, 0.28774878, 1, 0.74, 0.22200002, 0.22200002, 0.36078432)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nq5gb"]
+gradient = SubResource("Gradient_3qe1u")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hpyvr"]
+particle_flag_disable_z = true
+spread = 38.0
+initial_velocity_min = 60.0
+initial_velocity_max = 100.0
+gravity = Vector3(0, 0, 0)
+damping_min = 100.00001
+damping_max = 100.00001
+color_ramp = SubResource("GradientTexture1D_nq5gb")
+
+[node name="ConeOfFireEffect" type="GPUParticles2D" unique_id=1661525007]
+emitting = false
+amount = 600
+process_material = SubResource("ParticleProcessMaterial_hpyvr")

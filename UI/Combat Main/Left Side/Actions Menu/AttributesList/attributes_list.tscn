@@ -1,0 +1,124 @@
+[gd_scene format=3 uid="uid://bc0ktg547bvkx"]
+
+[ext_resource type="Script" uid="uid://cwoluyvpooj6h" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attributes_list.gd" id="1_xlxxh"]
+[ext_resource type="PackedScene" uid="uid://b5bihuukcd1k7" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attribute_sign.tscn" id="2_fyvyx"]
+
+[node name="AttributesList" type="VBoxContainer" unique_id=825787806]
+custom_minimum_size = Vector2(44, 176)
+size_flags_horizontal = 3
+mouse_filter = 0
+script = ExtResource("1_xlxxh")
+
+[node name="MGTSign" parent="." unique_id=1524647781 instance=ExtResource("2_fyvyx")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="MGT" type="Label" parent="MGTSign" unique_id=785641763]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = -17.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Mgt:"
+vertical_alignment = 1
+
+[node name="POTSign" parent="." unique_id=1172503103 instance=ExtResource("2_fyvyx")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="POT" type="Label" parent="POTSign" unique_id=1351604782]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Pot:"
+vertical_alignment = 1
+
+[node name="CONSign" parent="." unique_id=896379397 instance=ExtResource("2_fyvyx")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CON" type="Label" parent="CONSign" unique_id=140760504]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.5
+offset_right = -17.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Con:"
+vertical_alignment = 1
+
+[node name="RESSign" parent="." unique_id=193112484 instance=ExtResource("2_fyvyx")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="RES" type="Label" parent="RESSign" unique_id=907003041]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.5
+offset_right = -17.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Res:"
+vertical_alignment = 1
+
+[node name="INTSign" parent="." unique_id=1357739339 instance=ExtResource("2_fyvyx")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="INT" type="Label" parent="INTSign" unique_id=1506607622]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_right = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Int:"
+vertical_alignment = 1
+
+[node name="SPDSign" parent="." unique_id=783544811 instance=ExtResource("2_fyvyx")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="SPD" type="Label" parent="SPDSign" unique_id=1188264359]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.5
+offset_right = -17.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Spd:"
+vertical_alignment = 1
+
+[node name="LCKSign" parent="." unique_id=1270423756 instance=ExtResource("2_fyvyx")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="LCK" type="Label" parent="LCKSign" unique_id=765077462]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = -18.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lck:"
+vertical_alignment = 1
+
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

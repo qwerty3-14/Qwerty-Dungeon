@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://l2igo7vnudx"]
+
+[ext_resource type="Script" uid="uid://d3pl8b7xb0jqi" path="res://Status Effects/Potions/poison_status.gd" id="1_exyx3"]
+[ext_resource type="Texture2D" uid="uid://b7l86hrhhu23x" path="res://Status Effects/Potions/PoisonStatus.png" id="2_s21gi"]
+
+[node name="PoisonStatus" type="Node" unique_id=2129397614]
+script = ExtResource("1_exyx3")
+icon = ExtResource("2_s21gi")
+display_name = "Poisoned"
+duration = 5
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="ticked" from="." to="." method="_on_ticked"]

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://bnugpalvilcn6"]
+
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_cbqet"]
+[ext_resource type="Texture2D" uid="uid://b4q8hr7pyw43i" path="res://Skills/Passives/GetToTheFrontlines.png" id="1_n8erd"]
+
+[resource]
+script = ExtResource("1_cbqet")
+icon = ExtResource("1_n8erd")
+display_name = "Get to the frontlines"
+description = "Allows using MP on phase 0"
+skill_path = "uid://d1wxv4mjklcbe"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

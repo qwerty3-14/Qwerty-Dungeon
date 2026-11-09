@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://x6wnh6o0hey8"]
+
+[ext_resource type="Texture2D" uid="uid://cunn36mfskcl6" path="res://Skills/Actions/Meteorology/Lightning.png" id="1_tgvg3"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_obbgk"]
+
+[resource]
+script = ExtResource("2_obbgk")
+icon = ExtResource("1_tgvg3")
+display_name = "Lighting"
+description = "Deals <LD>
+
+{DP}"
+skill_type = 1
+target_range = 8.0
+ap_cost = 2
+action_type = 7
+skill_path = "uid://dc2by1qa41378"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

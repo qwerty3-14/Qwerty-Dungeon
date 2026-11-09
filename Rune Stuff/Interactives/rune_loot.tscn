@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://cpyo0mlsp58tk"]
+
+[ext_resource type="Script" uid="uid://d3m5qt45j4vl3" path="res://Rune Stuff/Interactives/rune_loot.gd" id="1_vktli"]
+[ext_resource type="Script" uid="uid://5bnwqjam4nk5" path="res://Rune Stuff/Interactives/mini_rune_drawer.gd" id="3_4lv0d"]
+
+[node name="RuneLoot" type="Node2D" unique_id=1869769152]
+script = ExtResource("1_vktli")
+
+[node name="MiniRuneDrawer" type="Node2D" parent="." unique_id=511286756]
+unique_name_in_owner = true
+visible = false
+script = ExtResource("3_4lv0d")
+
+[node name="Timer" type="Timer" parent="." unique_id=481436123]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true

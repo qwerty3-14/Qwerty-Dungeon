@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bbc7pp7114jgg"]
+
+[ext_resource type="Script" uid="uid://c5c6xx126no6f" path="res://Combat Objects/Player Characters/sydney.gd" id="1_3wb6f"]
+[ext_resource type="Texture2D" uid="uid://cghqbnj3y4wyu" path="res://Combat Objects/Player Characters/Sydney.png" id="1_r7qw0"]
+[ext_resource type="PackedScene" uid="uid://c2ba4l83aa8j6" path="res://Combat Objects/Generic/actor.tscn" id="2_yx8rg"]
+[ext_resource type="Resource" uid="uid://co6bv7q68co40" path="res://Combat Objects/Player Characters/sydney_info.tres" id="4_leuct"]
+[ext_resource type="PackedScene" uid="uid://dod43oll11b5t" path="res://Skills/Actions/Weapon Attacks/shortsword_attack.tscn" id="5_mkbq7"]
+[ext_resource type="PackedScene" uid="uid://cxyffo81s1yd6" path="res://Skills/Actions/Alchemy/DefensePotion.tscn" id="6_ynf0y"]
+[ext_resource type="PackedScene" uid="uid://kmw67t2q3jv7" path="res://Skills/Actions/Alchemy/imbue.tscn" id="7_gv8u7"]
+[ext_resource type="PackedScene" uid="uid://c4qm02a3igdc6" path="res://Skills/Actions/Alchemy/poison_potion.tscn" id="8_vhrq7"]
+[ext_resource type="PackedScene" uid="uid://lyo86g2eqqw0" path="res://Skills/Passives/cloak.tscn" id="9_dx7fy"]
+
+[node name="Sydney" type="Node2D" unique_id=1632378837]
+script = ExtResource("1_3wb6f")
+blocks_enemies = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1573761521]
+texture = ExtResource("1_r7qw0")
+
+[node name="Actor" parent="." unique_id=60533830 node_paths=PackedStringArray("hotbar_skills") instance=ExtResource("2_yx8rg")]
+actor_info = ExtResource("4_leuct")
+alignment = 0
+hotbar_skills = {
+0: NodePath("ShortswordAttack"),
+1: NodePath("Action"),
+2: NodePath("PoisonPotion"),
+3: NodePath("Imbue"),
+4: NodePath("Cloak")
+}
+
+[node name="ShortswordAttack" parent="Actor" unique_id=1849104426 instance=ExtResource("5_mkbq7")]
+
+[node name="Action" parent="Actor" unique_id=721052048 instance=ExtResource("6_ynf0y")]
+
+[node name="Imbue" parent="Actor" unique_id=1374097831 instance=ExtResource("7_gv8u7")]
+
+[node name="PoisonPotion" parent="Actor" unique_id=806427594 instance=ExtResource("8_vhrq7")]
+
+[node name="Cloak" parent="Actor" unique_id=1030159903 instance=ExtResource("9_dx7fy")]

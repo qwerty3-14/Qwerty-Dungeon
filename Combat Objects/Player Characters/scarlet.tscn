@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cmd7nlwoq1fev"]
+
+[ext_resource type="Script" uid="uid://dwot26pci7p8y" path="res://Combat Objects/Player Characters/scarlet.gd" id="1_12ivs"]
+[ext_resource type="PackedScene" uid="uid://c2ba4l83aa8j6" path="res://Combat Objects/Generic/actor.tscn" id="2_n786x"]
+[ext_resource type="Texture2D" uid="uid://bha2qcogml6hr" path="res://Combat Objects/Player Characters/Scarlet.png" id="2_pw4l4"]
+[ext_resource type="PackedScene" uid="uid://cnpfqiulbjgbc" path="res://Skills/Actions/Weapon Attacks/unarmed_attack.tscn" id="4_mh77v"]
+[ext_resource type="Resource" uid="uid://cwat74d6pkg6u" path="res://Combat Objects/Player Characters/scarlet_info.tres" id="4_q1aaw"]
+[ext_resource type="PackedScene" uid="uid://gssc7sqfnt5t" path="res://Skills/Actions/Elder/fatigue_bolt.tscn" id="6_8ma5u"]
+[ext_resource type="PackedScene" uid="uid://b67mejxlyjce5" path="res://Skills/Actions/Elder/shadow_strike.tscn" id="7_12ivs"]
+
+[node name="Scarlet" type="Node2D" unique_id=275822502]
+script = ExtResource("1_12ivs")
+blocks_enemies = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=214927805]
+texture = ExtResource("2_pw4l4")
+
+[node name="Actor" parent="." unique_id=60533830 node_paths=PackedStringArray("hotbar_skills") instance=ExtResource("2_n786x")]
+actor_info = ExtResource("4_q1aaw")
+alignment = 0
+hotbar_skills = {
+0: NodePath("UnarmedAttack"),
+1: NodePath("FatigueBolt"),
+2: NodePath("ShadowStrike")
+}
+
+[node name="UnarmedAttack" parent="Actor" unique_id=2139241734 instance=ExtResource("4_mh77v")]
+
+[node name="FatigueBolt" parent="Actor" unique_id=2069703919 instance=ExtResource("6_8ma5u")]
+
+[node name="ShadowStrike" parent="Actor" unique_id=171247750 instance=ExtResource("7_12ivs")]

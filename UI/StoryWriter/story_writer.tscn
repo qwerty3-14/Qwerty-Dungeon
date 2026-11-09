@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://d0f0igjng4sy3"]
+
+[ext_resource type="Script" uid="uid://dio23pk2ahi8s" path="res://UI/StoryWriter/story_writer.gd" id="1_k7h3v"]
+
+[node name="StoryWriter" type="ColorRect" unique_id=919540679]
+offset_right = 480.0
+offset_bottom = 270.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_k7h3v")
+story = Array[String](["There once was a castle...", "and [tornado radius=2.0 freq=-8.0 connected=1]then...[/tornado]", "there was no longer a castle!", "rumor has it that an ANCIENT EVIL lay deep beneath the castle.", "A party of adventurers is set out to investigate!", "Floor 1:
+Castle Ruins", "The party approaches the castle ruins, and to thier suprise it has been ocupied by a gang of hostile scavengers."])
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1374394477]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Dialog" type="RichTextLabel" parent="CenterContainer" unique_id=741929113]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 20)
+custom_maximum_size = Vector2(300, -1)
+layout_mode = 2
+bbcode_enabled = true
+fit_content = true
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="AutoTimer" type="Timer" parent="." unique_id=255564744]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="timeout" from="AutoTimer" to="." method="_on_auto_timer_timeout"]

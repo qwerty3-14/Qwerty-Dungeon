@@ -1,0 +1,16 @@
+[gd_resource type="ParticleProcessMaterial" format=3 uid="uid://bao1hnvkxoau0"]
+
+[sub_resource type="Curve" id="Curve_cu4ke"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_sc5ad"]
+curve = SubResource("Curve_cu4ke")
+
+[resource]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 2.42
+gravity = Vector3(0, 0, 0)
+color = Color(0.8267971, 0.40030724, 0.7587977, 1)
+alpha_curve = SubResource("CurveTexture_sc5ad")

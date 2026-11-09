@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b35vd3fu6d2q"]
+
+[ext_resource type="Script" uid="uid://v7u47nhud75c" path="res://Combat Events/CommonEvents/end_turn_event.gd" id="1_15hmf"]
+
+[node name="EndTurnEvent" type="Timer" unique_id=559360720]
+wait_time = 0.2
+one_shot = true
+script = ExtResource("1_15hmf")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"

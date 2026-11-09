@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://x7hgs5vlmik2"]
+
+[ext_resource type="Texture2D" uid="uid://dkw1tem56tkwd" path="res://UI/Combat Main/Middle UI/TileCursor.png" id="1_5y0ff"]
+[ext_resource type="Script" uid="uid://b2qnpyo61ct0c" path="res://UI/Combat Main/Middle UI/tile_cursor.gd" id="2_s8pf1"]
+
+[node name="TileCursor" type="Sprite2D" unique_id=372669054]
+texture = ExtResource("1_5y0ff")
+script = ExtResource("2_s8pf1")

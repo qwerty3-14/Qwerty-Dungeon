@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://c4qm02a3igdc6"]
+
+[ext_resource type="Script" uid="uid://b6c8r8vuk66jg" path="res://Skills/Actions/Alchemy/poison_potion.gd" id="1_v4fh0"]
+[ext_resource type="Texture2D" uid="uid://b6jlsmrkn3vur" path="res://Skills/Actions/Alchemy/PoisonPotion.png" id="2_hcyvi"]
+[ext_resource type="Resource" uid="uid://c6q0st0jwtrww" path="res://SkillResources/SkillInfo/Actions/Alchemy/poision_potion_info.tres" id="2_t578g"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="3_kvwdo"]
+[ext_resource type="PackedScene" uid="uid://b4pj5t3pnx10x" path="res://Skills/Components/potion.tscn" id="4_t578g"]
+[ext_resource type="Texture2D" uid="uid://b8asdpykm7uaj" path="res://Skills/Actions/Alchemy/PoisonPotionImbue.png" id="5_30oip"]
+
+[node name="PoisonPotion" type="Node" unique_id=806427594]
+script = ExtResource("1_v4fh0")
+skill_info = ExtResource("2_t578g")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("3_kvwdo")]
+unique_name_in_owner = true
+type = 4
+ap_cost = 2
+
+[node name="Potion" parent="." unique_id=1264552933 node_paths=PackedStringArray("action") instance=ExtResource("4_t578g")]
+unique_name_in_owner = true
+default_icon = ExtResource("2_hcyvi")
+imbue_icon = ExtResource("5_30oip")
+action = NodePath("../Action")
+
+[connection signal="used" from="Action" to="." method="_on_action_used"]
+[connection signal="imbue_confirmed" from="Potion" to="." method="_on_potion_imbue_confirmed"]

@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ActorInfo" format=3 uid="uid://cgkejmsf55teu"]
+
+[ext_resource type="Texture2D" uid="uid://bdepwhf5cybva" path="res://Combat Objects/Player Characters/Narine.png" id="1_bbfyt"]
+[ext_resource type="Texture2D" uid="uid://cg81buuh4fxl5" path="res://Combat Objects/Player Characters/NarinePortrait.png" id="2_461uj"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="2_bbfyt"]
+
+[resource]
+script = ExtResource("2_bbfyt")
+base_might = 7
+base_potency = 1
+base_constitution = 7
+base_resilience = 6
+base_intelligence = 1
+base_speed = 7
+base_luck = 10
+portrait = ExtResource("2_461uj")
+icon = ExtResource("1_bbfyt")
+character_name = "Narine"
+combat_class = "Infantry"
+actor_path = "uid://yuvv0y32kwy2"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"

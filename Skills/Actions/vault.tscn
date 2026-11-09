@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://mcxa80aqflfb"]
+
+[ext_resource type="Script" uid="uid://d13kqahmrklrj" path="res://Skills/Actions/vault.gd" id="1_oihn0"]
+[ext_resource type="Resource" uid="uid://clrgfhet0hijo" path="res://SkillResources/SkillInfo/Actions/Martial Arts/vault_info.tres" id="2_oihn0"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_lc7i1"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_lc7i1"]
+
+[node name="Vault" type="Node" unique_id=81867704]
+script = ExtResource("1_oihn0")
+skill_info = ExtResource("2_oihn0")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="TargetRange" parent="." unique_id=746520125 instance=ExtResource("3_lc7i1")]
+unique_name_in_owner = true
+attack_range = 5.0
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_lc7i1")]
+unique_name_in_owner = true
+phase_cooldown = 2
+type = 3
+ap_cost = 1
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_action_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

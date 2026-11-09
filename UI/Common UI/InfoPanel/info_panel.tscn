@@ -1,0 +1,269 @@
+[gd_scene format=3 uid="uid://b60f6mxdl6o3h"]
+
+[ext_resource type="Theme" uid="uid://dutkltoyuei8g" path="res://Resources/Themes/InfoPanel.tres" id="1_jxnin"]
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="2_4aruy"]
+[ext_resource type="Script" uid="uid://duv5k1la5iapg" path="res://UI/Common UI/InfoPanel/info_panel.gd" id="2_is28j"]
+[ext_resource type="PackedScene" uid="uid://depp3m24le8r5" path="res://UI/Common UI/IntegerProgressBar/integer_progress_bar.tscn" id="4_h5mxt"]
+[ext_resource type="Texture2D" uid="uid://bdy7ov8wxs5ew" path="res://UI/Common UI/InfoPanel/InfoDivider.png" id="5_s2d3j"]
+[ext_resource type="Texture2D" uid="uid://du05ddqwalgx8" path="res://UI/Common UI/InfoPanel/RangeIcon.png" id="6_nxuhp"]
+[ext_resource type="Texture2D" uid="uid://bt4eo6uca7bos" path="res://UI/Common UI/InfoPanel/DurationIcon.png" id="6_r3y34"]
+[ext_resource type="Texture2D" uid="uid://bp5sj8as5qog4" path="res://UI/Common UI/InfoPanel/SwordIcon.png" id="6_vc3u4"]
+[ext_resource type="Texture2D" uid="uid://dyfuu73wwne6l" path="res://UI/Common UI/InfoPanel/SpecialSwordIcon.png" id="7_y5hmo"]
+[ext_resource type="Texture2D" uid="uid://g2135bkkq265" path="res://UI/Common UI/InfoPanel/FireIcon.png" id="8_dftpp"]
+[ext_resource type="Texture2D" uid="uid://gd1q0hx175lt" path="res://UI/Common UI/InfoPanel/BookIcon.png" id="9_osoic"]
+[ext_resource type="Texture2D" uid="uid://bxdlpxsiv4b63" path="res://UI/Common UI/InfoPanel/PotionIcon.png" id="10_osoic"]
+[ext_resource type="Texture2D" uid="uid://mj7t65yrheio" path="res://UI/Common UI/InfoPanel/ArtIcon.png" id="11_xkxpd"]
+[ext_resource type="Texture2D" uid="uid://7686slgr2gfc" path="res://UI/Common UI/InfoPanel/MeteorologyIcon.png" id="12_lupjq"]
+[ext_resource type="Texture2D" uid="uid://d1gj3lnurrgdm" path="res://UI/Common UI/InfoPanel/RadiusIcon.png" id="13_yt6fs"]
+[ext_resource type="Texture2D" uid="uid://b25p6gxaq414x" path="res://UI/Common UI/InfoPanel/UsesIcon.png" id="15_lupjq"]
+
+[node name="InfoPanel" type="PanelContainer" unique_id=1604432641]
+offset_right = 134.0
+offset_bottom = 231.0
+theme = ExtResource("1_jxnin")
+script = ExtResource("2_is28j")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1692315411]
+layout_mode = 2
+
+[node name="TopRow" type="HBoxContainer" parent="VBoxContainer" unique_id=1793314355]
+layout_mode = 2
+
+[node name="IconBorder" parent="VBoxContainer/TopRow" unique_id=1053470623 instance=ExtResource("2_4aruy")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="VBoxContainer/TopRow/IconBorder" unique_id=223049745]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="Spacer" type="Control" parent="VBoxContainer/TopRow" unique_id=923651317]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SkillNameLabel" type="Label" parent="VBoxContainer/TopRow" unique_id=687194847]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "skill"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/TopRow" unique_id=676326073]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="APCostSection" type="CenterContainer" parent="VBoxContainer/TopRow" unique_id=623670190]
+layout_mode = 2
+
+[node name="APCost" parent="VBoxContainer/TopRow/APCostSection" unique_id=693049536 instance=ExtResource("4_h5mxt")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="VBoxContainer" unique_id=2122878093]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+texture = ExtResource("5_s2d3j")
+patch_margin_left = 2
+patch_margin_right = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="TypeAndCooldown" type="HBoxContainer" parent="VBoxContainer" unique_id=373083510]
+layout_mode = 2
+
+[node name="TypeLabel" type="Label" parent="VBoxContainer/TypeAndCooldown" unique_id=2095852901]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Passive"
+vertical_alignment = 1
+
+[node name="Spacer3" type="Control" parent="VBoxContainer/TypeAndCooldown" unique_id=1322134519]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ActionTypeContainer" type="CenterContainer" parent="VBoxContainer/TypeAndCooldown" unique_id=1691322092]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Cooldown"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer" unique_id=963434473]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer/HBoxContainer" unique_id=2086894810]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="BasicAttackIcon" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer/HBoxContainer" unique_id=956132375]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("6_vc3u4")
+
+[node name="SpecialAttackIcon" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer/HBoxContainer" unique_id=1941437634]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+texture = ExtResource("7_y5hmo")
+
+[node name="FireSpellIcon" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer/HBoxContainer" unique_id=393315492]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+texture = ExtResource("8_dftpp")
+
+[node name="ElderSpellIcon" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer/HBoxContainer" unique_id=1608456069]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+texture = ExtResource("9_osoic")
+
+[node name="AlchemyIcon" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer/HBoxContainer" unique_id=672296442]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+texture = ExtResource("10_osoic")
+
+[node name="ArtIcon" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer/HBoxContainer" unique_id=435697806]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+texture = ExtResource("11_xkxpd")
+
+[node name="MetIcon" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer/HBoxContainer" unique_id=469250494]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+texture = ExtResource("12_lupjq")
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/TypeAndCooldown/ActionTypeContainer/HBoxContainer" unique_id=301900576]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RangeContainer" type="CenterContainer" parent="VBoxContainer/TypeAndCooldown" unique_id=179480100]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Cooldown"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TypeAndCooldown/RangeContainer" unique_id=2016230751]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer/TypeAndCooldown/RangeContainer/HBoxContainer" unique_id=1080516081]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RangeIcon" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/RangeContainer/HBoxContainer" unique_id=885136495]
+layout_mode = 2
+texture = ExtResource("6_nxuhp")
+
+[node name="RangeLabel" type="Label" parent="VBoxContainer/TypeAndCooldown/RangeContainer/HBoxContainer" unique_id=352258690]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = ":1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/TypeAndCooldown/RangeContainer/HBoxContainer" unique_id=728350363]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RadiusContainer" type="CenterContainer" parent="VBoxContainer/TypeAndCooldown" unique_id=1430762203]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Cooldown"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TypeAndCooldown/RadiusContainer" unique_id=322147784]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer/TypeAndCooldown/RadiusContainer/HBoxContainer" unique_id=1389493773]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="RadiusIcon" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/RadiusContainer/HBoxContainer" unique_id=1984729715]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("13_yt6fs")
+
+[node name="RadiusLabel" type="Label" parent="VBoxContainer/TypeAndCooldown/RadiusContainer/HBoxContainer" unique_id=690453511]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = ":1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/TypeAndCooldown/RadiusContainer/HBoxContainer" unique_id=493106677]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="DurationContainer" type="CenterContainer" parent="VBoxContainer/TypeAndCooldown" unique_id=774128880]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Cooldown"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/TypeAndCooldown/DurationContainer" unique_id=1863664655]
+layout_mode = 2
+
+[node name="Spacer" type="Control" parent="VBoxContainer/TypeAndCooldown/DurationContainer/HBoxContainer" unique_id=2021590432]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Hourglass" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/DurationContainer/HBoxContainer" unique_id=781268008]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("6_r3y34")
+
+[node name="Wrench" type="TextureRect" parent="VBoxContainer/TypeAndCooldown/DurationContainer/HBoxContainer" unique_id=898973315]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+texture = ExtResource("15_lupjq")
+
+[node name="DurationLabel" type="Label" parent="VBoxContainer/TypeAndCooldown/DurationContainer/HBoxContainer" unique_id=2088753878]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = ":1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Spacer2" type="Control" parent="VBoxContainer/TypeAndCooldown/DurationContainer/HBoxContainer" unique_id=421658784]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="NinePatchRect2" type="NinePatchRect" parent="VBoxContainer" unique_id=70152761]
+custom_minimum_size = Vector2(0, 3)
+layout_mode = 2
+texture = ExtResource("5_s2d3j")
+patch_margin_left = 2
+patch_margin_right = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Description" type="RichTextLabel" parent="VBoxContainer" unique_id=1538810899]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, /n consectetur adipiscing elit, sed do eiusmod [b] tempor [/b] incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+fit_content = true
+scroll_active = false

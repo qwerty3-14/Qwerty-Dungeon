@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://onw6dwjchrmv"]
+
+[ext_resource type="Script" uid="uid://bn6rbgcw24qq7" path="res://Skills/Actions/fireball.gd" id="1_6qkqh"]
+[ext_resource type="Resource" uid="uid://djr4yl6vljg0t" path="res://SkillResources/SkillInfo/Actions/Fire Magic/fireball_info.tres" id="2_wpqgr"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_qgsk6"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_wpqgr"]
+
+[node name="Fireball" type="Node" unique_id=1916993779]
+script = ExtResource("1_6qkqh")
+skill_info = ExtResource("2_wpqgr")
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_qgsk6")]
+unique_name_in_owner = true
+attack_range = 8.0
+include_self = true
+group_name = "FireballRange"
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_wpqgr")]
+unique_name_in_owner = true
+phase_cooldown = 3
+type = 5
+ap_cost = 8
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="inputs_done" from="Action" to="." method="_on_action_inputs_done"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

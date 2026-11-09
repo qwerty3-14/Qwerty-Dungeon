@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://d0whbnrbqx3q3"]
+
+[ext_resource type="Script" uid="uid://c8nng4d26jf3j" path="res://Skills/Actions/Weapon Attacks/polearm_attack.gd" id="1_3udis"]
+[ext_resource type="Resource" uid="uid://omy2b1a2u42" path="res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/polearm_attack_info.tres" id="2_7psi3"]
+[ext_resource type="Texture2D" uid="uid://bufkqpuahhd20" path="res://Skills/Actions/Weapon Attacks/PolearmAttack.png" id="2_btk1t"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_btk1t"]
+[ext_resource type="PackedScene" uid="uid://b0ovc75aun67a" path="res://Skills/Components/Weapon Attack/weapon_attack.tscn" id="3_g77dj"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_ajl52"]
+
+[node name="PolearmAttack" type="Node" unique_id=77832508]
+script = ExtResource("1_3udis")
+skill_info = ExtResource("2_7psi3")
+icon = ExtResource("2_btk1t")
+display_name = "Polearm Attack"
+description = "Deals <PD>
+
+{DM}"
+tags = Array[String](["Weapon Attack", "Range: 2"])
+
+[node name="WeaponAttack" parent="." unique_id=1381722177 node_paths=PackedStringArray("action", "target_range") instance=ExtResource("3_g77dj")]
+action = NodePath("../Action")
+target_range = NodePath("../TargetRange")
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_btk1t")]
+unique_name_in_owner = true
+attack_range = 2.0
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_ajl52")]
+unique_name_in_owner = true
+type = 1
+ap_cost = 2

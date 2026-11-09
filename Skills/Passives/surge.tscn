@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ckuf1hnj65e0y"]
+
+[ext_resource type="Script" uid="uid://bytfm4u37w6rl" path="res://Skills/Passives/surge.gd" id="1_a58th"]
+[ext_resource type="Resource" uid="uid://chgbv7u7c5ryl" path="res://SkillResources/SkillInfo/Passives/surge_info.tres" id="2_a5avq"]
+[ext_resource type="PackedScene" uid="uid://cny3fwogu8t2o" path="res://Skills/Components/damage_reciever.tscn" id="3_e2idp"]
+
+[node name="Surge" type="Node" unique_id=499257595]
+script = ExtResource("1_a58th")
+skill_info = ExtResource("2_a5avq")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="DamageReciever" parent="." unique_id=786419577 instance=ExtResource("3_e2idp")]
+
+[connection signal="object_about_to_be_damaged" from="DamageReciever" to="." method="_on_damage_reciever_object_about_to_be_damaged"]

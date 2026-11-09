@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://rtmhqs71boxo"]
+
+[ext_resource type="Script" uid="uid://dt3dyr1gw8il7" path="res://Combat Objects/Scavengers/scavenger_archer.gd" id="1_uae0w"]
+[ext_resource type="PackedScene" uid="uid://c2ba4l83aa8j6" path="res://Combat Objects/Generic/actor.tscn" id="2_uae0w"]
+[ext_resource type="Texture2D" uid="uid://bnr4ncqihbmaj" path="res://Combat Objects/Scavengers/ScavengerArcher.png" id="2_whfg8"]
+[ext_resource type="PackedScene" uid="uid://bjvg1bvistqhk" path="res://Skills/Actions/Weapon Attacks/bow_attack.tscn" id="3_whfg8"]
+[ext_resource type="Texture2D" uid="uid://dju3f0mhksng4" path="res://Combat Objects/Generic/PlaceholderPortrait.png" id="4_1dc3u"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="5_r4wcn"]
+
+[sub_resource type="Resource" id="Resource_gq4ob"]
+script = ExtResource("5_r4wcn")
+base_might = 5
+base_potency = 3
+base_constitution = 3
+base_resilience = 4
+base_intelligence = 3
+base_speed = 1
+base_luck = 10
+icon = ExtResource("2_whfg8")
+character_name = "Scavenger"
+combat_class = "Archer"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"
+
+[node name="ScavengerArcher" type="Node2D" unique_id=1468662785]
+script = ExtResource("1_uae0w")
+blocks_friendlies = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=11439557]
+texture = ExtResource("2_whfg8")
+
+[node name="Actor" parent="." unique_id=60533830 node_paths=PackedStringArray("hotbar_skills") instance=ExtResource("2_uae0w")]
+actor_info = SubResource("Resource_gq4ob")
+prefered_range_max = 8.0
+prefered_range_min = 6.0
+hotbar_skills = {
+0: NodePath("BowAttack")
+}
+
+[node name="BowAttack" parent="Actor" unique_id=1714006223 instance=ExtResource("3_whfg8")]

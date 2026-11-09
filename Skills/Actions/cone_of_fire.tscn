@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dc3koevicfecg"]
+
+[ext_resource type="Script" uid="uid://drxson1l2k6p" path="res://Skills/Actions/cone_of_fire.gd" id="1_aotug"]
+[ext_resource type="Resource" uid="uid://cy4l18gjpoqck" path="res://SkillResources/SkillInfo/Actions/Fire Magic/cone_of_fire_info.tres" id="2_wux2g"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_jfkux"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="4_wux2g"]
+
+[node name="ConeOfFire" type="Node" unique_id=566455891]
+script = ExtResource("1_aotug")
+skill_info = ExtResource("2_wux2g")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("4_wux2g")]
+unique_name_in_owner = true
+attack_range = 1.5
+group_name = "ConeDriections"
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_jfkux")]
+unique_name_in_owner = true
+phase_cooldown = 2
+type = 5
+ap_cost = 2
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="inputs_done" from="Action" to="." method="_on_action_inputs_done"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_action_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dod43oll11b5t"]
+
+[ext_resource type="Script" uid="uid://p30y2hox7o8h" path="res://Skills/Actions/Weapon Attacks/shortsword_attack.gd" id="1_4draf"]
+[ext_resource type="Texture2D" uid="uid://cvqy42j8ofwel" path="res://Skills/Actions/Weapon Attacks/ShortswordAttack.png" id="2_1g2qf"]
+[ext_resource type="Resource" uid="uid://dfqdxuprj0lao" path="res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/shortsword_attack_info.tres" id="2_eehba"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_brycy"]
+[ext_resource type="PackedScene" uid="uid://b0ovc75aun67a" path="res://Skills/Components/Weapon Attack/weapon_attack.tscn" id="3_xdqcm"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_1g2qf"]
+
+[node name="ShortswordAttack" type="Node" unique_id=1849104426]
+script = ExtResource("1_4draf")
+skill_info = ExtResource("2_eehba")
+icon = ExtResource("2_1g2qf")
+display_name = "Shortsword Attack"
+description = "Deals <PD>
+
+{DM}"
+tags = Array[String](["Weapon Attack", "Range: 1.5"])
+
+[node name="WeaponAttack" parent="." unique_id=1381722177 node_paths=PackedStringArray("action", "target_range") instance=ExtResource("3_xdqcm")]
+action = NodePath("../Action")
+target_range = NodePath("../TargetRange")
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_brycy")]
+unique_name_in_owner = true
+attack_range = 1.5
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_1g2qf")]
+unique_name_in_owner = true
+type = 1
+ap_cost = 2
