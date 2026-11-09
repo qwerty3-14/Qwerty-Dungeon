@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://yuvv0y32kwy2"]
+
+[ext_resource type="Script" uid="uid://bdv6kxrxyckd6" path="res://Combat Objects/Player Characters/narine.gd" id="1_2c5ho"]
+[ext_resource type="Texture2D" uid="uid://bdepwhf5cybva" path="res://Combat Objects/Player Characters/Narine.png" id="1_734xu"]
+[ext_resource type="PackedScene" uid="uid://c2ba4l83aa8j6" path="res://Combat Objects/Generic/actor.tscn" id="2_j2c7m"]
+[ext_resource type="Resource" uid="uid://cgkejmsf55teu" path="res://Combat Objects/Player Characters/narine_info.tres" id="4_b0wui"]
+[ext_resource type="PackedScene" uid="uid://d0whbnrbqx3q3" path="res://Skills/Actions/Weapon Attacks/polearm_attack.tscn" id="5_27at4"]
+[ext_resource type="PackedScene" uid="uid://cnfyqirr1itf6" path="res://Skills/Passives/plate_armor.tscn" id="6_oahbx"]
+[ext_resource type="PackedScene" uid="uid://dsc2xgayxx7x3" path="res://Skills/Passives/block.tscn" id="7_evn7j"]
+
+[node name="Narine" type="Node2D" unique_id=1063439351]
+script = ExtResource("1_2c5ho")
+blocks_enemies = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=248812288]
+texture = ExtResource("1_734xu")
+
+[node name="Actor" parent="." unique_id=60533830 node_paths=PackedStringArray("hotbar_skills") instance=ExtResource("2_j2c7m")]
+actor_info = ExtResource("4_b0wui")
+alignment = 0
+hotbar_skills = {
+0: NodePath("PolearmAttack"),
+1: NodePath("PlateArmor"),
+2: NodePath("Block")
+}
+
+[node name="PolearmAttack" parent="Actor" unique_id=77832508 instance=ExtResource("5_27at4")]
+
+[node name="PlateArmor" parent="Actor" unique_id=2101931980 instance=ExtResource("6_oahbx")]
+
+[node name="Block" parent="Actor" unique_id=1642620020 instance=ExtResource("7_evn7j")]

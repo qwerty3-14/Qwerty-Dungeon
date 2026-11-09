@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://bq8e1qbmt8i6v"]
+
+[ext_resource type="Texture2D" uid="uid://chhpmu8nqnw2d" path="res://Skills/Actions/Weapon Attacks/Cripple.png" id="1_3jo4b"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_fnagt"]
+
+[resource]
+script = ExtResource("2_fnagt")
+icon = ExtResource("1_3jo4b")
+display_name = "Cripple"
+description = "Deals <VD>;
+Removes all of the target's mp and prevents them from recovering mp next phase
+
+{DM}"
+skill_type = 1
+target_range = -1.0
+ap_cost = 2
+action_cooldown = 3
+action_type = 2
+skill_path = "uid://cae63qp6iquvs"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

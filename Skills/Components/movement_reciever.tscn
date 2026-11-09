@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ctessd0jw6yyo"]
+
+[ext_resource type="Script" uid="uid://bj6wfqrqhvvvv" path="res://Skills/Components/movement_reciever.gd" id="1_use4t"]
+
+[node name="MovementReciever" type="Node" unique_id=9850205]
+script = ExtResource("1_use4t")

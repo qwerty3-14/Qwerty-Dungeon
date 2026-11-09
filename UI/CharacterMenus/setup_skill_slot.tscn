@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://n5cgjw2mb7uc"]
+
+[ext_resource type="Script" uid="uid://x6mlqkqdmskl" path="res://UI/CharacterMenus/setup_skill_slot.gd" id="1_wacdn"]
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="2_2fhp3"]
+[ext_resource type="Theme" uid="uid://bj8ln32ccw1r5" path="res://Resources/Themes/TransparentButton.tres" id="3_2fhp3"]
+
+[node name="AvailbileSkillSlot" type="Control" unique_id=193482008]
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -458.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wacdn")
+
+[node name="WoodBorder" parent="." unique_id=1053470623 instance=ExtResource("2_2fhp3")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Icon" type="TextureRect" parent="WoodBorder" unique_id=4977399]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="Button" type="Button" parent="WoodBorder" unique_id=1325182017]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 1
+theme = ExtResource("3_2fhp3")
+disabled = true
+
+[connection signal="mouse_entered" from="WoodBorder/Button" to="." method="_on_button_mouse_entered"]
+[connection signal="pressed" from="WoodBorder/Button" to="." method="_on_button_pressed"]

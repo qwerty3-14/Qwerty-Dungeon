@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c1lvhgeg2s3xs"]
+
+[ext_resource type="Script" uid="uid://c76xig46ntq50" path="res://Skills/Components/Weapon Attack/weapon_attack_damage.gd" id="1_cs1xe"]
+
+[node name="WeaponAttackDamage" type="Node" unique_id=1897891269]
+script = ExtResource("1_cs1xe")

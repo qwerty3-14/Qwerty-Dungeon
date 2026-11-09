@@ -1,0 +1,12 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://cjon1mrqljd62"]
+
+[ext_resource type="Texture2D" uid="uid://b3qt1bne1rs74" path="res://UI/Common UI/WoodButtonNormal.png" id="1_2sw3u"]
+
+[resource]
+texture = ExtResource("1_2sw3u")
+texture_margin_left = 5.0
+texture_margin_top = 5.0
+texture_margin_right = 5.0
+texture_margin_bottom = 5.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1

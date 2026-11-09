@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://caxcw0yl3vujw"]
+
+[ext_resource type="Script" uid="uid://by6r22wskpjoq" path="res://Status Effects/buildup_charge.gd" id="1_4a3ct"]
+
+[node name="BuildupCharge" type="Node" unique_id=140642665]
+script = ExtResource("1_4a3ct")
+display_name = "Impalement Charge"
+duration = 1
+time_based = false
+stack_duration = true
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[connection signal="ready" from="." to="." method="_on_ready"]

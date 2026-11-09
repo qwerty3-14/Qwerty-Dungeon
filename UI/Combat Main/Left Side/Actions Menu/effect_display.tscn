@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://xtfy7od3h6s8"]
+
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="1_f6163"]
+[ext_resource type="Script" uid="uid://cga1yhuslii5j" path="res://UI/Combat Main/Left Side/Actions Menu/effect_display.gd" id="1_qowgj"]
+
+[node name="EffectDisplay" type="PanelContainer" unique_id=294607808]
+custom_minimum_size = Vector2(110, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -370.0
+offset_bottom = -248.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qowgj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1470101065]
+layout_mode = 2
+
+[node name="WoodBorder" parent="HBoxContainer" unique_id=1053470623 instance=ExtResource("1_f6163")]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+
+[node name="IconRect" type="TextureRect" parent="HBoxContainer/WoodBorder" unique_id=1774240560]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="Duration" type="Label" parent="HBoxContainer/WoodBorder/IconRect" unique_id=1120476929]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EffectName" type="Label" parent="HBoxContainer" unique_id=1300357817]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Effect"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

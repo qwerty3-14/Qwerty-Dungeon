@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://obylxl3qdowq"]
+
+[ext_resource type="Script" uid="uid://dymfn6xn61jo0" path="res://Skills/Actions/Alchemy/weak_potion.gd" id="1_7lkxo"]
+[ext_resource type="Resource" uid="uid://debgd1vm2o266" path="res://SkillResources/SkillInfo/Actions/Alchemy/weak_potion_info.tres" id="2_xv07t"]
+[ext_resource type="Texture2D" uid="uid://c2ds04tpypeac" path="res://Skills/Actions/Alchemy/WeakPotion.png" id="2_yrgdq"]
+[ext_resource type="PackedScene" uid="uid://b4pj5t3pnx10x" path="res://Skills/Components/potion.tscn" id="4_4xxar"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="5_03gmy"]
+[ext_resource type="Texture2D" uid="uid://b04xpcx2pqnpi" path="res://Skills/Actions/Alchemy/WeakPotionImbue.png" id="5_4xxar"]
+
+[node name="WeakPotion" type="Node" unique_id=1068904969]
+script = ExtResource("1_7lkxo")
+skill_info = ExtResource("2_xv07t")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="Potion" parent="." unique_id=1264552933 node_paths=PackedStringArray("action") instance=ExtResource("4_4xxar")]
+unique_name_in_owner = true
+default_icon = ExtResource("2_yrgdq")
+imbue_icon = ExtResource("5_4xxar")
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("5_03gmy")]
+phase_cooldown = -1
+type = 4
+ap_cost = 1
+
+[connection signal="imbue_confirmed" from="Potion" to="." method="_on_potion_imbue_confirmed"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

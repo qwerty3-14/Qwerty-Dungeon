@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://bantnpjh5dwbk"]
+
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_2b4hl"]
+[ext_resource type="Texture2D" uid="uid://xc3sso2q65eo" path="res://Skills/Passives/Shadowstab.png" id="1_aslsr"]
+
+[resource]
+script = ExtResource("1_2b4hl")
+icon = ExtResource("1_aslsr")
+display_name = "Shadow Stab"
+description = "Shadowstrike now deals double damage if it leads to a kill."
+skill_path = "uid://bp3vbncme4l4k"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

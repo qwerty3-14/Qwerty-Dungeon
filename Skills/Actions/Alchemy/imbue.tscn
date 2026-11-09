@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://kmw67t2q3jv7"]
+
+[ext_resource type="Script" uid="uid://cx3h58yecpo0k" path="res://Skills/Actions/Alchemy/imbue.gd" id="1_1y15n"]
+[ext_resource type="Resource" uid="uid://bpfyaqifug0bb" path="res://SkillResources/SkillInfo/Actions/Alchemy/imbue_info.tres" id="2_nfcys"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="3_nfcys"]
+
+[node name="Imbue" type="Node" unique_id=1374097831]
+script = ExtResource("1_1y15n")
+skill_info = ExtResource("2_nfcys")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("3_nfcys")]
+type = 4
+ap_cost = 2
+
+[connection signal="ended" from="Action" to="." method="_on_action_ended"]
+[connection signal="post_used_setup" from="Action" to="." method="_on_action_post_used_setup"]

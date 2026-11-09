@@ -1,0 +1,257 @@
+[gd_scene format=3 uid="uid://boqeoal66gfli"]
+
+[ext_resource type="Script" uid="uid://c40n21ow306gm" path="res://UI/Combat Main/combat_main.gd" id="1_0ctc0"]
+[ext_resource type="PackedScene" uid="uid://dyfav450f8d4q" path="res://UI/Combat Main/cursor_manager.tscn" id="2_dq43s"]
+[ext_resource type="PackedScene" uid="uid://66f07qdj8ok" path="res://UI/Combat Main/a_star_manager.tscn" id="2_idx2w"]
+[ext_resource type="PackedScene" uid="uid://q883qb0pjeop" path="res://UI/Combat Main/Left Side/Actions Menu/actions_menu.tscn" id="2_s3uqg"]
+[ext_resource type="Texture2D" uid="uid://cva6iemit5iic" path="res://UI/Combat Main/Left Side/GridButtonIcon.png" id="4_nibml"]
+[ext_resource type="Texture2D" uid="uid://up30g2kbqo2e" path="res://UI/Combat Main/Left Side/MenuButtonIcon.png" id="4_rxc08"]
+[ext_resource type="PackedScene" uid="uid://d1ikbewe3ea1q" path="res://UI/Combat Main/Middle UI/OverRoomRenders/over_room_renders.tscn" id="5_g35ro"]
+[ext_resource type="PackedScene" uid="uid://b8sbuh310wfs0" path="res://UI/Combat Main/Middle UI/path_drawer.tscn" id="5_vfgdb"]
+[ext_resource type="PackedScene" uid="uid://5olwy38tmsgw" path="res://Rooms/castle_bridge.tscn" id="7_8sn8y"]
+[ext_resource type="Texture2D" uid="uid://kmkkip4i8lh5" path="res://UI/Common UI/WoodSign.png" id="7_w2xab"]
+[ext_resource type="PackedScene" uid="uid://x7hgs5vlmik2" path="res://UI/Combat Main/Middle UI/tile_cursor.tscn" id="9_dq43s"]
+[ext_resource type="PackedScene" uid="uid://bd4aawi1qtrlq" path="res://UI/Combat Main/Middle UI/combat_end_popup.tscn" id="11_rgu56"]
+[ext_resource type="PackedScene" uid="uid://dmujjicuaf1vf" path="res://UI/Combat Main/Right Side/Initiative List/initiative_list.tscn" id="11_yrpkc"]
+[ext_resource type="PackedScene" uid="uid://b8xwvfw8jdhl5" path="res://UI/Common UI/wood_sign.tscn" id="12_8sn8y"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g35ro"]
+texture = ExtResource("7_w2xab")
+texture_margin_left = 6.0
+texture_margin_top = 6.0
+texture_margin_right = 6.0
+texture_margin_bottom = 6.0
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="CombatMain" type="Control" unique_id=1630780378 node_paths=PackedStringArray("room")]
+custom_minimum_size = Vector2(10, 10)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ctc0")
+room = NodePath("CombatUI/HBoxContainer/VBoxContainer/RoomRegion/SubViewportContainer/SubViewport/CastleBridge")
+
+[node name="CursorManager" parent="." unique_id=1416322440 node_paths=PackedStringArray("cursor_sprite") instance=ExtResource("2_dq43s")]
+unique_name_in_owner = true
+cursor_sprite = NodePath("../CombatUI/HBoxContainer/VBoxContainer/RoomRegion/SubViewportContainer/OverRoomRenders/TileCursor")
+
+[node name="AStarManager" parent="." unique_id=760358032 node_paths=PackedStringArray("path_drawer", "actions_menu", "combat_main") instance=ExtResource("2_idx2w")]
+unique_name_in_owner = true
+path_drawer = NodePath("../CombatUI/HBoxContainer/VBoxContainer/RoomRegion/SubViewportContainer/OverRoomRenders/PathDrawer")
+actions_menu = NodePath("../CombatUI/HBoxContainer/ActionsMenu")
+combat_main = NodePath("..")
+
+[node name="CombatUI" type="Control" parent="." unique_id=1697735085]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CombatUI" unique_id=2140070188]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ActionsMenu" parent="CombatUI/HBoxContainer" unique_id=1473416957 instance=ExtResource("2_s3uqg")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="BottomButtons" type="HBoxContainer" parent="CombatUI/HBoxContainer/ActionsMenu" unique_id=189367421]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -31.0
+offset_top = -17.0
+offset_right = 31.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="MenuButton" type="Button" parent="CombatUI/HBoxContainer/ActionsMenu/BottomButtons" unique_id=423421175]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(17, 17)
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="CombatUI/HBoxContainer/ActionsMenu/BottomButtons/MenuButton" unique_id=1886756371]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 14.0
+offset_bottom = 14.0
+texture = ExtResource("4_rxc08")
+
+[node name="EndTurnButton" type="Button" parent="CombatUI/HBoxContainer/ActionsMenu/BottomButtons" unique_id=818498401]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+text = "Delay Turn"
+
+[node name="GridToggleButton" type="Button" parent="CombatUI/HBoxContainer/ActionsMenu/BottomButtons" unique_id=236995343]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(17, 17)
+layout_mode = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="TextureRect" type="TextureRect" parent="CombatUI/HBoxContainer/ActionsMenu/BottomButtons/GridToggleButton" unique_id=1144571913]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 14.0
+offset_bottom = 14.0
+texture = ExtResource("4_nibml")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CombatUI/HBoxContainer" unique_id=1079995826]
+layout_mode = 2
+
+[node name="TopSpacer" type="Control" parent="CombatUI/HBoxContainer/VBoxContainer" unique_id=1447659020]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RoomRegion" type="Control" parent="CombatUI/HBoxContainer/VBoxContainer" unique_id=1348874662]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 2
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="CombatUI/HBoxContainer/VBoxContainer/RoomRegion" unique_id=1370676566]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SubViewport" type="SubViewport" parent="CombatUI/HBoxContainer/VBoxContainer/RoomRegion/SubViewportContainer" unique_id=882269934]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(256, 256)
+render_target_update_mode = 4
+
+[node name="CastleBridge" parent="CombatUI/HBoxContainer/VBoxContainer/RoomRegion/SubViewportContainer/SubViewport" unique_id=276378860 instance=ExtResource("7_8sn8y")]
+
+[node name="OverRoomRenders" parent="CombatUI/HBoxContainer/VBoxContainer/RoomRegion/SubViewportContainer" unique_id=1307470091 instance=ExtResource("5_g35ro")]
+unique_name_in_owner = true
+z_index = 1
+
+[node name="TileCursor" parent="CombatUI/HBoxContainer/VBoxContainer/RoomRegion/SubViewportContainer/OverRoomRenders" unique_id=372669054 instance=ExtResource("9_dq43s")]
+unique_name_in_owner = true
+position = Vector2(-112, -7)
+
+[node name="PathDrawer" parent="CombatUI/HBoxContainer/VBoxContainer/RoomRegion/SubViewportContainer/OverRoomRenders" unique_id=824996969 instance=ExtResource("5_vfgdb")]
+unique_name_in_owner = true
+
+[node name="HelpBoxContainer" type="CenterContainer" parent="CombatUI/HBoxContainer/VBoxContainer/RoomRegion" unique_id=148002739]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HelpBox" type="Label" parent="CombatUI/HBoxContainer/VBoxContainer/RoomRegion/HelpBoxContainer" unique_id=1256397559]
+unique_name_in_owner = true
+visible = false
+z_index = 1
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_g35ro")
+text = "help"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BottomSpacer" type="Control" parent="CombatUI/HBoxContainer/VBoxContainer" unique_id=1002662806]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RightSide" type="HBoxContainer" parent="CombatUI/HBoxContainer" unique_id=1677391857]
+z_index = 1
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="CombatUI/HBoxContainer/RightSide" unique_id=2034344984]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="CombatUI/HBoxContainer/RightSide" unique_id=513186727]
+custom_minimum_size = Vector2(51, 0)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CombatUI/HBoxContainer/RightSide/ColorRect" unique_id=1228134621]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Control" type="Control" parent="CombatUI/HBoxContainer/RightSide/ColorRect/VBoxContainer" unique_id=656278204]
+custom_minimum_size = Vector2(0, 12)
+layout_mode = 2
+
+[node name="WoodSign" parent="CombatUI/HBoxContainer/RightSide/ColorRect/VBoxContainer/Control" unique_id=1067532115 instance=ExtResource("12_8sn8y")]
+z_index = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.0
+offset_right = 4.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PhaseLabel" type="Label" parent="CombatUI/HBoxContainer/RightSide/ColorRect/VBoxContainer/Control/WoodSign" unique_id=959389001]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Phase 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="InitiativeList" parent="CombatUI/HBoxContainer/RightSide/ColorRect/VBoxContainer" unique_id=1355760148 instance=ExtResource("11_yrpkc")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Control2" type="Control" parent="CombatUI/HBoxContainer/RightSide" unique_id=409197818]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CombatEndPopup" parent="CombatUI" unique_id=1609396417 instance=ExtResource("11_rgu56")]
+unique_name_in_owner = true
+z_index = 1
+
+[node name="TipPopup" type="AcceptDialog" parent="." unique_id=1679935276]
+unique_name_in_owner = true
+oversampling_override = 1.0
+title = "Tip"
+initial_position = 1
+size = Vector2i(196, 72)
+always_on_top = true
+min_size = Vector2i(196, 72)
+max_size = Vector2i(196, 72)
+dialog_autowrap = true
+
+[connection signal="cursor_tile_position_changed" from="CursorManager" to="." method="_on_cursor_manager_cursor_tile_position_changed"]
+[connection signal="pressed" from="CombatUI/HBoxContainer/ActionsMenu/BottomButtons/MenuButton" to="." method="_on_menu_button_pressed"]
+[connection signal="pressed" from="CombatUI/HBoxContainer/ActionsMenu/BottomButtons/EndTurnButton" to="." method="_on_end_turn_button_pressed"]
+[connection signal="mouse_exited" from="CombatUI/HBoxContainer/VBoxContainer/RoomRegion" to="." method="_on_room_region_mouse_exited"]
+[connection signal="on_continue" from="CombatUI/CombatEndPopup" to="." method="_on_combat_end_popup_on_continue"]

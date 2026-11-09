@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://t0rjkv1w46sn"]
+
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="1_2rn6d"]
+[ext_resource type="Script" uid="uid://bgfhhr513vn07" path="res://UI/Appendex/skill_list_item.gd" id="1_kupvv"]
+
+[node name="SkillListItem" type="PanelContainer" unique_id=215861052]
+anchors_preset = -1
+anchor_right = 0.119
+anchor_bottom = 0.104
+offset_right = 42.879997
+offset_bottom = -0.07999992
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kupvv")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1548965589]
+custom_maximum_size = Vector2(-1, 22)
+layout_mode = 2
+
+[node name="WoodBorder" parent="HBoxContainer" unique_id=1053470623 instance=ExtResource("1_2rn6d")]
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+
+[node name="SkillIcon" type="TextureRect" parent="HBoxContainer/WoodBorder" unique_id=1123115009]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.136
+anchor_top = 0.136
+anchor_right = 0.864
+anchor_bottom = 0.864
+offset_left = 0.007999897
+offset_top = 0.007999897
+offset_right = -0.0080013275
+offset_bottom = -0.0080013275
+
+[node name="SkillName" type="Label" parent="HBoxContainer" unique_id=359619803]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Skill"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]

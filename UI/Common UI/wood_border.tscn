@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://b57pa30563opa"]
+
+[ext_resource type="Texture2D" uid="uid://cdowuo6mdviwn" path="res://UI/Common UI/WoodBorder.png" id="1_kx4hw"]
+
+[node name="WoodBorder" type="NinePatchRect" unique_id=1053470623]
+anchors_preset = -1
+anchor_right = 0.083000004
+anchor_bottom = 0.148
+offset_right = -30.840004
+offset_bottom = -30.96
+texture = ExtResource("1_kx4hw")
+region_rect = Rect2(0, 0, 9, 9)
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3

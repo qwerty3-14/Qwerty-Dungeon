@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://seqfi3ik4ad4"]
+
+[ext_resource type="Script" uid="uid://cvwow67h14qyx" path="res://Status Effects/Potions/spellbane_status.gd" id="1_3tu2g"]
+[ext_resource type="Texture2D" uid="uid://4fip3icu17ec" path="res://Status Effects/Potions/SpellbaneStatus.png" id="2_r0m8f"]
+
+[node name="SpellbaneStatus" type="Node" unique_id=732213054]
+script = ExtResource("1_3tu2g")
+icon = ExtResource("2_r0m8f")
+display_name = "Spellbane Potion"
+duration = 5
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://dlwh2ry8t0yjv"]
+
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_36duh"]
+[ext_resource type="Texture2D" uid="uid://iv1rrfnyxj41" path="res://Skills/Actions/Elder/Impalement.png" id="1_q26pf"]
+
+[resource]
+script = ExtResource("1_36duh")
+icon = ExtResource("1_q26pf")
+display_name = "Impalement"
+description = "Deals <ED-6> 5 times.
+
+{DP}-6"
+skill_type = 1
+target_range = 8.0
+ap_cost = 5
+action_cooldown = 4
+action_type = 6
+skill_path = "uid://dmjkgo7xd58fs"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

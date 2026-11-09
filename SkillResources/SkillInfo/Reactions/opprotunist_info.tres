@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://xnp54pphwnr1"]
+
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_awmyl"]
+[ext_resource type="Texture2D" uid="uid://cps1f8hniijaj" path="res://Skills/Reactions/Opprotunist.png" id="1_qkche"]
+
+[resource]
+script = ExtResource("1_awmyl")
+icon = ExtResource("1_qkche")
+display_name = "Opportunist"
+description = "Deals <VD>.
+
+Can only be used when an enemy moves into range."
+skill_type = 2
+target_range = -1.0
+ap_cost = 1
+action_type = 2
+skill_path = "uid://kkbbva7om18e"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

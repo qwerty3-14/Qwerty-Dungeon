@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://dujs6f12024q"]
+
+[ext_resource type="PackedScene" uid="uid://nopnegvdmeoe" path="res://Rune Stuff/Interactives/rune_board.tscn" id="1_e1k5o"]
+[ext_resource type="PackedScene" uid="uid://cpdpj3120f68f" path="res://Rune Stuff/Interactives/rune_grabber.tscn" id="2_nyphd"]
+
+[node name="RunePlayground" type="Node2D" unique_id=1818497906]
+
+[node name="RuneBoard" parent="." unique_id=2122650616 instance=ExtResource("1_e1k5o")]
+offset_left = 186.0
+offset_top = 46.0
+offset_right = 231.0
+offset_bottom = 91.0
+
+[node name="RuneGrabber2" parent="." unique_id=170024085 node_paths=PackedStringArray("rune") instance=ExtResource("2_nyphd")]
+offset_left = 352.0
+offset_top = 231.0
+offset_right = 402.0
+offset_bottom = 281.0
+rune = NodePath("")
+
+[node name="RuneGrabber" parent="." unique_id=2021584496 node_paths=PackedStringArray("rune") instance=ExtResource("2_nyphd")]
+offset_left = 109.0
+offset_top = 237.0
+offset_right = 159.0
+offset_bottom = 287.0
+rune = NodePath("")

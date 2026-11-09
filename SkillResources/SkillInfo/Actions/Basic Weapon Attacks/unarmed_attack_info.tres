@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://c4lis5q6i5a6n"]
+
+[ext_resource type="Texture2D" uid="uid://kej25hsdpgag" path="res://Skills/Actions/Weapon Attacks/UnarmedAttack.png" id="1_puvfe"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_04ppd"]
+
+[resource]
+script = ExtResource("2_04ppd")
+icon = ExtResource("1_puvfe")
+display_name = "Unarmed Attack"
+description = "Deals <CD>
+
+{DM}"
+skill_type = 1
+target_range = 1.0
+ap_cost = 2
+action_type = 1
+skill_path = "uid://cnpfqiulbjgbc"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

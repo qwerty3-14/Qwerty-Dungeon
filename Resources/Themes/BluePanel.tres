@@ -1,0 +1,7 @@
+[gd_resource type="Theme" format=3 uid="uid://1bl3q3bfprlr"]
+
+[ext_resource type="StyleBox" uid="uid://kie4045eg2fo" path="res://Resources/Themes/BluePanelBoxTexture.tres" id="1_pyo6d"]
+
+[resource]
+Panel/styles/panel = ExtResource("1_pyo6d")
+PanelContainer/styles/panel = ExtResource("1_pyo6d")

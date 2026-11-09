@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://clrgfhet0hijo"]
+
+[ext_resource type="Texture2D" uid="uid://cvy6xw20eg7uo" path="res://Skills/Actions/Vault.png" id="1_8dsru"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="3_xcipr"]
+
+[resource]
+script = ExtResource("3_xcipr")
+icon = ExtResource("1_8dsru")
+display_name = "Vault"
+description = "Jump up to 5 spaces away"
+skill_type = 1
+target_range = 5.0
+ap_cost = 1
+action_cooldown = 2
+action_type = 3
+skill_path = "uid://mcxa80aqflfb"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

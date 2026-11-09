@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://3xgobbpf6mjm"]
+
+[ext_resource type="Script" uid="uid://bw5watsulvohx" path="res://Skills/Passives/toughness.gd" id="1_xhosc"]
+[ext_resource type="Resource" uid="uid://4r57qqo6wqip" path="res://SkillResources/SkillInfo/Passives/toughness_info.tres" id="2_h30ls"]
+
+[node name="Toughness" type="Node" unique_id=871711939]
+script = ExtResource("1_xhosc")
+skill_info = ExtResource("2_h30ls")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

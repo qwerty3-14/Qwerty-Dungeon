@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://dmet0phh8nyqj"]
+
+[ext_resource type="Texture2D" uid="uid://c4gs02gns15hf" path="res://Skills/Actions/Meteorology/PersonalRainCloud.png" id="1_67uyn"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_mj1dk"]
+
+[resource]
+script = ExtResource("2_mj1dk")
+icon = ExtResource("1_67uyn")
+display_name = "Personal Rain Cloud"
+description = "Give someone a Personal rain cloud! This reduces thier luck by 6 and causes them to receive 4 extra lighting damage.
+This action can target through walls.
+
+{P>R}"
+skill_type = 1
+target_range = 12.0
+ap_cost = 4
+action_cooldown = -1
+action_type = 7
+skill_path = "uid://jtmun2bpkx4g"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

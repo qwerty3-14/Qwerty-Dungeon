@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://d0coalblh41et"]
+
+[ext_resource type="Theme" uid="uid://1bl3q3bfprlr" path="res://Resources/Themes/BluePanel.tres" id="1_q6osq"]
+[ext_resource type="Script" uid="uid://dblbj4jskoayc" path="res://UI/Deprecated UI/skill_info_panel.gd" id="2_8am5h"]
+[ext_resource type="PackedScene" uid="uid://depp3m24le8r5" path="res://UI/Common UI/IntegerProgressBar/integer_progress_bar.tscn" id="2_8bkly"]
+
+[node name="SkillInfoPanel" type="PanelContainer" unique_id=952333713]
+custom_minimum_size = Vector2(130, 219)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -340.0
+offset_bottom = -31.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme = ExtResource("1_q6osq")
+script = ExtResource("2_8am5h")
+
+[node name="Contents" type="VBoxContainer" parent="." unique_id=1168427528]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="TopSection" type="HBoxContainer" parent="Contents" unique_id=298085661]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 14)
+layout_mode = 2
+
+[node name="LeftMargin" type="Control" parent="Contents/TopSection" unique_id=1496484948]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="Skill Name" type="Label" parent="Contents/TopSection" unique_id=1671238364]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 1
+text = "Skill Name"
+vertical_alignment = 1
+
+[node name="MiddleFiller" type="Control" parent="Contents/TopSection" unique_id=1994490217]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="APCostSection" type="CenterContainer" parent="Contents/TopSection" unique_id=185846598]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(48, 0)
+layout_mode = 2
+
+[node name="APCost" parent="Contents/TopSection/APCostSection" unique_id=693049536 instance=ExtResource("2_8bkly")]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 2
+value = 2
+
+[node name="RightMargin" type="Control" parent="Contents/TopSection" unique_id=1141387477]
+custom_minimum_size = Vector2(5, 0)
+layout_mode = 2
+
+[node name="CenterMargin" type="Control" parent="Contents" unique_id=1885887227]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+
+[node name="BottomSection" type="HBoxContainer" parent="Contents" unique_id=949734433]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="LeftPadding" type="Control" parent="Contents/BottomSection" unique_id=668819987]
+custom_minimum_size = Vector2(2, 0)
+layout_mode = 2
+
+[node name="BottomContents" type="VBoxContainer" parent="Contents/BottomSection" unique_id=838278402]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Tags" type="VBoxContainer" parent="Contents/BottomSection/BottomContents" unique_id=899064367]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="SkillTypeLabel" type="Label" parent="Contents/BottomSection/BottomContents/Tags" unique_id=2028573984]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Action"
+
+[node name="Control" type="Control" parent="Contents/BottomSection/BottomContents" unique_id=741560911]
+custom_minimum_size = Vector2(0, 2)
+layout_mode = 2
+
+[node name="Description" type="RichTextLabel" parent="Contents/BottomSection/BottomContents" unique_id=1775338239]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+bbcode_enabled = true
+text = "Lorem ipsum dolor sit amet, /n consectetur adipiscing elit, sed do eiusmod [b] tempor [/b] incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+fit_content = true
+scroll_active = false
+
+[node name="BottomMargin" type="Control" parent="Contents/BottomSection/BottomContents" unique_id=603043850]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[connection signal="sort_children" from="." to="." method="_on_sort_children"]

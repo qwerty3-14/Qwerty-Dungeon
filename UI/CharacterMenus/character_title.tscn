@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://de6qmm8n8rp06"]
+
+[ext_resource type="Script" uid="uid://bjuon2fxxjer1" path="res://UI/CharacterMenus/character_title.gd" id="1_a0un7"]
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="1_a58uy"]
+[ext_resource type="PackedScene" uid="uid://b8xwvfw8jdhl5" path="res://UI/Common UI/wood_sign.tscn" id="2_a0un7"]
+
+[node name="CharacterTitle" type="HBoxContainer" unique_id=1287509331]
+offset_right = 134.0
+offset_bottom = 24.0
+script = ExtResource("1_a0un7")
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=9697085]
+layout_mode = 2
+
+[node name="WoodBorder" parent="CenterContainer" unique_id=1053470623 instance=ExtResource("1_a58uy")]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="CenterContainer/WoodBorder" unique_id=1409983075]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1113714675]
+custom_maximum_size = Vector2(112, -1)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Control" type="Control" parent="VBoxContainer" unique_id=46231951]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="WoodSign2" parent="VBoxContainer/Control" unique_id=1067532115 instance=ExtResource("2_a0un7")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+
+[node name="NameLabel" type="Label" parent="VBoxContainer/Control/WoodSign2" unique_id=1410245255]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "???"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 128
+
+[node name="Control2" type="Control" parent="VBoxContainer" unique_id=869542391]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="WoodSign" parent="VBoxContainer/Control2" unique_id=1162127679 instance=ExtResource("2_a0un7")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+
+[node name="ClassLabel" type="Label" parent="VBoxContainer/Control2/WoodSign" unique_id=1566335046]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "???"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_trim_flags = 128

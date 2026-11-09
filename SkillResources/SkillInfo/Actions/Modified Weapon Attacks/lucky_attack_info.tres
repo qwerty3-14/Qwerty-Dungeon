@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://c78gyqjkqsykt"]
+
+[ext_resource type="Texture2D" uid="uid://skcqflhqernq" path="res://Skills/Actions/Weapon Attacks/LuckyAttack.png" id="1_15uj3"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_vima4"]
+
+[resource]
+script = ExtResource("1_vima4")
+icon = ExtResource("1_15uj3")
+display_name = "Lucky Attack"
+description = "Spend a lucky charge to deal <VD> without using ap!
+
+Passive: At the start of each phase grants a <L3> of gaining a lucky charge.
+
+{DM}
+{CL}x3%"
+skill_type = 1
+target_range = -1.0
+action_type = 2
+skill_path = "uid://dto4lt8qlp7pb"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

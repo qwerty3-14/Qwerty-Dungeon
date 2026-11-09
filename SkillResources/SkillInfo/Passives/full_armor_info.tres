@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://hgexvmng1wto"]
+
+[ext_resource type="Texture2D" uid="uid://d2ussx3vm7j81" path="res://Skills/Passives/FullArmor.png" id="1_t4cyb"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="3_xx6n4"]
+
+[resource]
+script = ExtResource("3_xx6n4")
+icon = ExtResource("1_t4cyb")
+display_name = "Full Armor"
+description = "Grants +1 defense for each enemy within 3 tiles."
+skill_path = "uid://bdf71qb7djss"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

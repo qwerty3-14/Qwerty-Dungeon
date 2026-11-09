@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://ctgrr528jgm2k"]
+
+[ext_resource type="Script" uid="uid://cd0xpdixvtoo8" path="res://UI/Combat Main/Left Side/Actions Menu/skill_hotbar_slot.gd" id="1_dnxd1"]
+[ext_resource type="PackedScene" uid="uid://b57pa30563opa" path="res://UI/Common UI/wood_border.tscn" id="1_sqxfx"]
+[ext_resource type="Theme" uid="uid://bj8ln32ccw1r5" path="res://Resources/Themes/TransparentButton.tres" id="3_lfmbe"]
+[ext_resource type="PackedScene" uid="uid://vfbjftlty1ux" path="res://UI/Combat Main/Left Side/Actions Menu/spotted_cycle_higlighter.tscn" id="4_2da23"]
+[ext_resource type="Texture2D" uid="uid://duad1m3l5ffip" path="res://UI/Combat Main/Left Side/Actions Menu/SkillHighlight.png" id="4_l1e32"]
+
+[node name="SkillHotbarSlot" type="Control" unique_id=1927062878]
+custom_minimum_size = Vector2(22, 22)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 22.0
+offset_bottom = 22.0
+script = ExtResource("1_dnxd1")
+
+[node name="WoodBorder" parent="." unique_id=1053470623 instance=ExtResource("1_sqxfx")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 0.0
+offset_bottom = 0.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="SkillIcon" type="TextureRect" parent="." unique_id=2121918651]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="Button" type="Button" parent="." unique_id=1424736781]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+mouse_filter = 1
+theme = ExtResource("3_lfmbe")
+disabled = true
+
+[node name="OutCycleHighlight" parent="." unique_id=1630227566 instance=ExtResource("4_2da23")]
+visible = false
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 21.0
+offset_bottom = 21.0
+
+[node name="InCycleHighlight" parent="." unique_id=1773833641 instance=ExtResource("4_2da23")]
+unique_name_in_owner = true
+visible = false
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+
+[node name="CooldownLabel" type="Label" parent="." unique_id=950938530]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -8.0
+offset_top = -8.0
+offset_right = 8.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Higlight" type="NinePatchRect" parent="." unique_id=1556495677]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = -1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_l1e32")
+patch_margin_left = 4
+patch_margin_top = 4
+patch_margin_right = 4
+patch_margin_bottom = 4
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

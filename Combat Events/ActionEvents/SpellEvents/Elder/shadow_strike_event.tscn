@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://byr7msqftiafd"]
+
+[ext_resource type="Script" uid="uid://cqsk08juokmfs" path="res://Combat Events/ActionEvents/SpellEvents/Elder/shadow_strike_event.gd" id="1_ya86v"]
+
+[node name="ShadowStrikeEvent" type="Timer" unique_id=736387586]
+wait_time = 0.3
+script = ExtResource("1_ya86v")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

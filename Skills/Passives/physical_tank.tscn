@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c31pnrq8ak4pj"]
+
+[ext_resource type="Script" uid="uid://wnf4g5agwo8a" path="res://Skills/Passives/physical_tank.gd" id="1_v8bwi"]
+[ext_resource type="Resource" uid="uid://nsk74sqmvj58" path="res://SkillResources/SkillInfo/Passives/physical_tank_info.tres" id="2_v8bwi"]
+
+[node name="PhysicalTank" type="Node" unique_id=1530335811]
+script = ExtResource("1_v8bwi")
+skill_info = ExtResource("2_v8bwi")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

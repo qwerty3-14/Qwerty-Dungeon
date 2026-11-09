@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://br1ll51oid4w"]
+
+[ext_resource type="Script" uid="uid://ddb65vfxxy4dj" path="res://Abstract Classes/combat_event.gd" id="1_fhet8"]
+
+[node name="EndAction" type="Timer" unique_id=1780727190]
+wait_time = 0.1
+script = ExtResource("1_fhet8")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"

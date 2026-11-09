@@ -1,0 +1,67 @@
+[gd_scene format=3 uid="uid://bd4aawi1qtrlq"]
+
+[ext_resource type="PackedScene" uid="uid://b8xwvfw8jdhl5" path="res://UI/Common UI/wood_sign.tscn" id="1_dy8x3"]
+[ext_resource type="Script" uid="uid://u4nxw8tsh0w2" path="res://UI/Combat Main/Middle UI/combat_end_popup.gd" id="1_vd3h0"]
+
+[sub_resource type="Curve2D" id="Curve2D_yrpkc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 240, 175, 0, 0, 0, 0, 240, 135)
+}
+point_count = 2
+
+[node name="CombatEndPopup" type="Path2D" unique_id=1609396417]
+curve = SubResource("Curve2D_yrpkc")
+script = ExtResource("1_vd3h0")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="." unique_id=1876841893]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+position = Vector2(240, 175)
+rotates = false
+
+[node name="sign" parent="PathFollow2D" unique_id=1067532115 instance=ExtResource("1_dy8x3")]
+offset_left = -31.0
+offset_top = -11.0
+offset_right = 34.0
+offset_bottom = 10.0
+
+[node name="GAME OVER" type="Label" parent="PathFollow2D/sign" unique_id=925914181]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GAME OVER"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VICTORY" type="Label" parent="PathFollow2D/sign" unique_id=871268867]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "VICTORY!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContinueButton" type="Button" parent="PathFollow2D" unique_id=1935415582]
+unique_name_in_owner = true
+visible = false
+offset_left = -30.0
+offset_top = 11.0
+offset_right = 33.0
+offset_bottom = 28.0
+text = "Continue"
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=992287651]
+unique_name_in_owner = true
+wait_time = 0.4
+one_shot = true
+
+[connection signal="pressed" from="PathFollow2D/ContinueButton" to="." method="_on_continue_button_pressed"]

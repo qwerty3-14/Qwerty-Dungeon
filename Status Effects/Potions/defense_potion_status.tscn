@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b0ptsgat8x7r1"]
+
+[ext_resource type="Script" uid="uid://bpb6m7r8mo2oq" path="res://Status Effects/Potions/defense_potion_status.gd" id="1_ehd51"]
+[ext_resource type="Texture2D" uid="uid://sj428kk1a5tw" path="res://Status Effects/Potions/DefensePotion.png" id="2_okctr"]
+
+[node name="DefensePotionStatus" type="Node" unique_id=811792750]
+script = ExtResource("1_ehd51")
+icon = ExtResource("2_okctr")
+display_name = "Def Potion"
+duration = 5
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

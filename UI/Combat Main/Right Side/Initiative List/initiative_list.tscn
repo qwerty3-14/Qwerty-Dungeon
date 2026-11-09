@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dmujjicuaf1vf"]
+
+[ext_resource type="Script" uid="uid://rmeeieurnvfj" path="res://UI/Combat Main/Right Side/Initiative List/initiative_list.gd" id="1_lmtni"]
+[ext_resource type="PackedScene" uid="uid://bfhqraq0e65bo" path="res://UI/Combat Main/Right Side/Initiative List/delay_pin.tscn" id="2_pd45g"]
+
+[node name="InitiativeList" type="ColorRect" unique_id=1355760148]
+custom_minimum_size = Vector2(51, 270)
+offset_right = 51.0
+offset_bottom = 270.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_lmtni")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2141051540]
+clip_contents = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+vertical_scroll_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer" unique_id=144244708]
+unique_name_in_owner = true
+layout_mode = 2
+mouse_filter = 2
+
+[node name="DelayPin" parent="ScrollContainer/VBoxContainer" unique_id=431251801 instance=ExtResource("2_pd45g")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

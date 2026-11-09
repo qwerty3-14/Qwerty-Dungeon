@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://df7t5y87jvxuw"]
+
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_hegah"]
+[ext_resource type="Texture2D" uid="uid://dqb2wrnm40a7m" path="res://Skills/Actions/Elder/Shadowstrike.png" id="1_tmhgi"]
+
+[resource]
+script = ExtResource("1_hegah")
+icon = ExtResource("1_tmhgi")
+display_name = "Shadow Strike"
+description = "Deals <ED>
+Damage is doubled if target is at full health.
+
+{DP}"
+skill_type = 1
+target_range = 1.5
+ap_cost = 2
+action_cooldown = 1
+action_type = 6
+skill_path = "uid://b67mejxlyjce5"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://blbyl72kqwdd6"]
+
+[ext_resource type="Script" uid="uid://uvklll1utv4n" path="res://Status Effects/personal_rain_cloud_status.gd" id="1_tbmw1"]
+[ext_resource type="Texture2D" uid="uid://cg4b2gfuv607i" path="res://Status Effects/RainCloudStatus.png" id="2_sbemv"]
+[ext_resource type="Texture2D" uid="uid://dk1g27xiayw4m" path="res://Status Effects/CloudParticle.png" id="3_4pbo1"]
+
+[sub_resource type="Curve" id="Curve_cu4ke"]
+_data = [Vector2(0, 0.79775286), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_sc5ad"]
+curve = SubResource("Curve_cu4ke")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_0yd1l"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(4, 1, 1)
+spread = 180.0
+initial_velocity_min = 4.0
+initial_velocity_max = 6.0
+gravity = Vector3(0, 0, 0)
+damping_min = 2.538
+damping_max = 10.660001
+alpha_curve = SubResource("CurveTexture_sc5ad")
+
+[node name="PersonalRainCloudStatus" type="Node" unique_id=1599637647]
+script = ExtResource("1_tbmw1")
+icon = ExtResource("2_sbemv")
+display_name = "Personal Rain Cloud"
+duration = 10
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[node name="CloudParticles" type="GPUParticles2D" parent="." unique_id=601459806]
+emitting = false
+amount = 30
+texture = ExtResource("3_4pbo1")
+lifetime = 3.0
+draw_order = 2
+process_material = SubResource("ParticleProcessMaterial_0yd1l")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://chqbd8pt1qxgu"]
+
+[ext_resource type="Script" uid="uid://cmfra66cr3xnj" path="res://Skills/Passives/killing_flow.gd" id="1_aum04"]
+[ext_resource type="Resource" uid="uid://csg6pppxki8t3" path="res://SkillResources/SkillInfo/Passives/killing_flow.tres" id="2_dnxqv"]
+[ext_resource type="PackedScene" uid="uid://cny3fwogu8t2o" path="res://Skills/Components/damage_reciever.tscn" id="3_dnxqv"]
+
+[node name="KillingFlow" type="Node" unique_id=1157680311]
+script = ExtResource("1_aum04")
+skill_info = ExtResource("2_dnxqv")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="DamageReciever" parent="." unique_id=786419577 instance=ExtResource("3_dnxqv")]
+
+[connection signal="object_damaged" from="DamageReciever" to="." method="_on_damage_reciever_object_damaged"]

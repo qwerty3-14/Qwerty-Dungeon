@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cae63qp6iquvs"]
+
+[ext_resource type="Script" uid="uid://bjtbtwclx4tvc" path="res://Skills/Actions/Weapon Attacks/cripple.gd" id="1_353ik"]
+[ext_resource type="Resource" uid="uid://bq8e1qbmt8i6v" path="res://SkillResources/SkillInfo/Actions/Modified Weapon Attacks/cripple_info.tres" id="2_tj231"]
+[ext_resource type="PackedScene" uid="uid://38n4pwhivik4" path="res://Skills/Components/Weapon Attack/modified_weapon_attack.tscn" id="3_spwfs"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_tj231"]
+
+[node name="Cripple" type="Node" unique_id=1417406927]
+script = ExtResource("1_353ik")
+skill_info = ExtResource("2_tj231")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="ModifiedWeaponAttack" parent="." unique_id=847325741 node_paths=PackedStringArray("action") instance=ExtResource("3_spwfs")]
+attack_name = "Cripple"
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_tj231")]
+phase_cooldown = 3
+type = 2
+ap_cost = 2
+
+[connection signal="about_to_score" from="ModifiedWeaponAttack" to="." method="_on_modified_weapon_attack_about_to_score"]
+[connection signal="AI_used" from="Action" to="." method="_on_action_ai_used"]
+[connection signal="ended" from="Action" to="." method="_on_action_ended"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

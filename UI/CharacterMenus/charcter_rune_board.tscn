@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cfl37k2bxnp0q"]
+
+[ext_resource type="Script" uid="uid://be607fu6mwep8" path="res://UI/CharacterMenus/charcter_rune_board.gd" id="1_ongov"]
+[ext_resource type="PackedScene" uid="uid://de6qmm8n8rp06" path="res://UI/CharacterMenus/character_title.tscn" id="2_3br2y"]
+[ext_resource type="PackedScene" uid="uid://bc0ktg547bvkx" path="res://UI/Combat Main/Left Side/Actions Menu/AttributesList/attributes_list.tscn" id="2_8f23p"]
+[ext_resource type="PackedScene" uid="uid://nopnegvdmeoe" path="res://Rune Stuff/Interactives/rune_board.tscn" id="2_yoag3"]
+
+[node name="CharcterRuneBoard" type="VBoxContainer" unique_id=641556228]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ongov")
+
+[node name="CharacterTitle" parent="." unique_id=1287509331 instance=ExtResource("2_3br2y")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CenterContainer2" type="CenterContainer" parent="." unique_id=1553543725]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Icon" type="TextureRect" parent="CenterContainer2" unique_id=1007044008]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CenterContainer3" type="HBoxContainer" parent="." unique_id=659074154]
+layout_mode = 2
+
+[node name="AttributesList" parent="CenterContainer3" unique_id=825787806 instance=ExtResource("2_8f23p")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(44, 80)
+layout_mode = 2
+size_flags_horizontal = 1
+
+[node name="Control" type="Control" parent="CenterContainer3" unique_id=2013203876]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=1208136880]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="RuneBoard" parent="CenterContainer" unique_id=2122650616 instance=ExtResource("2_yoag3")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(45, 45)
+layout_mode = 2

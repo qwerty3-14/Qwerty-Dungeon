@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cdw38r81qhx7u"]
+
+[ext_resource type="Script" uid="uid://b3ro8fywgy2n1" path="res://Combat Events/ActionEvents/SpellEvents/Elder/impalement_event.gd" id="1_7bla2"]
+
+[node name="ImpalementEvent" type="Timer" unique_id=20975748]
+wait_time = 2.0
+one_shot = true
+script = ExtResource("1_7bla2")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"

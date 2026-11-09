@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dseqotw2umqgi"]
+
+[ext_resource type="Script" uid="uid://cnur4e758eekf" path="res://Status Effects/miasma_status.gd" id="1_slv2g"]
+[ext_resource type="Texture2D" uid="uid://bhirkq3ao7i07" path="res://Status Effects/MiasmaStatus.png" id="2_afqg4"]
+[ext_resource type="Texture2D" uid="uid://b6xfaksf3hspi" path="res://Combat Events/ActionEvents/SpellEvents/Elder/MiasmaCloud.png" id="3_x131q"]
+
+[sub_resource type="Curve" id="Curve_uokb5"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.6666667, 0.8089888), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_kps3k"]
+curve = SubResource("Curve_uokb5")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_aapga"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(8, 8, 1)
+gravity = Vector3(0, -30, 0)
+alpha_curve = SubResource("CurveTexture_kps3k")
+
+[node name="MiasmaStatus" type="Node" unique_id=325515771]
+script = ExtResource("1_slv2g")
+icon = ExtResource("2_afqg4")
+display_name = "Miasma"
+duration = 5
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[node name="EffectTimer" type="Timer" parent="." unique_id=915689127]
+unique_name_in_owner = true
+wait_time = 0.5
+
+[node name="CloudParticles" type="GPUParticles2D" parent="." unique_id=1671425357]
+unique_name_in_owner = true
+emitting = false
+amount = 24
+texture = ExtResource("3_x131q")
+lifetime = 0.5
+process_material = SubResource("ParticleProcessMaterial_aapga")
+
+[connection signal="ready" from="." to="." method="_on_ready"]
+[connection signal="ticked" from="." to="." method="_on_ticked"]
+[connection signal="timeout" from="EffectTimer" to="." method="_on_effect_timer_timeout"]

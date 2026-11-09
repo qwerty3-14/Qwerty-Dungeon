@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dy41kvgbto3ve"]
+
+[ext_resource type="Texture2D" uid="uid://3rrqx3y3r3cq" path="res://Combat Events/ActionEvents/SpellEvents/Fire/FireballCore.png" id="1_7aa66"]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_68sf1"]
+particle_flag_disable_z = true
+emission_shape = 6
+emission_ring_axis = Vector3(0, 0, 1)
+emission_ring_height = 1.0
+emission_ring_radius = 4.0
+emission_ring_inner_radius = 3.0
+emission_ring_cone_angle = 90.0
+gravity = Vector3(0, 0, 0)
+color = Color(0.77254903, 0.40392157, 0.25882354, 1)
+
+[node name="FireCore" type="Sprite2D" unique_id=1813907544]
+texture = ExtResource("1_7aa66")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="." unique_id=1103401148]
+amount = 40
+process_material = SubResource("ParticleProcessMaterial_68sf1")

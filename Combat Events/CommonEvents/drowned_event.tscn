@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://b5c1nofr5x20l"]
+
+[ext_resource type="Script" uid="uid://b3cdq61tqqia3" path="res://Combat Events/CommonEvents/drowned_event.gd" id="1_hekeh"]
+
+[node name="DrownedEvent" type="Timer" unique_id=36593435]
+wait_time = 0.5
+script = ExtResource("1_hekeh")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"

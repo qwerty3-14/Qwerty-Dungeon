@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://csq1eids7fhpw"]
+
+[ext_resource type="Script" uid="uid://vf6irsbssykl" path="res://Combat Events/ActionEvents/throw_event.gd" id="1_at10p"]
+
+[sub_resource type="Curve" id="Curve_at10p"]
+_limits = [0.0, 18.0, 0.0, 1.0]
+_data = [Vector2(0, 12), 0.0, 31.863369, 0, 0, Vector2(0.35071087, 18), 0.0, 0.0, 0, 0, Vector2(0.9194312, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_ccmy8"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 12), 0.0, 107.23251, 0, 0, Vector2(0.32701424, 30), 5.0204997, 5.0204997, 0, 0, Vector2(0.92891, 0), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[node name="ThrowEvent" type="Timer" unique_id=1501216816]
+one_shot = true
+script = ExtResource("1_at10p")
+low_throw_curve = SubResource("Curve_at10p")
+high_throw_curve = SubResource("Curve_ccmy8")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]

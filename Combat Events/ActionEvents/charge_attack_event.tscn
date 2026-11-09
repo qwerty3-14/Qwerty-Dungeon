@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://3x4ssj3rg8ds"]
+
+[ext_resource type="Script" uid="uid://crbmutwk6k6va" path="res://Combat Events/ActionEvents/charge_attack_event.gd" id="1_5x2n5"]
+
+[node name="ChargeAttackEvent" type="Timer" unique_id=372076980]
+wait_time = 0.5
+script = ExtResource("1_5x2n5")
+metadata/_custom_type_script = "uid://b0f1y0uha27cx"
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
+[connection signal="timeout" from="." to="." method="_on_charge_timeout"]

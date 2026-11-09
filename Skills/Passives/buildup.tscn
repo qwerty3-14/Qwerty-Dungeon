@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://htltrmv0fy5g"]
+
+[ext_resource type="Script" uid="uid://bnka8v5ntpix5" path="res://Skills/Passives/buildup.gd" id="1_356af"]
+[ext_resource type="Resource" uid="uid://b5tc14xpw163r" path="res://SkillResources/SkillInfo/Passives/buildup_info.tres" id="2_356af"]
+
+[node name="Buildup" type="Node" unique_id=549626470]
+script = ExtResource("1_356af")
+skill_info = ExtResource("2_356af")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

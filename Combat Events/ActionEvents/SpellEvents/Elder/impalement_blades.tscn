@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://30xrl2ahstcx"]
+
+[ext_resource type="Script" uid="uid://dtir4snfjk7mj" path="res://Combat Events/ActionEvents/SpellEvents/Elder/impalement_blades.gd" id="1_ca78u"]
+[ext_resource type="Texture2D" uid="uid://cnbgdm38b8re0" path="res://Combat Events/ActionEvents/SpellEvents/Elder/ImpalementBlade.png" id="1_e4pk7"]
+[ext_resource type="Material" uid="uid://bao1hnvkxoau0" path="res://Resources/Themes/elder_particles.tres" id="2_ca78u"]
+
+[sub_resource type="Curve" id="Curve_ekx4e"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1.4901161e-08), 0.0, 0.0, 0, 0, Vector2(0.1, 0.1), 0.0, 0.0, 0, 0, Vector2(0.2, 0.1), 0.0, 0.0, 0, 0, Vector2(0.69999, 1), 4.8046875, 4.8046875, 0, 0, Vector2(0.7, -1), 0.0, 0.0, 0, 0, Vector2(1, 1.4901161e-08), 0.0, 0.0, 0, 0]
+point_count = 6
+metadata/_snap_enabled = true
+
+[node name="ImpalementBlades" type="Node2D" unique_id=22171490]
+script = ExtResource("1_ca78u")
+anim_curce = SubResource("Curve_ekx4e")
+
+[node name="LeftBlade" type="Sprite2D" parent="." unique_id=1956981184]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("1_e4pk7")
+vframes = 5
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="LeftBlade" unique_id=381374334]
+amount = 100
+process_material = ExtResource("2_ca78u")
+
+[node name="UpLeftBlade" type="Sprite2D" parent="." unique_id=983176922]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("1_e4pk7")
+vframes = 5
+frame = 1
+
+[node name="GPUParticles2D2" type="GPUParticles2D" parent="UpLeftBlade" unique_id=1386818471]
+amount = 100
+process_material = ExtResource("2_ca78u")
+
+[node name="UpBlade" type="Sprite2D" parent="." unique_id=968505031]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("1_e4pk7")
+vframes = 5
+frame = 3
+
+[node name="GPUParticles2D5" type="GPUParticles2D" parent="UpBlade" unique_id=51064228]
+amount = 100
+process_material = ExtResource("2_ca78u")
+
+[node name="UpRightBlade" type="Sprite2D" parent="." unique_id=1320488145]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("1_e4pk7")
+flip_h = true
+vframes = 5
+frame = 1
+
+[node name="GPUParticles2D3" type="GPUParticles2D" parent="UpRightBlade" unique_id=1127104634]
+amount = 100
+process_material = ExtResource("2_ca78u")
+
+[node name="RightBlade" type="Sprite2D" parent="." unique_id=1905653659]
+unique_name_in_owner = true
+visible = false
+texture = ExtResource("1_e4pk7")
+flip_h = true
+vframes = 5
+
+[node name="GPUParticles2D4" type="GPUParticles2D" parent="RightBlade" unique_id=1630262129]
+amount = 100
+process_material = ExtResource("2_ca78u")
+
+[node name="AnimTimer" type="Timer" parent="." unique_id=249786839]
+unique_name_in_owner = true
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[node name="DecayTimer" type="Timer" parent="." unique_id=506803975]
+unique_name_in_owner = true
+one_shot = true
+
+[connection signal="timeout" from="AnimTimer" to="." method="_on_anim_timer_timeout"]
+[connection signal="timeout" from="DecayTimer" to="." method="_on_decay_timer_timeout"]

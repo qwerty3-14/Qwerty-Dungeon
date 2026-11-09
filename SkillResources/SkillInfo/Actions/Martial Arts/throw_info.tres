@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://b52k3qovxmt7o"]
+
+[ext_resource type="Texture2D" uid="uid://c5m6br7u7iu1m" path="res://Skills/Actions/Throw.png" id="1_3u6hd"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_ombq7"]
+
+[resource]
+script = ExtResource("2_ombq7")
+icon = ExtResource("1_3u6hd")
+display_name = "Throw"
+description = "Grab a target and throw them up to 5 tiles away
+
+
+{Actor}'s might must be higher than the target's weight/con"
+skill_type = 1
+target_range = 1.0
+ap_cost = 1
+action_cooldown = 1
+action_type = 3
+skill_path = "uid://o1prlukjfaef"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

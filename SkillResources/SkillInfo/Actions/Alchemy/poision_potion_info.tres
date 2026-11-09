@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://c6q0st0jwtrww"]
+
+[ext_resource type="Texture2D" uid="uid://b6jlsmrkn3vur" path="res://Skills/Actions/Alchemy/PoisonPotion.png" id="1_4fq3k"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_ogqf5"]
+
+[resource]
+script = ExtResource("1_ogqf5")
+icon = ExtResource("1_4fq3k")
+display_name = "Poison Potion"
+description = "Take Poison damage now and at the end of the next 5 phases"
+skill_type = 1
+ap_cost = 2
+action_type = 4
+skill_path = "uid://c4qm02a3igdc6"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

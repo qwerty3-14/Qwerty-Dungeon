@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bd7ov5o2v1j3m"]
+
+[ext_resource type="Script" uid="uid://gbwinittm52t" path="res://UI/Combat Main/Right Side/Initiative List/shrinking_spacer.gd" id="1_phq4i"]
+
+[node name="ShrinkingSpacer" type="ColorRect" unique_id=477094179]
+custom_minimum_size = Vector2(43, 27)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -437.0
+offset_bottom = -243.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_phq4i")
+
+[node name="ShrinkTimer" type="Timer" parent="." unique_id=467491114]
+unique_name_in_owner = true
+wait_time = 0.6
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="ShrinkTimer" to="." method="_on_shrink_timer_timeout"]

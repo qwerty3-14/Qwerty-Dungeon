@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://debgd1vm2o266"]
+
+[ext_resource type="Texture2D" uid="uid://c2ds04tpypeac" path="res://Skills/Actions/Alchemy/WeakPotion.png" id="1_dhnxt"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_hhxr0"]
+
+[resource]
+script = ExtResource("2_hhxr0")
+icon = ExtResource("1_dhnxt")
+display_name = "Weak Potion"
+description = "Reduces your mgt by 4 for 5 turns."
+skill_type = 1
+ap_cost = 2
+action_cooldown = -1
+action_type = 4
+skill_path = "uid://obylxl3qdowq"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

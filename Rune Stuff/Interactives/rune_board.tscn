@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://nopnegvdmeoe"]
+
+[ext_resource type="Texture2D" uid="uid://dmrsum2odfak5" path="res://Rune Stuff/Interactives/RuneBoard.png" id="1_du58c"]
+[ext_resource type="Script" uid="uid://p4bajewjdeel" path="res://Rune Stuff/Interactives/rune_board.gd" id="2_2ejoo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ejoo"]
+size = Vector2(25, 25)
+
+[node name="RuneBoard" type="NinePatchRect" unique_id=2122650616]
+offset_right = 29.0
+offset_bottom = 29.0
+texture = ExtResource("1_du58c")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 2
+patch_margin_bottom = 2
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_2ejoo")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1640494900]
+position = Vector2(2, 2)
+collision_mask = 2
+
+[node name="BoardArea" type="CollisionShape2D" parent="Area2D" unique_id=399700379]
+unique_name_in_owner = true
+position = Vector2(12.5, 12.5)
+shape = SubResource("RectangleShape2D_2ejoo")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

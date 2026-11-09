@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ActorInfo" format=3 uid="uid://be0jct1hlfn1r"]
+
+[ext_resource type="Texture2D" uid="uid://bnpobqbmypxo0" path="res://Combat Objects/Player Characters/Bronze.png" id="1_nlgka"]
+[ext_resource type="Texture2D" uid="uid://bf2gq8jg178vr" path="res://Combat Objects/Player Characters/BronzePortrait.png" id="2_4sd8b"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="2_nlgka"]
+
+[resource]
+script = ExtResource("2_nlgka")
+base_might = 9
+base_potency = 8
+base_constitution = 10
+base_resilience = 7
+base_intelligence = 2
+base_speed = 3
+base_luck = 1
+portrait = ExtResource("2_4sd8b")
+icon = ExtResource("1_nlgka")
+character_name = "Bronze"
+combat_class = "Fire Fighter"
+actor_path = "uid://cdo3d45ymn5uf"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"

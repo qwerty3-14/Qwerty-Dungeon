@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ActorInfo" format=3 uid="uid://cwat74d6pkg6u"]
+
+[ext_resource type="Texture2D" uid="uid://bha2qcogml6hr" path="res://Combat Objects/Player Characters/Scarlet.png" id="1_s1eqw"]
+[ext_resource type="Texture2D" uid="uid://b63uj0e4g1jv" path="res://Combat Objects/Player Characters/ScarletPortrait.png" id="2_5sf7n"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="2_s1eqw"]
+
+[resource]
+script = ExtResource("2_s1eqw")
+base_might = 2
+base_potency = 10
+base_constitution = 3
+base_resilience = 2
+base_intelligence = 8
+base_speed = 5
+base_luck = 9
+portrait = ExtResource("2_5sf7n")
+icon = ExtResource("1_s1eqw")
+character_name = "Scarlet"
+combat_class = "Arcanist"
+actor_path = "uid://cmd7nlwoq1fev"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"

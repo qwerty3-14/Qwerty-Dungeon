@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bp3vbncme4l4k"]
+
+[ext_resource type="Script" uid="uid://bdllboh0gx55b" path="res://Skills/Passives/shadowstab.gd" id="1_iebwt"]
+[ext_resource type="Resource" uid="uid://bantnpjh5dwbk" path="res://SkillResources/SkillInfo/Passives/shadowstab.tres" id="2_iebwt"]
+
+[node name="Shadowstab" type="Node" unique_id=1439596944]
+script = ExtResource("1_iebwt")
+skill_info = ExtResource("2_iebwt")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

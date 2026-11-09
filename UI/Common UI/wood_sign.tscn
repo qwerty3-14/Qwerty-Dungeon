@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://b8xwvfw8jdhl5"]
+
+[ext_resource type="Texture2D" uid="uid://kmkkip4i8lh5" path="res://UI/Common UI/WoodSign.png" id="1_8e3kt"]
+
+[node name="WoodSign" type="NinePatchRect" unique_id=1067532115]
+offset_right = 12.0
+offset_bottom = 12.0
+texture = ExtResource("1_8e3kt")
+patch_margin_left = 6
+patch_margin_top = 6
+patch_margin_right = 6
+patch_margin_bottom = 6

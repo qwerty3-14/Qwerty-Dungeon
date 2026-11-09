@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dsc2xgayxx7x3"]
+
+[ext_resource type="Script" uid="uid://cautjow1fixpa" path="res://Skills/Passives/block.gd" id="1_phojf"]
+[ext_resource type="Resource" uid="uid://csukad2f7qq66" path="res://SkillResources/SkillInfo/Passives/block_info.tres" id="2_fnt1y"]
+
+[node name="Block" type="Node" unique_id=1642620020]
+script = ExtResource("1_phojf")
+skill_info = ExtResource("2_fnt1y")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cxyffo81s1yd6"]
+
+[ext_resource type="Script" uid="uid://ci1hso0px501s" path="res://Skills/Actions/Alchemy/defense_potion.gd" id="1_x3qjt"]
+[ext_resource type="Texture2D" uid="uid://cpwi6gtpv3s35" path="res://Skills/Actions/Alchemy/DefensePotion.png" id="2_70i7w"]
+[ext_resource type="Resource" uid="uid://b1uh5lwcabs1k" path="res://SkillResources/SkillInfo/Actions/Alchemy/defense_potion_info.tres" id="2_b77xj"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="3_ru0s1"]
+[ext_resource type="PackedScene" uid="uid://b4pj5t3pnx10x" path="res://Skills/Components/potion.tscn" id="4_w1il3"]
+[ext_resource type="Texture2D" uid="uid://baqq32d6t6n4g" path="res://Skills/Actions/Alchemy/DefensePotionImbue.png" id="5_b77xj"]
+
+[node name="DefensePotion" type="Node" unique_id=721052048]
+script = ExtResource("1_x3qjt")
+skill_info = ExtResource("2_b77xj")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("3_ru0s1")]
+phase_cooldown = -1
+type = 4
+ap_cost = 2
+
+[node name="Potion" parent="." unique_id=1264552933 node_paths=PackedStringArray("action") instance=ExtResource("4_w1il3")]
+unique_name_in_owner = true
+default_icon = ExtResource("2_70i7w")
+imbue_icon = ExtResource("5_b77xj")
+action = NodePath("../Action")
+
+[connection signal="used" from="Action" to="." method="_on_action_used"]
+[connection signal="imbue_confirmed" from="Potion" to="." method="_on_potion_imbue_confirmed"]

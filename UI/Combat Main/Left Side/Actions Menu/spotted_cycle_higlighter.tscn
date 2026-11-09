@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://vfbjftlty1ux"]
+
+[ext_resource type="Texture2D" uid="uid://capohyad0567k" path="res://UI/Combat Main/Left Side/Actions Menu/SpottedHighlight.png" id="1_gry6j"]
+[ext_resource type="Script" uid="uid://c2posheidelug" path="res://UI/Combat Main/Left Side/Actions Menu/spotted_cycle_higlighter.gd" id="2_7q5x8"]
+
+[node name="SpottedCycleHiglighter" type="NinePatchRect" unique_id=1630227566]
+offset_right = 16.0
+offset_bottom = 16.0
+texture = ExtResource("1_gry6j")
+region_rect = Rect2(0, 0, 6, 6)
+patch_margin_left = 1
+patch_margin_top = 1
+patch_margin_right = 1
+patch_margin_bottom = 1
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_7q5x8")

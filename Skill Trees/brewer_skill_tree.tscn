@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://criepepk81486"]
+
+[ext_resource type="Script" uid="uid://45aq1saawh2a" path="res://Skill Trees/Components/SkillTree.gd" id="1_85aoo"]
+[ext_resource type="PackedScene" uid="uid://bvqr5lvj0clth" path="res://Skill Trees/Components/skill_tree_slot.tscn" id="2_5f7sj"]
+
+[node name="BrewerSkillTree" type="Control" unique_id=493972082]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_85aoo")
+metadata/_custom_type_script = "uid://45aq1saawh2a"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1436965486]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14287072, 0.2506041, 0.1399523, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=711002070]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -74.0
+offset_top = 12.0
+offset_right = 74.0
+offset_bottom = 48.0
+grow_horizontal = 2
+
+[node name="ShortswordSlot" parent="." unique_id=350782598 instance=ExtResource("2_5f7sj")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 61.0
+offset_top = 18.0
+offset_right = 61.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Shortsword Attack"
+aquired = true
+
+[node name="PoisonPotionSlot" parent="." unique_id=393508954 instance=ExtResource("2_5f7sj")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 89.0
+offset_top = 18.0
+offset_right = 89.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Poison Potion"
+aquired = true
+
+[node name="DefensePotionSlot" parent="." unique_id=334191544 instance=ExtResource("2_5f7sj")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 117.0
+offset_top = 18.0
+offset_right = 117.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Defense Potion"
+aquired = true
+
+[node name="ImbueSlot" parent="." unique_id=1096417443 instance=ExtResource("2_5f7sj")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 145.0
+offset_top = 18.0
+offset_right = 145.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Imbue"
+aquired = true
+
+[node name="CloakSlot" parent="." unique_id=1573200895 instance=ExtResource("2_5f7sj")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 173.0
+offset_top = 18.0
+offset_right = 173.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Cloak"
+aquired = true
+
+[node name="WeakSlot" parent="." unique_id=1912037746 instance=ExtResource("2_5f7sj")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 76.0
+offset_top = 68.0
+offset_right = 76.0
+offset_bottom = 68.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Weak Potion"
+availible = true
+
+[node name="SpellbaneSlot" parent="." unique_id=26097485 instance=ExtResource("2_5f7sj")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 155.0
+offset_top = 66.0
+offset_right = 155.0
+offset_bottom = 66.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Spellbane Potion"
+availible = true

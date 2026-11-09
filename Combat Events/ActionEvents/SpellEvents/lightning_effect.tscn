@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://csrl6q4rkjtmn"]
+
+[ext_resource type="Script" uid="uid://b1n4qdviergp6" path="res://Combat Events/ActionEvents/SpellEvents/lightning_effect.gd" id="1_gm1vi"]
+
+[node name="LightningEffect" type="Node2D" unique_id=872338533]
+script = ExtResource("1_gm1vi")
+end_pos = Vector2(128, 0)
+
+[node name="Timer" type="Timer" parent="." unique_id=1079568475]
+unique_name_in_owner = true
+wait_time = 0.2
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,359 @@
+[gd_scene format=3 uid="uid://ds85en0dsintp"]
+
+[ext_resource type="PackedScene" uid="uid://b8xwvfw8jdhl5" path="res://UI/Common UI/wood_sign.tscn" id="1_8rrvy"]
+[ext_resource type="PackedScene" uid="uid://de6qmm8n8rp06" path="res://UI/CharacterMenus/character_title.tscn" id="1_34vhs"]
+[ext_resource type="Script" uid="uid://b00xa6bvx02gn" path="res://UI/MainMenu/character_select.gd" id="1_tg7tw"]
+[ext_resource type="PackedScene" uid="uid://clhm0ojdvudmt" path="res://UI/MainMenu/character_select_button.tscn" id="2_xykp5"]
+[ext_resource type="Texture2D" uid="uid://jfrgvhai1u68" path="res://Combat Objects/Player Characters/George.png" id="3_udrgd"]
+[ext_resource type="Texture2D" uid="uid://b4vnlyahd1qd1" path="res://Combat Objects/Player Characters/Eclipse.png" id="4_6aq56"]
+[ext_resource type="Texture2D" uid="uid://bfopgkrvofuov" path="res://Combat Objects/Player Characters/Geode.png" id="5_tg7tw"]
+[ext_resource type="Texture2D" uid="uid://dw4ta2tna60qt" path="res://Combat Objects/Player Characters/Alex.png" id="6_2iuqd"]
+[ext_resource type="Texture2D" uid="uid://b754dhac74qo6" path="res://Combat Objects/Player Characters/Holmes.png" id="7_21a65"]
+[ext_resource type="Texture2D" uid="uid://bumc7w3cb6vp4" path="res://Combat Objects/Player Characters/Edward.png" id="8_js4e2"]
+
+[node name="CharacterSelect" type="Control" unique_id=1678580469 node_paths=PackedStringArray("character_select_buttons")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tg7tw")
+character_select_buttons = [NodePath("HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow/Narine"), NodePath("HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow/Sydney"), NodePath("HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow/Scarlet"), NodePath("HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow/Bronze")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1987175116]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftSide" type="ColorRect" parent="HBoxContainer" unique_id=993596599]
+layout_mode = 2
+size_flags_horizontal = 3
+color = Color(0, 0, 0, 1)
+
+[node name="CenterContainer" type="CenterContainer" parent="HBoxContainer/LeftSide" unique_id=699033679]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="HBoxContainer/LeftSide/CenterContainer" unique_id=1179100547]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer" unique_id=874527112]
+layout_mode = 2
+
+[node name="WoodSign" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer" unique_id=1067532115 instance=ExtResource("1_8rrvy")]
+custom_minimum_size = Vector2(80, 22)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/WoodSign" unique_id=787252986]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Character
+Select"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TopRow" type="HBoxContainer" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer" unique_id=1561860631]
+layout_mode = 2
+
+[node name="Narine" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow" unique_id=1225082146 instance=ExtResource("2_xykp5")]
+layout_mode = 2
+library_key = "Narine"
+
+[node name="George" type="Control" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow" unique_id=1698799771]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+tooltip_text = "Coming soon!"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow/George" unique_id=443042639]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+texture = ExtResource("3_udrgd")
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow/George/TextureRect" unique_id=1879254150]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Sydney" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow" unique_id=670372161 instance=ExtResource("2_xykp5")]
+layout_mode = 2
+library_key = "Sydney"
+
+[node name="Eclipse" type="Control" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow" unique_id=2054612033]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+tooltip_text = "Coming soon!"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow/Eclipse" unique_id=381410960]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+texture = ExtResource("4_6aq56")
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/TopRow/Eclipse/TextureRect" unique_id=310662448]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MiddleRow" type="HBoxContainer" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer" unique_id=374583818]
+layout_mode = 2
+
+[node name="SpacerLeft" type="Control" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/MiddleRow" unique_id=531407628]
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+
+[node name="Geode" type="Control" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/MiddleRow" unique_id=1120861385]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+tooltip_text = "Coming soon!"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/MiddleRow/Geode" unique_id=403487794]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+texture = ExtResource("5_tg7tw")
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/MiddleRow/Geode/TextureRect" unique_id=2043085088]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Alex" type="Control" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/MiddleRow" unique_id=1947214580]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+tooltip_text = "Coming soon!"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/MiddleRow/Alex" unique_id=1171207775]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+texture = ExtResource("6_2iuqd")
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/MiddleRow/Alex/TextureRect" unique_id=1994603753]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SpacerRight" type="Control" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/MiddleRow" unique_id=1288979933]
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+
+[node name="BottomRow" type="HBoxContainer" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer" unique_id=639741427]
+layout_mode = 2
+
+[node name="Holmes" type="Control" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow" unique_id=1652334793]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+tooltip_text = "Coming soon!"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow/Holmes" unique_id=444907887]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+texture = ExtResource("7_21a65")
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow/Holmes/TextureRect" unique_id=1527309703]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Scarlet" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow" unique_id=56428315 instance=ExtResource("2_xykp5")]
+layout_mode = 2
+library_key = "Scarlet"
+
+[node name="Bronze" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow" unique_id=972422692 instance=ExtResource("2_xykp5")]
+layout_mode = 2
+library_key = "Bronze"
+
+[node name="Edward" type="Control" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow" unique_id=811403639]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(22, 22)
+custom_maximum_size = Vector2(22, 22)
+layout_mode = 2
+tooltip_text = "Coming soon!"
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow/Edward" unique_id=1572158134]
+self_modulate = Color(0, 0, 0, 1)
+custom_minimum_size = Vector2(16, 16)
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = 19.0
+offset_bottom = 19.0
+texture = ExtResource("8_js4e2")
+
+[node name="Label" type="Label" parent="HBoxContainer/LeftSide/CenterContainer/PanelContainer/VBoxContainer/BottomRow/Edward/TextureRect" unique_id=884709024]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "?"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Return" type="Button" parent="HBoxContainer/LeftSide" unique_id=413839449]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -10.0
+offset_right = 10.0
+grow_vertical = 0
+text = "Return"
+
+[node name="RightSide" type="VBoxContainer" parent="HBoxContainer" unique_id=1083063057]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="Control" type="Control" parent="HBoxContainer/RightSide" unique_id=11961586]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ColorRect" type="ColorRect" parent="HBoxContainer/RightSide" unique_id=1196925503]
+custom_minimum_size = Vector2(0, 23)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CharacterTitleContainer" type="HBoxContainer" parent="HBoxContainer/RightSide/ColorRect" unique_id=1016958210]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterTitle" parent="HBoxContainer/RightSide/ColorRect/CharacterTitleContainer" unique_id=1287509331 instance=ExtResource("1_34vhs")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CharacterTitle2" parent="HBoxContainer/RightSide/ColorRect/CharacterTitleContainer" unique_id=922181953 instance=ExtResource("1_34vhs")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CharacterTitle3" parent="HBoxContainer/RightSide/ColorRect/CharacterTitleContainer" unique_id=1186308870 instance=ExtResource("1_34vhs")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CharacterTitle4" parent="HBoxContainer/RightSide/ColorRect/CharacterTitleContainer" unique_id=860415767 instance=ExtResource("1_34vhs")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect2" type="ColorRect" parent="HBoxContainer/RightSide" unique_id=1559806501]
+custom_minimum_size = Vector2(0, 17)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BeginHelp" type="Label" parent="HBoxContainer/RightSide/ColorRect2" unique_id=1920613173]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -3.5
+offset_right = 40.0
+offset_bottom = 3.5
+grow_vertical = 2
+text = "Select 4 more character before you begin."
+
+[node name="Begin" type="Button" parent="HBoxContainer/RightSide/ColorRect2" unique_id=455301563]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -8.5
+offset_bottom = 8.5
+grow_horizontal = 0
+grow_vertical = 2
+disabled = true
+text = "Begin!"
+
+[connection signal="pressed" from="HBoxContainer/LeftSide/Return" to="." method="_on_return_pressed"]
+[connection signal="pressed" from="HBoxContainer/RightSide/ColorRect2/Begin" to="." method="_on_begin_pressed"]

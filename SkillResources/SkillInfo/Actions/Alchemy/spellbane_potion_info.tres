@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://centtyutkxd08"]
+
+[ext_resource type="Texture2D" uid="uid://b0f7ofkxfvrl4" path="res://Skills/Actions/Alchemy/SpellbanePotion.png" id="1_04qhu"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_bhlsq"]
+
+[resource]
+script = ExtResource("2_bhlsq")
+icon = ExtResource("1_04qhu")
+display_name = "Spellbane Potion"
+description = "Reduces your pot by 4 for 5 turns."
+skill_type = 1
+ap_cost = 2
+action_cooldown = -1
+action_type = 4
+skill_path = "uid://crf5x3y2arsad"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

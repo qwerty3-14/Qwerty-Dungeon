@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://omy2b1a2u42"]
+
+[ext_resource type="Texture2D" uid="uid://bufkqpuahhd20" path="res://Skills/Actions/Weapon Attacks/PolearmAttack.png" id="1_f6rx6"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_cxmoe"]
+
+[resource]
+script = ExtResource("2_cxmoe")
+icon = ExtResource("1_f6rx6")
+display_name = "Polearm Attack"
+description = "Deals <PD>
+
+{DM}"
+skill_type = 1
+target_range = 2.0
+ap_cost = 2
+action_type = 1
+skill_path = "uid://d0whbnrbqx3q3"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

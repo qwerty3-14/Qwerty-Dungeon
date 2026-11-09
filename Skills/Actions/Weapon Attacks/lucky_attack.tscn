@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dto4lt8qlp7pb"]
+
+[ext_resource type="Script" uid="uid://bfsm1h0kw028c" path="res://Skills/Actions/Weapon Attacks/LuckyAttack.gd" id="1_mcvfp"]
+[ext_resource type="Texture2D" uid="uid://skcqflhqernq" path="res://Skills/Actions/Weapon Attacks/LuckyAttack.png" id="2_d5f30"]
+[ext_resource type="Resource" uid="uid://c78gyqjkqsykt" path="res://SkillResources/SkillInfo/Actions/Modified Weapon Attacks/lucky_attack_info.tres" id="2_ef5ht"]
+[ext_resource type="PackedScene" uid="uid://38n4pwhivik4" path="res://Skills/Components/Weapon Attack/modified_weapon_attack.tscn" id="2_u4oq3"]
+[ext_resource type="Script" uid="uid://mgqvtedchk8o" path="res://Skills/Components/action.gd" id="4_ogikl"]
+
+[node name="LuckyAttack" type="Node" unique_id=1424397549]
+script = ExtResource("1_mcvfp")
+skill_info = ExtResource("2_ef5ht")
+icon = ExtResource("2_d5f30")
+display_name = "Lucky Attack"
+description = "Spend a lucky charge to deal <VD> without costing ap!
+
+Passive: At the start of each phase grants a luck x 3% chance of gaining a lucky charge.
+
+{DM}"
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="ModifiedWeaponAttack" parent="." unique_id=847325741 node_paths=PackedStringArray("action") instance=ExtResource("2_u4oq3")]
+action = NodePath("../Action")
+
+[node name="Action" type="Node" parent="." unique_id=1611507076]
+script = ExtResource("4_ogikl")
+type = 2
+metadata/_custom_type_script = "uid://mgqvtedchk8o"
+
+[connection signal="checking_playable" from="." to="." method="_on_checking_playable"]
+[connection signal="inputs_done" from="Action" to="." method="_on_action_inputs_done"]

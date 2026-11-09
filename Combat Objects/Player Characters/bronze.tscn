@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://cdo3d45ymn5uf"]
+
+[ext_resource type="Texture2D" uid="uid://bnpobqbmypxo0" path="res://Combat Objects/Player Characters/Bronze.png" id="1_3swli"]
+[ext_resource type="Script" uid="uid://dd4vicgmwpr8b" path="res://Combat Objects/Player Characters/bronze.gd" id="1_jt76e"]
+[ext_resource type="PackedScene" uid="uid://c2ba4l83aa8j6" path="res://Combat Objects/Generic/actor.tscn" id="3_mgv71"]
+[ext_resource type="PackedScene" uid="uid://cnpfqiulbjgbc" path="res://Skills/Actions/Weapon Attacks/unarmed_attack.tscn" id="4_dhmev"]
+[ext_resource type="Texture2D" uid="uid://bf2gq8jg178vr" path="res://Combat Objects/Player Characters/BronzePortrait.png" id="4_mgv71"]
+[ext_resource type="Resource" uid="uid://be0jct1hlfn1r" path="res://Combat Objects/Player Characters/bronze_info.tres" id="4_sisiq"]
+[ext_resource type="PackedScene" uid="uid://onw6dwjchrmv" path="res://Skills/Actions/fireball.tscn" id="6_abkug"]
+[ext_resource type="PackedScene" uid="uid://lo8hy63er5gg" path="res://Skills/Actions/suplex.tscn" id="7_jt76e"]
+
+[node name="Bronze" type="Node2D" unique_id=1750468704]
+script = ExtResource("1_jt76e")
+blocks_enemies = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=516985276]
+texture = ExtResource("1_3swli")
+
+[node name="Actor" parent="." unique_id=60533830 node_paths=PackedStringArray("hotbar_skills") instance=ExtResource("3_mgv71")]
+actor_info = ExtResource("4_sisiq")
+base_might = 9
+base_potency = 8
+base_constitution = 10
+base_resilience = 7
+base_intelligence = 2
+base_speed = 3
+base_luck = 1
+portrait = ExtResource("4_mgv71")
+icon = ExtResource("1_3swli")
+character_name = "Bronze"
+combat_class = "Fire Fighter"
+alignment = 0
+hotbar_skills = {
+0: NodePath("UnarmedAttack"),
+1: NodePath("Fireball"),
+2: NodePath("Suplex")
+}
+
+[node name="UnarmedAttack" parent="Actor" unique_id=2139241734 instance=ExtResource("4_dhmev")]
+
+[node name="Fireball" parent="Actor" unique_id=1916993779 instance=ExtResource("6_abkug")]
+
+[node name="Suplex" parent="Actor" unique_id=1709145225 instance=ExtResource("7_jt76e")]

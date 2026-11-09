@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://b1uh5lwcabs1k"]
+
+[ext_resource type="Texture2D" uid="uid://cpwi6gtpv3s35" path="res://Skills/Actions/Alchemy/DefensePotion.png" id="1_u6p2o"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="3_krgxy"]
+
+[resource]
+script = ExtResource("3_krgxy")
+icon = ExtResource("1_u6p2o")
+display_name = "Defense Potion"
+description = "Gain 4 defense for 5 turns"
+skill_type = 1
+ap_cost = 2
+action_cooldown = -1
+action_type = 4
+skill_path = "uid://cxyffo81s1yd6"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

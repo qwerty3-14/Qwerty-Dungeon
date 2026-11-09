@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://bgpbbxceqfsfg"]
+
+[ext_resource type="Script" uid="uid://ivj7fam8vkia" path="res://UI/CharacterMenus/character_menus.gd" id="1_6f475"]
+[ext_resource type="PackedScene" uid="uid://cfl37k2bxnp0q" path="res://UI/CharacterMenus/charcter_rune_board.tscn" id="2_dkjwe"]
+
+[node name="CharacterMenus" type="Control" unique_id=550055595]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_6f475")
+
+[node name="TabContainer" type="TabContainer" parent="." unique_id=1154446722]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+current_tab = 2
+
+[node name="Hotbars" type="ColorRect" parent="TabContainer" unique_id=529148122]
+visible = false
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+metadata/_tab_index = 0
+
+[node name="Hotbars" type="TabContainer" parent="TabContainer/Hotbars" unique_id=267952663]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Skill Trees" type="TabContainer" parent="TabContainer" unique_id=504797956]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+metadata/_tab_index = 1
+
+[node name="Rune Boards" type="Control" parent="TabContainer" unique_id=1205541371]
+layout_mode = 2
+mouse_filter = 1
+metadata/_tab_index = 2
+
+[node name="TopBottomDivision" type="VBoxContainer" parent="TabContainer/Rune Boards" unique_id=1090306647]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BoardList" type="HBoxContainer" parent="TabContainer/Rune Boards/TopBottomDivision" unique_id=516523831]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 3.0
+
+[node name="CharcterRuneBoard" parent="TabContainer/Rune Boards/TopBottomDivision/BoardList" unique_id=641556228 instance=ExtResource("2_dkjwe")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CharcterRuneBoard2" parent="TabContainer/Rune Boards/TopBottomDivision/BoardList" unique_id=1341933949 instance=ExtResource("2_dkjwe")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CharcterRuneBoard3" parent="TabContainer/Rune Boards/TopBottomDivision/BoardList" unique_id=1009554247 instance=ExtResource("2_dkjwe")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CharcterRuneBoard4" parent="TabContainer/Rune Boards/TopBottomDivision/BoardList" unique_id=1845314440 instance=ExtResource("2_dkjwe")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ColorRect" type="ColorRect" parent="TabContainer/Rune Boards/TopBottomDivision" unique_id=1592798408]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 1
+color = Color(0, 0, 0, 1)
+
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Rune Boards/TopBottomDivision/ColorRect" unique_id=1085508780]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+
+[node name="RuneFlow" type="HFlowContainer" parent="TabContainer/Rune Boards/TopBottomDivision/ColorRect/ScrollContainer" unique_id=520211549]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="DraggedRuneContainer" type="Node2D" parent="TabContainer/Rune Boards/TopBottomDivision" unique_id=835106279]
+unique_name_in_owner = true
+
+[node name="Blackout" type="ColorRect" parent="TabContainer/Rune Boards" unique_id=1812712075]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.060530394, 0.060530335, 0.060530372, 0.5137255)
+
+[node name="Label" type="Label" parent="TabContainer/Rune Boards/Blackout" unique_id=1035724187]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Can't be edited during combat"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="Button" parent="." unique_id=742820846]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -50.0
+offset_bottom = 17.0
+grow_horizontal = 0
+text = "Return"
+
+[connection signal="mouse_entered" from="TabContainer/Rune Boards/TopBottomDivision/ColorRect/ScrollContainer/RuneFlow" to="." method="_on_rune_flow_mouse_entered"]
+[connection signal="mouse_exited" from="TabContainer/Rune Boards/TopBottomDivision/ColorRect/ScrollContainer/RuneFlow" to="." method="_on_rune_flow_mouse_exited"]
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

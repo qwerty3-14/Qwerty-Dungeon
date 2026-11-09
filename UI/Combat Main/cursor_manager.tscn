@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://dyfav450f8d4q"]
+
+[ext_resource type="Script" uid="uid://dtonmsknwbvnh" path="res://UI/Combat Main/cursor_manager.gd" id="1_ix0to"]
+
+[node name="CursorManager" type="Node" unique_id=1416322440]
+script = ExtResource("1_ix0to")
+
+[connection signal="cursor_tile_position_changed" from="." to="." method="_on_cursor_tile_position_changed"]

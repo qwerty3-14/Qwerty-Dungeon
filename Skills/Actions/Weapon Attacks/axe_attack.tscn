@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c6jcs7kddyfwx"]
+
+[ext_resource type="Script" uid="uid://eqbdmf3fegj3" path="res://Skills/Actions/Weapon Attacks/axe_attack.gd" id="1_8y6r1"]
+[ext_resource type="PackedScene" uid="uid://b0ovc75aun67a" path="res://Skills/Components/Weapon Attack/weapon_attack.tscn" id="2_kru5k"]
+[ext_resource type="Resource" uid="uid://co5cdkpprfdc6" path="res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/axe_attack_info.tres" id="2_nfcxr"]
+[ext_resource type="Texture2D" uid="uid://d3o6ufw6xnpom" path="res://Skills/Actions/Weapon Attacks/AxeAttack.png" id="2_pmcgt"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_pmcgt"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_nfcxr"]
+
+[node name="AxeAttack" type="Node" unique_id=282768279]
+script = ExtResource("1_8y6r1")
+skill_info = ExtResource("2_nfcxr")
+icon = ExtResource("2_pmcgt")
+display_name = "Axe Attack"
+description = "Deals <SD>
+
+{DM}"
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="WeaponAttack" parent="." unique_id=1381722177 node_paths=PackedStringArray("action", "target_range") instance=ExtResource("2_kru5k")]
+action = NodePath("../Action")
+target_range = NodePath("../TargetRange")
+damage_type = 3
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_pmcgt")]
+attack_range = 1.5
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_nfcxr")]
+type = 1
+ap_cost = 2

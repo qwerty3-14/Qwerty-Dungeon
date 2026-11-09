@@ -1,0 +1,369 @@
+[gd_scene format=3 uid="uid://dsvd40sc2uphr"]
+
+[ext_resource type="Script" uid="uid://45aq1saawh2a" path="res://Skill Trees/Components/SkillTree.gd" id="1_kigey"]
+[ext_resource type="PackedScene" uid="uid://d27mtjx2w00pu" path="res://Skill Trees/Components/chain.tscn" id="2_3p73d"]
+[ext_resource type="PackedScene" uid="uid://bvqr5lvj0clth" path="res://Skill Trees/Components/skill_tree_slot.tscn" id="2_l1g5t"]
+[ext_resource type="PackedScene" uid="uid://bw8vsrwxeo0h2" path="res://Skill Trees/Components/curved_link_arrow.tscn" id="2_upny4"]
+[ext_resource type="PackedScene" uid="uid://b47oifrpcp4ft" path="res://Skill Trees/Components/link_arrow.tscn" id="3_3p73d"]
+
+[node name="InfantrySkillTree" type="Control" unique_id=1891710239]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 256.0
+offset_bottom = 256.0
+script = ExtResource("1_kigey")
+combat_class = "Infantry"
+metadata/_custom_type_script = "uid://45aq1saawh2a"
+
+[node name="Chain" parent="." unique_id=1031715725 instance=ExtResource("2_3p73d")]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 174.0
+offset_right = 36.0
+offset_bottom = 181.0
+
+[node name="Chain2" parent="." unique_id=281892763 instance=ExtResource("2_3p73d")]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 220.0
+offset_right = 175.0
+offset_bottom = 227.0
+
+[node name="CurvedLinkArrow" parent="." unique_id=1438768544 instance=ExtResource("2_upny4")]
+layout_mode = 0
+offset_left = 174.0
+offset_top = 37.0
+offset_right = 192.0
+offset_bottom = 74.0
+
+[node name="CurvedLinkArrow3" parent="." unique_id=735491151 instance=ExtResource("2_upny4")]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 100.0
+offset_right = 136.0
+offset_bottom = 120.0
+
+[node name="CurvedLinkArrow5" parent="." unique_id=959943111 instance=ExtResource("2_upny4")]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 100.0
+offset_right = 236.0
+offset_bottom = 120.0
+
+[node name="CurvedLinkArrow6" parent="." unique_id=769125655 instance=ExtResource("2_upny4")]
+layout_mode = 0
+offset_left = 188.0
+offset_top = 146.0
+offset_right = 236.0
+offset_bottom = 166.0
+
+[node name="CurvedLinkArrow2" parent="." unique_id=1053385193 instance=ExtResource("2_upny4")]
+layout_mode = 0
+offset_left = 84.0
+offset_top = 37.0
+offset_right = 102.0
+offset_bottom = 74.0
+scale = Vector2(-1, 1)
+
+[node name="CurvedLinkArrow4" parent="." unique_id=952844045 instance=ExtResource("2_upny4")]
+layout_mode = 0
+offset_left = 182.0
+offset_top = 100.0
+offset_right = 242.0
+offset_bottom = 120.0
+scale = Vector2(-1, 1)
+
+[node name="CurvedLinkArrow7" parent="." unique_id=735093905 instance=ExtResource("2_upny4")]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 100.0
+offset_right = 130.0
+offset_bottom = 166.0
+scale = Vector2(-1, 1)
+
+[node name="CurvedLinkArrow8" parent="." unique_id=713522558 instance=ExtResource("2_upny4")]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 146.0
+offset_right = 102.0
+offset_bottom = 166.0
+scale = Vector2(-1, 1)
+
+[node name="LinkArrow" parent="." unique_id=986622274 instance=ExtResource("3_3p73d")]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 96.0
+offset_right = 80.0
+offset_bottom = 120.0
+
+[node name="LinkArrow2" parent="." unique_id=1585359555 instance=ExtResource("3_3p73d")]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 96.0
+offset_right = 192.0
+offset_bottom = 120.0
+
+[node name="LinkArrow3" parent="." unique_id=1461973736 instance=ExtResource("3_3p73d")]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 142.0
+offset_right = 192.0
+offset_bottom = 166.0
+
+[node name="LinkArrow5" parent="." unique_id=1027029963 instance=ExtResource("3_3p73d")]
+layout_mode = 0
+offset_left = 178.0
+offset_top = 188.0
+offset_right = 192.0
+offset_bottom = 212.0
+
+[node name="LinkArrow6" parent="." unique_id=209699111 instance=ExtResource("3_3p73d")]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 188.0
+offset_right = 80.0
+offset_bottom = 212.0
+
+[node name="LinkArrow4" parent="." unique_id=1460955113 instance=ExtResource("3_3p73d")]
+layout_mode = 0
+offset_left = 66.0
+offset_top = 142.0
+offset_right = 80.0
+offset_bottom = 166.0
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=830655698]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_top = 12.0
+offset_right = 47.0
+offset_bottom = 48.0
+grow_horizontal = 2
+
+[node name="PolearmSlot" parent="." unique_id=350782598 instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 90.0
+offset_top = 18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Polearm Attack"
+aquired = true
+
+[node name="PlateArmorSlot" parent="." unique_id=1839838028 instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 118.0
+offset_top = 18.0
+offset_right = 118.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Plate Armor"
+aquired = true
+
+[node name="BlockSlot" parent="." unique_id=1889596234 instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 146.0
+offset_top = 18.0
+offset_right = 146.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Block"
+aquired = true
+
+[node name="OpprotunistSlot" parent="." unique_id=395922981 instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 62.0
+offset_top = 74.0
+offset_right = 62.0
+offset_bottom = 74.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Opportunist"
+availible = true
+
+[node name="CrippleSlot" parent="." unique_id=1234631144 node_paths=PackedStringArray("prerequisites") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 62.0
+offset_top = 120.0
+offset_right = 62.0
+offset_bottom = 120.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Cripple"
+prerequisites = [NodePath("../OpprotunistSlot")]
+
+[node name="OptimalPositioning" parent="." unique_id=87094094 node_paths=PackedStringArray("prerequisites") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 62.0
+offset_top = 166.0
+offset_right = 62.0
+offset_bottom = 166.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Optimal Positioning"
+prerequisites = [NodePath("../CrippleSlot")]
+
+[node name="CripplingOpprotunistSlot" parent="." unique_id=815609911 node_paths=PackedStringArray("prerequisites", "mutually_exlusives") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 34.0
+offset_top = 166.0
+offset_right = 34.0
+offset_bottom = 166.0
+grow_horizontal = 1
+grow_vertical = 1
+prerequisites = [NodePath("../CrippleSlot")]
+mutually_exlusives = [NodePath("../MyTurnYetSlot")]
+
+[node name="MyTurnYetSlot" parent="." unique_id=144794216 node_paths=PackedStringArray("prerequisites", "mutually_exlusives") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 6.0
+offset_top = 166.0
+offset_right = 6.0
+offset_bottom = 166.0
+grow_horizontal = 1
+grow_vertical = 1
+prerequisites = [NodePath("../OpprotunistSlot")]
+mutually_exlusives = [NodePath("../CripplingOpprotunistSlot")]
+
+[node name="VaultSlot" parent="." unique_id=2117424889 instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 174.0
+offset_top = 74.0
+offset_right = 174.0
+offset_bottom = 74.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Vault"
+availible = true
+
+[node name="ToughnessSlot" parent="." unique_id=1590710805 node_paths=PackedStringArray("prerequisites") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 174.0
+offset_top = 120.0
+offset_right = 174.0
+offset_bottom = 120.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Toughness"
+prerequisites = [NodePath("../VaultSlot")]
+
+[node name="GetToTheFrontlinesSlot" parent="." unique_id=1923408712 node_paths=PackedStringArray("prerequisites") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 218.0
+offset_top = 120.0
+offset_right = 218.0
+offset_bottom = 120.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Get to the frontlines"
+prerequisites = [NodePath("../VaultSlot")]
+
+[node name="PerservernceSlot" parent="." unique_id=558315476 node_paths=PackedStringArray("prerequisites") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 174.0
+offset_top = 166.0
+offset_right = 174.0
+offset_bottom = 166.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Perseverance"
+prerequisites = [NodePath("../ToughnessSlot")]
+
+[node name="PhysicalTankSlot" parent="." unique_id=1756713843 node_paths=PackedStringArray("prerequisites") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 218.0
+offset_top = 166.0
+offset_right = 218.0
+offset_bottom = 166.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Physical Tank"
+prerequisites = [NodePath("../ToughnessSlot")]
+
+[node name="FullArmor" parent="." unique_id=772857242 node_paths=PackedStringArray("prerequisites", "mutually_exlusives") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 174.0
+offset_top = 212.0
+offset_right = 174.0
+offset_bottom = 212.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Full Armor"
+prerequisites = [NodePath("../PerservernceSlot")]
+mutually_exlusives = [NodePath("../LuckyAttack")]
+
+[node name="LuckyAttack" parent="." unique_id=109584768 node_paths=PackedStringArray("prerequisites", "mutually_exlusives") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 62.0
+offset_top = 212.0
+offset_right = 62.0
+offset_bottom = 212.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Lucky Attack"
+prerequisites = [NodePath("../OptimalPositioning")]
+mutually_exlusives = [NodePath("../FullArmor")]
+
+[node name="ChargeSlot" parent="." unique_id=991085703 node_paths=PackedStringArray("prerequisites") instance=ExtResource("2_l1g5t")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 118.0
+offset_top = 120.0
+offset_right = 118.0
+offset_bottom = 120.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Charge"
+prerequisites = [NodePath("../VaultSlot"), NodePath("../OpprotunistSlot")]

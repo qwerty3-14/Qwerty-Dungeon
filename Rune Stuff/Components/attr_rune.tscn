@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://blbliakikjprs"]
+
+[ext_resource type="Script" uid="uid://dgiwbrakdl4co" path="res://Rune Stuff/Components/attr_rune.gd" id="1_1ecqh"]
+
+[node name="AttrRune" type="Node" unique_id=786195099]
+script = ExtResource("1_1ecqh")

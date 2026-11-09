@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cny3fwogu8t2o"]
+
+[ext_resource type="Script" uid="uid://b4kykhedjyq1a" path="res://Skills/Components/damage_reciever.gd" id="1_dloav"]
+
+[node name="DamageReciever" type="Node" unique_id=786419577]
+script = ExtResource("1_dloav")

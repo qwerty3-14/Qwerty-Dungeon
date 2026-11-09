@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://b5tc14xpw163r"]
+
+[ext_resource type="Texture2D" uid="uid://dvwrc6kymvnnq" path="res://Skills/Passives/Buildup.png" id="1_13ttf"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="3_s0bm7"]
+
+[resource]
+script = ExtResource("3_s0bm7")
+icon = ExtResource("1_13ttf")
+display_name = "Buildup"
+description = "When Impalement is off cooldown gain an impalement charge at the end of the phase.
+
+Impalement hits an additional time for each impalement charge."
+skill_path = "uid://htltrmv0fy5g"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

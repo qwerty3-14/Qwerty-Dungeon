@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bfhqraq0e65bo"]
+
+[ext_resource type="Script" uid="uid://b3vvwn55uih6x" path="res://UI/Combat Main/Right Side/Initiative List/delay_pin.gd" id="1_42hvs"]
+[ext_resource type="Texture2D" uid="uid://uro1di74vxmr" path="res://UI/Combat Main/Right Side/Initiative List/DelayPin.png" id="1_43qmn"]
+
+[node name="DelayPin" type="ColorRect" unique_id=431251801]
+custom_minimum_size = Vector2(43, 5)
+offset_right = 43.0
+offset_bottom = 5.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("1_42hvs")
+
+[node name="PinSprite" type="Sprite2D" parent="." unique_id=314991400]
+unique_name_in_owner = true
+position = Vector2(-26.5, 2.5)
+texture = ExtResource("1_43qmn")
+
+[node name="FadeTimer" type="Timer" parent="." unique_id=1645025767]
+unique_name_in_owner = true
+wait_time = 0.3
+one_shot = true
+
+[connection signal="timeout" from="FadeTimer" to="." method="_on_fade_timer_timeout"]

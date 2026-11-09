@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://cnpfqiulbjgbc"]
+
+[ext_resource type="Script" uid="uid://be06h7uef4r14" path="res://Skills/Actions/Weapon Attacks/unarmed_attack.gd" id="1_rbf0s"]
+[ext_resource type="Texture2D" uid="uid://kej25hsdpgag" path="res://Skills/Actions/Weapon Attacks/UnarmedAttack.png" id="2_1p16o"]
+[ext_resource type="Resource" uid="uid://c4lis5q6i5a6n" path="res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/unarmed_attack_info.tres" id="2_o8riw"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_1p16o"]
+[ext_resource type="PackedScene" uid="uid://b0ovc75aun67a" path="res://Skills/Components/Weapon Attack/weapon_attack.tscn" id="3_waken"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_ap60l"]
+
+[node name="UnarmedAttack" type="Node" unique_id=2139241734]
+script = ExtResource("1_rbf0s")
+skill_info = ExtResource("2_o8riw")
+icon = ExtResource("2_1p16o")
+display_name = "Unarmed Attack"
+description = "Deals <CD>
+
+{DM}"
+tags = Array[String](["Weapon Attack", "Range: 1"])
+
+[node name="WeaponAttack" parent="." unique_id=1381722177 node_paths=PackedStringArray("action", "target_range") instance=ExtResource("3_waken")]
+action = NodePath("../Action")
+target_range = NodePath("../TargetRange")
+damage_type = 1
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_1p16o")]
+unique_name_in_owner = true
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_ap60l")]
+unique_name_in_owner = true
+type = 1
+ap_cost = 2

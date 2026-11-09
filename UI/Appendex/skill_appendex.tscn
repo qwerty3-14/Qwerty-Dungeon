@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dnephsml5eqwn"]
+
+[ext_resource type="Script" uid="uid://dnuy8lh85edkd" path="res://UI/Appendex/skill_appendex.gd" id="1_sr264"]
+[ext_resource type="PackedScene" uid="uid://t0rjkv1w46sn" path="res://UI/Appendex/skill_list_item.tscn" id="1_vcsb3"]
+[ext_resource type="PackedScene" uid="uid://b60f6mxdl6o3h" path="res://UI/Common UI/InfoPanel/info_panel.tscn" id="3_vx7l3"]
+
+[node name="SkillAppendex" type="Control" unique_id=1623146807]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_sr264")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1697606638]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LeftSide" type="VBoxContainer" parent="HBoxContainer" unique_id=2026966494]
+layout_mode = 2
+
+[node name="SkillList" type="ScrollContainer" parent="HBoxContainer/LeftSide" unique_id=274831618]
+custom_minimum_size = Vector2(180, 0)
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="SkillVBox" type="VBoxContainer" parent="HBoxContainer/LeftSide/SkillList" unique_id=971836949]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="SkillListItem" parent="HBoxContainer/LeftSide/SkillList/SkillVBox" unique_id=215861052 instance=ExtResource("1_vcsb3")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ReturnButton" type="Button" parent="HBoxContainer/LeftSide" unique_id=646048833]
+layout_mode = 2
+text = "Return"
+
+[node name="Control" type="CenterContainer" parent="HBoxContainer" unique_id=733292269]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InfoPanel" parent="HBoxContainer/Control" unique_id=1604432641 instance=ExtResource("3_vx7l3")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[connection signal="hovered" from="HBoxContainer/LeftSide/SkillList/SkillVBox/SkillListItem" to="." method="_on_skill_list_item_hovered"]
+[connection signal="pressed" from="HBoxContainer/LeftSide/ReturnButton" to="." method="_on_return_button_pressed"]

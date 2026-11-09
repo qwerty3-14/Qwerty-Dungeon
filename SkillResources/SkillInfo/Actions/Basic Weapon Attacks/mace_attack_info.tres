@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://dovw4nqoi5ym0"]
+
+[ext_resource type="Texture2D" uid="uid://nft87c13hayo" path="res://Skills/Actions/Weapon Attacks/MaceAttack.png" id="1_mi8f0"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_ei03l"]
+
+[resource]
+script = ExtResource("2_ei03l")
+icon = ExtResource("1_mi8f0")
+display_name = "Mace Attack"
+description = "Deals <CD>
+
+{DM}"
+skill_type = 1
+target_range = 1.5
+ap_cost = 2
+action_type = 1
+skill_path = "uid://chpwo0sbp87fv"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

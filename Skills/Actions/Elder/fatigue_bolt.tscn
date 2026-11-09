@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://gssc7sqfnt5t"]
+
+[ext_resource type="Script" uid="uid://cona3x6hs31fd" path="res://Skills/Actions/Elder/fatigue_bolt.gd" id="1_an0oe"]
+[ext_resource type="Resource" uid="uid://b5jp8xsfg5al0" path="res://SkillResources/SkillInfo/Actions/Elder Magic/fatigue_bolt_info.tres" id="2_m1uw8"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_2pynp"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_2hxvt"]
+[ext_resource type="PackedScene" uid="uid://dvabcexqa6x3g" path="res://Skills/Components/single_target_attack_ai.tscn" id="5_m1uw8"]
+
+[node name="FatigueBolt" type="Node" unique_id=2069703919]
+script = ExtResource("1_an0oe")
+skill_info = ExtResource("2_m1uw8")
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_2pynp")]
+unique_name_in_owner = true
+attack_range = 8.0
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_2hxvt")]
+unique_name_in_owner = true
+type = 6
+ap_cost = 3
+
+[node name="SingleTargetAttackAI" parent="." unique_id=863810320 instance=ExtResource("5_m1uw8")]
+unique_name_in_owner = true
+attack_name = "Fatigue bolt"
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]
+[connection signal="about_to_score" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_about_to_score"]
+[connection signal="ready_to_use_action" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_ready_to_use_action"]
+[connection signal="update_my_damage" from="SingleTargetAttackAI" to="." method="_on_single_target_attack_ai_update_my_damage"]

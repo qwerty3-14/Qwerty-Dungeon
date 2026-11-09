@@ -1,0 +1,103 @@
+[gd_scene format=3 uid="uid://d25glsjleekfg"]
+
+[ext_resource type="Script" uid="uid://45aq1saawh2a" path="res://Skill Trees/Components/SkillTree.gd" id="1_4ymav"]
+[ext_resource type="PackedScene" uid="uid://bvqr5lvj0clth" path="res://Skill Trees/Components/skill_tree_slot.tscn" id="2_7x84g"]
+
+[node name="FireFighterSkillTree" type="Control" unique_id=2058877025]
+custom_minimum_size = Vector2(256, 256)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4ymav")
+metadata/_custom_type_script = "uid://45aq1saawh2a"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=513216355]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.14287072, 0.2506041, 0.1399523, 1)
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=577895599]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_top = 12.0
+offset_right = 47.0
+offset_bottom = 48.0
+grow_horizontal = 2
+
+[node name="UnarmedSlot" parent="." unique_id=350782598 instance=ExtResource("2_7x84g")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 90.0
+offset_top = 18.0
+offset_right = 90.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Unarmed Attack"
+aquired = true
+
+[node name="FireballSlot" parent="." unique_id=1558085876 instance=ExtResource("2_7x84g")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 118.0
+offset_top = 18.0
+offset_right = 118.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Fireball"
+aquired = true
+
+[node name="SuplexSlot" parent="." unique_id=364126809 instance=ExtResource("2_7x84g")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 146.0
+offset_top = 18.0
+offset_right = 146.0
+offset_bottom = 18.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Suplex"
+aquired = true
+
+[node name="ThrowSlot" parent="." unique_id=2133597863 instance=ExtResource("2_7x84g")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 174.0
+offset_top = 74.0
+offset_right = 174.0
+offset_bottom = 74.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Throw"
+availible = true
+
+[node name="ConeOfFireSlot" parent="." unique_id=47401141 instance=ExtResource("2_7x84g")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 62.0
+offset_top = 74.0
+offset_right = 62.0
+offset_bottom = 74.0
+grow_horizontal = 1
+grow_vertical = 1
+library_key = "Cone of Fire"
+availible = true

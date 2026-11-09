@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://cn8gbyvpjhrdx"]
+
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_344cd"]
+[ext_resource type="Texture2D" uid="uid://d3gqcav53t14f" path="res://Skills/Actions/Weapon Attacks/Charge.png" id="1_eht4g"]
+
+[resource]
+script = ExtResource("1_344cd")
+icon = ExtResource("1_eht4g")
+display_name = "Charge"
+description = "Rush toward and deal <VD> to an enemy within 8 tiles.
+
+{DM}"
+skill_type = 1
+target_range = 8.0
+min_target_range = 2.8
+ap_cost = 2
+action_cooldown = 3
+action_type = 2
+skill_path = "uid://wmgl604fchju"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

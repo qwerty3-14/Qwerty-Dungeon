@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://38n4pwhivik4"]
+
+[ext_resource type="Script" uid="uid://df7y8c64xrovo" path="res://Skills/Components/Weapon Attack/modified_weapon_attack.gd" id="1_gk5ry"]
+[ext_resource type="PackedScene" uid="uid://7roh64s5v25f" path="res://Skills/Components/Weapon Attack/weapon_attack_ai.tscn" id="2_jve6k"]
+
+[node name="ModifiedWeaponAttack" type="Node" unique_id=847325741]
+script = ExtResource("1_gk5ry")
+
+[node name="WeaponAttackAI" parent="." unique_id=769469301 instance=ExtResource("2_jve6k")]
+
+[connection signal="ready" from="." to="." method="_on_ready"]

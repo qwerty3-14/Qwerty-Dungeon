@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://quye2o7abb5v"]
+
+[ext_resource type="Script" uid="uid://g3wspum7vrrw" path="res://Combat Objects/Scavengers/scavenger_fencer.gd" id="1_21hkh"]
+[ext_resource type="Texture2D" uid="uid://d0fpwj6jiec4k" path="res://Combat Objects/Scavengers/ScavengerFencer.png" id="2_deco6"]
+[ext_resource type="PackedScene" uid="uid://c2ba4l83aa8j6" path="res://Combat Objects/Generic/actor.tscn" id="3_jqx7d"]
+[ext_resource type="Texture2D" uid="uid://dju3f0mhksng4" path="res://Combat Objects/Generic/PlaceholderPortrait.png" id="4_ifl6j"]
+[ext_resource type="PackedScene" uid="uid://dod43oll11b5t" path="res://Skills/Actions/Weapon Attacks/shortsword_attack.tscn" id="4_jqx7d"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="5_unhai"]
+
+[sub_resource type="Resource" id="Resource_hh5lq"]
+script = ExtResource("5_unhai")
+base_might = 4
+base_potency = 1
+base_constitution = 2
+base_resilience = 4
+base_intelligence = 4
+base_speed = 11
+base_luck = 4
+icon = ExtResource("2_deco6")
+character_name = "Scavenger"
+combat_class = "Fencer"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"
+
+[node name="ScavengerFencer" type="Node2D" unique_id=1635179156]
+script = ExtResource("1_21hkh")
+blocks_friendlies = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1753888985]
+texture = ExtResource("2_deco6")
+
+[node name="Actor" parent="." unique_id=60533830 node_paths=PackedStringArray("hotbar_skills") instance=ExtResource("3_jqx7d")]
+actor_info = SubResource("Resource_hh5lq")
+prefered_range_max = 3.0
+prefered_range_min = 2.0
+hotbar_skills = {
+0: NodePath("ShortswordAttack")
+}
+
+[node name="ShortswordAttack" parent="Actor" unique_id=1849104426 instance=ExtResource("4_jqx7d")]

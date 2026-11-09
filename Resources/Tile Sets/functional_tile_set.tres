@@ -1,0 +1,18 @@
+[gd_resource type="TileSet" format=3 uid="uid://d2fpfr8drc3v7"]
+
+[ext_resource type="Texture2D" uid="uid://jggjyce6o35d" path="res://Resources/Tile Sets/FunctionTilemap.png" id="1_f0a0p"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_veoh2"]
+texture = ExtResource("1_f0a0p")
+0:0/0 = 0
+1:0/0 = 0
+1:0/0/custom_data_0 = 3
+0:1/0 = 0
+0:1/0/custom_data_0 = 1
+1:1/0 = 0
+1:1/0/custom_data_0 = 2
+
+[resource]
+custom_data_layer_0/name = "Type"
+custom_data_layer_0/type = 2
+sources/0 = SubResource("TileSetAtlasSource_veoh2")

@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c62fqvi8mn8e"]
+
+[ext_resource type="Script" uid="uid://3qag6qdc6f06" path="res://UI/CharacterMenus/skill_tree_tab.gd" id="1_xo202"]
+[ext_resource type="PackedScene" uid="uid://de6qmm8n8rp06" path="res://UI/CharacterMenus/character_title.tscn" id="2_q2p3r"]
+[ext_resource type="PackedScene" uid="uid://b8xwvfw8jdhl5" path="res://UI/Common UI/wood_sign.tscn" id="3_knntu"]
+[ext_resource type="PackedScene" uid="uid://b60f6mxdl6o3h" path="res://UI/Common UI/InfoPanel/info_panel.tscn" id="4_q2p3r"]
+
+[node name="SkillTreeTab" type="HBoxContainer" unique_id=458256570]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xo202")
+
+[node name="TreeRegion" type="Control" parent="." unique_id=868947856]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="TreeRegion" unique_id=237195946]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+
+[node name="SubViewport" type="SubViewport" parent="TreeRegion/SubViewportContainer" unique_id=437616090]
+unique_name_in_owner = true
+handle_input_locally = false
+size = Vector2i(276, 236)
+render_target_update_mode = 4
+
+[node name="SkillTreeCamera" type="Camera2D" parent="TreeRegion/SubViewportContainer/SubViewport" unique_id=1697873418]
+unique_name_in_owner = true
+position = Vector2(180, 130)
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 30.0
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1509742635]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ColorRect" unique_id=942159178]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CharacterTitle" parent="ColorRect/VBoxContainer" unique_id=1287509331 instance=ExtResource("2_q2p3r")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="WoodSign" parent="ColorRect/VBoxContainer" unique_id=2086703932 instance=ExtResource("3_knntu")]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+
+[node name="PointsLabel" type="Label" parent="ColorRect/VBoxContainer/WoodSign" unique_id=676407152]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Points: 4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="ColorRect/VBoxContainer" unique_id=1531292049]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="CenterContainer" type="CenterContainer" parent="ColorRect/VBoxContainer/ScrollContainer" unique_id=1539943498]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InfoPanel" parent="ColorRect/VBoxContainer/ScrollContainer/CenterContainer" unique_id=1604432641 instance=ExtResource("4_q2p3r")]
+unique_name_in_owner = true
+layout_mode = 2

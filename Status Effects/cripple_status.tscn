@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://1ix7e4nrd3k"]
+
+[ext_resource type="Script" uid="uid://2ycksqlxmib8" path="res://Status Effects/cripple_status.gd" id="1_l0f1f"]
+[ext_resource type="Texture2D" uid="uid://bovujxsew4xsb" path="res://Status Effects/CrippleStatus.png" id="2_c04q8"]
+
+[node name="CrippleStatus" type="Node" unique_id=352732574]
+script = ExtResource("1_l0f1f")
+icon = ExtResource("2_c04q8")
+display_name = "Cripple"
+time_based = false
+metadata/_custom_type_script = "uid://c8e84qon0n4ef"
+
+[connection signal="ready" from="." to="." method="_on_ready"]

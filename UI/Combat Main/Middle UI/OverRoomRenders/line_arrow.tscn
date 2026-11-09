@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://yoc1t4mcegbj"]
+
+[ext_resource type="Script" uid="uid://bovlyxp134emm" path="res://UI/Combat Main/Middle UI/OverRoomRenders/line_arrow.gd" id="1_pq77o"]
+
+[node name="LineArrow" type="Node2D" unique_id=410756357]
+script = ExtResource("1_pq77o")

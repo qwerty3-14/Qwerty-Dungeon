@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://dmjkgo7xd58fs"]
+
+[ext_resource type="Script" uid="uid://dtwi6n2bbhjhc" path="res://Skills/Actions/Elder/impalement.gd" id="1_5x1at"]
+[ext_resource type="Resource" uid="uid://dlwh2ry8t0yjv" path="res://SkillResources/SkillInfo/Actions/Elder Magic/impalement_info.tres" id="2_5x1at"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_8j7rd"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_5sstl"]
+
+[node name="Impalement" type="Node" unique_id=1385836896]
+script = ExtResource("1_5x1at")
+skill_info = ExtResource("2_5x1at")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_8j7rd")]
+unique_name_in_owner = true
+attack_range = 8.0
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_5sstl")]
+unique_name_in_owner = true
+phase_cooldown = 4
+type = 6
+ap_cost = 5
+
+[connection signal="need_info_panel_extras" from="." to="." method="_on_need_info_panel_extras"]
+[connection signal="cursor_moved" from="Action" to="." method="_on_action_cursor_moved"]
+[connection signal="tile_position_clicked" from="Action" to="." method="_on_action_tile_position_clicked"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://br6xgmndkjthx"]
+
+[ext_resource type="Script" uid="uid://u7aafjov4d12" path="res://Skills/Passives/perserverance.gd" id="1_wvsx0"]
+[ext_resource type="Resource" uid="uid://bhff2ib60d4yr" path="res://SkillResources/SkillInfo/Passives/perseverence_info.tres" id="2_ivhaf"]
+
+[node name="Perserverance" type="Node" unique_id=1271019294]
+script = ExtResource("1_wvsx0")
+skill_info = ExtResource("2_ivhaf")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

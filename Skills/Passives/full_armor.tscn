@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bdf71qb7djss"]
+
+[ext_resource type="Script" uid="uid://bw0h17vukil7k" path="res://Skills/Passives/full_armor.gd" id="1_xfklq"]
+[ext_resource type="Resource" uid="uid://hgexvmng1wto" path="res://SkillResources/SkillInfo/Passives/full_armor_info.tres" id="2_onghk"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_onghk"]
+[ext_resource type="PackedScene" uid="uid://ctessd0jw6yyo" path="res://Skills/Components/movement_reciever.tscn" id="4_7o482"]
+
+[node name="FullArmor" type="Node" unique_id=560269067]
+script = ExtResource("1_xfklq")
+skill_info = ExtResource("2_onghk")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="TargetRange" parent="." unique_id=746520125 instance=ExtResource("3_onghk")]
+unique_name_in_owner = true
+attack_range = 3.0
+
+[node name="MovementReciever" parent="." unique_id=9850205 instance=ExtResource("4_7o482")]
+
+[connection signal="object_moved" from="MovementReciever" to="." method="_on_movement_reciever_object_moved"]

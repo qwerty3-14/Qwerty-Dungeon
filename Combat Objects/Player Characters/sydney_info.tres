@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ActorInfo" format=3 uid="uid://co6bv7q68co40"]
+
+[ext_resource type="Texture2D" uid="uid://cghqbnj3y4wyu" path="res://Combat Objects/Player Characters/Sydney.png" id="1_tqdwg"]
+[ext_resource type="Texture2D" uid="uid://cy358q7nmkiyf" path="res://Combat Objects/Player Characters/SydneyPortrait.png" id="2_gsgic"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="2_tqdwg"]
+
+[resource]
+script = ExtResource("2_tqdwg")
+base_might = 5
+base_potency = 5
+base_constitution = 2
+base_resilience = 10
+base_intelligence = 5
+base_speed = 6
+base_luck = 6
+portrait = ExtResource("2_gsgic")
+icon = ExtResource("1_tqdwg")
+character_name = "Sydney"
+combat_class = "Brewer"
+actor_path = "uid://bbc7pp7114jgg"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"

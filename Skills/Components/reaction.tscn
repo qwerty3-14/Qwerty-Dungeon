@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://ciw8hlrsnu3ws"]
+
+[ext_resource type="Script" uid="uid://dab8luvqlw8yv" path="res://Skills/Components/reaction.gd" id="1_4r7f4"]
+
+[node name="Reaction" type="Node" unique_id=1969346675]
+script = ExtResource("1_4r7f4")
+metadata/_custom_type_script = "uid://chedye875xxef"

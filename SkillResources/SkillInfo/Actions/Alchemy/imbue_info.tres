@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://bpfyaqifug0bb"]
+
+[ext_resource type="Texture2D" uid="uid://c53xuhbko2sw7" path="res://Skills/Actions/Alchemy/Imbue.png" id="1_cpb1x"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_x3nm7"]
+
+[resource]
+script = ExtResource("1_x3nm7")
+icon = ExtResource("1_cpb1x")
+display_name = "Imbue"
+description = "Imbue a potion onto your weapon."
+skill_type = 1
+action_type = 4
+skill_path = "uid://kmw67t2q3jv7"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

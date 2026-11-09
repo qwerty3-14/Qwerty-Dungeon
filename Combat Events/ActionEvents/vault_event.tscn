@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bt1ur71cwvntb"]
+
+[ext_resource type="Script" uid="uid://bdu0mw08c5a2u" path="res://Combat Events/ActionEvents/vault_event.gd" id="1_au4bt"]
+[ext_resource type="Script" uid="uid://cnjvvlx7a78t0" path="res://Abstract Classes/timer_watcher.gd" id="2_brsuh"]
+
+[sub_resource type="Curve" id="Curve_w6ogh"]
+_data = [Vector2(0.099999994, 0), 0.0, 0.0, 0, 0, Vector2(0.505, 1), 0.0, 0.0, 0, 0, Vector2(0.905, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[node name="VaultEvent" type="Timer" unique_id=983538655]
+one_shot = true
+script = ExtResource("1_au4bt")
+jump_curve = SubResource("Curve_w6ogh")
+metadata/_custom_type_script = "uid://ddb65vfxxy4dj"
+
+[node name="StartWatcher" type="Node" parent="." unique_id=222217711]
+script = ExtResource("2_brsuh")
+metadata/_custom_type_script = "uid://cnjvvlx7a78t0"
+
+[connection signal="timeout" from="." to="." method="_on_timeout"]
+[connection signal="threshold_reached" from="StartWatcher" to="." method="_on_start_watcher_threshold_reached"]

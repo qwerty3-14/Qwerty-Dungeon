@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://csukad2f7qq66"]
+
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_ifl5h"]
+[ext_resource type="Texture2D" uid="uid://ba0n4aaimv70t" path="res://Skills/Passives/Block.png" id="1_utvrj"]
+
+[resource]
+script = ExtResource("1_ifl5h")
+icon = ExtResource("1_utvrj")
+display_name = "Block"
+description = "Grants a <L2> to block physical damage.
+
+{CL}x2%"
+skill_path = "uid://dsc2xgayxx7x3"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

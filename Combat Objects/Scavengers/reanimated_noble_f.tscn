@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://lqy2apjs2vkr"]
+
+[ext_resource type="Script" uid="uid://brfrj8sg0u8kn" path="res://combat_object.gd" id="1_iqyve"]
+[ext_resource type="Script" uid="uid://dj4w38c4vjxn" path="res://Combat Objects/Generic/actor.gd" id="2_ppwut"]
+[ext_resource type="Texture2D" uid="uid://btapfuisngu8e" path="res://Combat Objects/Scavengers/ReanimatedNobleF.png" id="3_pnk5n"]
+[ext_resource type="Texture2D" uid="uid://dju3f0mhksng4" path="res://Combat Objects/Generic/PlaceholderPortrait.png" id="4_6mu0a"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="5_nyjnw"]
+[ext_resource type="PackedScene" uid="uid://cnpfqiulbjgbc" path="res://Skills/Actions/Weapon Attacks/unarmed_attack.tscn" id="6_pnk5n"]
+[ext_resource type="PackedScene" uid="uid://chuqbv4ep4mba" path="res://Skills/Passives/fragile.tscn" id="7_6mu0a"]
+
+[sub_resource type="Resource" id="Resource_0yd1l"]
+script = ExtResource("5_nyjnw")
+base_might = 4
+base_potency = 4
+base_constitution = 2
+base_resilience = 4
+base_speed = 4
+icon = ExtResource("3_pnk5n")
+character_name = "Scavenger"
+combat_class = "Reanimated Noble"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"
+
+[node name="ReanimatedNobleF" type="Node2D" unique_id=732776552]
+script = ExtResource("1_iqyve")
+blocks_friendlies = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=272284786]
+texture = ExtResource("3_pnk5n")
+
+[node name="Actor" type="Node" parent="." unique_id=855535628 node_paths=PackedStringArray("hotbar_skills")]
+script = ExtResource("2_ppwut")
+actor_info = SubResource("Resource_0yd1l")
+hotbar_skills = {
+0: NodePath("UnarmedAttack"),
+1: NodePath("Fragile")
+}
+metadata/_custom_type_script = "uid://dj4w38c4vjxn"
+
+[node name="UnarmedAttack" parent="Actor" unique_id=2139241734 instance=ExtResource("6_pnk5n")]
+
+[node name="Fragile" parent="Actor" unique_id=1897741381 instance=ExtResource("7_6mu0a")]

@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://b5jp8xsfg5al0"]
+
+[ext_resource type="Texture2D" uid="uid://bxn40y8uxg7hv" path="res://Skills/Actions/Elder/FatigueBolt.png" id="1_0w5ks"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="1_pmbya"]
+
+[resource]
+script = ExtResource("1_pmbya")
+icon = ExtResource("1_0w5ks")
+display_name = "Fatigue Bolt"
+description = "Deals <ED>
+Attempts to deplete 1ap.
+
+{DP}"
+skill_type = 1
+target_range = 8.0
+ap_cost = 3
+action_type = 6
+skill_path = "uid://gssc7sqfnt5t"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"
