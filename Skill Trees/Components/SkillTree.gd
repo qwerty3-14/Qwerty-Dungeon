@@ -7,7 +7,7 @@ signal actor_loaded(_actor : Actor)
 @export var combat_class : String = "Class Name"
 @export var actor : Actor
 
-var points : int = 2
+var points : int = 0
 
 func _on_skill_aquired(key : String):
 	if actor:
