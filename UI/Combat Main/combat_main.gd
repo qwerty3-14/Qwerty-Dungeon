@@ -3,6 +3,9 @@ class_name CombatMain
 
 
 signal phase_ending()
+##emmitted as soon as the phase counter incriments and before turn order is set up
+signal pre_phase_starting()
+##emitted after actors get thier resources, and turn order is decided  
 signal phase_starting()
 signal phase_zero_starting(phase_zero_actor_cos : Array[CombatObject])
 
@@ -158,26 +161,33 @@ func start_combat():
 	combat_objects = room.get_combat_objects()
 	%GridToggleButton.pressed.connect(room.toggle_grid)
 	for co : CombatObject in combat_objects:
-		#print(co.name)
-		MetaCombat.send_entered_combat_signal(co)
-		if co.has_node("Actor"):
-			var actor : Actor = co.get_node("Actor")
-			add_actor_to_lists(actor)
-			if actor.alignment == Globals.alignment.PLAYABLE:
-				actor.heal_and_reset_cooldowns()
+		register_combat_object(co)
 	if room.start_tip:
-		print(room.start_tip)
-		#%TipLabel.text = room.start_tip
 		%TipPopup.dialog_text = room.start_tip
 		%TipPopup.popup_centered_clamped()
+	Globals.over_room_renders.below_combat_objects = room.below_combat_objects
 	%AStarManager.astar_update_tiles()
 	phase_zero_starting.emit(actor_combat_object_list)
 	%InitiativeList.set_actor_list(actor_combat_object_list)
 	MetaCombat.send_combat_started_signal()
 	update_current_combatant()
 
+func add_combat_object_during_combat(co : CombatObject):
+	combat_objects.append(co)
+	register_combat_object(co)
+
+func register_combat_object(co : CombatObject):
+	#print(co.name)
+	MetaCombat.send_entered_combat_signal(co)
+	if co.has_node("Actor"):
+		var actor : Actor = co.get_node("Actor")
+		add_actor_to_lists(actor)
+		if actor.alignment == Globals.alignment.PLAYABLE:
+			actor.heal_and_reset_cooldowns()
+
 func start_next_phase():
 	current_phase += 1
+	pre_phase_starting.emit()
 	%PhaseLabel.text = "Phase " + str(current_phase)
 	setup_initiative()
 	for actor : CombatObject in actor_combat_object_list:

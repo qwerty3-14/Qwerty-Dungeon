@@ -37,6 +37,10 @@ signal learned_skill(_skill : Skill)
 @onready var intelligence : Attribute = Attribute.new(actor_info.base_intelligence) ##increases inititive and xp gain
 @onready var speed : Attribute = Attribute.new(actor_info.base_speed) ##odd levels increase mp, even  levels increase inititive
 @onready var luck : Attribute = Attribute.new(actor_info.base_luck) ##increases hit chance and dogdge chance with weapon attacks, effects chance based skills
+@onready var luck_dodge_bonus : AttrBonus = AttrBonus.new(0, "Luck")
+@onready var dodge_chance : Attribute = Attribute.new(0)
+@onready var luck_hit_bonus : AttrBonus = AttrBonus.new(0, "Luck")
+@onready var hit_chance : Attribute = Attribute.new(100)
 
 var max_ap : int = 5
 var cur_ap : int = 0
@@ -51,8 +55,12 @@ var default_weapon_attack : WeaponAttack
 
 var co_parent : CombatObject
 
+var blinded : bool = false
+
 
 func _ready() -> void:
+	dodge_chance.add_bonus(luck_dodge_bonus)
+	hit_chance.add_bonus(luck_hit_bonus)
 	might.value_changed.connect(_attri_value_changed.bind(might))
 	potency.value_changed.connect(_attri_value_changed.bind(potency))
 	constitution.value_changed.connect(_attri_value_changed.bind(constitution))
@@ -85,6 +93,9 @@ func update_stats():
 	
 	health.maximum = BASE_HP + HP_FROM_CON * constitution.value
 	health.current = health.maximum
+	
+	luck_dodge_bonus.set_value(luck.value * 3)
+	luck_hit_bonus.set_value(luck.value * 3)
 	
 	if get_parent() is CombatObject:
 		get_parent().weight = constitution.value
@@ -190,14 +201,14 @@ func refresh_ap_and_mov():
 	cur_ap = min(cur_ap, max_ap)
 	cur_mp = max_mp
 
-func hit_chance() -> int:
-	return 100 + luck.value * 3
+#func hit_chance() -> int:
+#	return 100 + luck.value * 3
 
-func dodge_chance() -> int:
-	return luck.value * 3
+#func dodge_chance() -> int:
+#	return luck.value * 3
 
 func calculate_hit_chance_against(target : Actor) -> int:
-	return min(100, hit_chance() - target.dodge_chance())
+	return min(100, hit_chance.value - target.dodge_chance.value)
 
 func try_to_hit(target : Actor) -> bool:
 	return calculate_hit_chance_against(target) > Globals.rng.randi_range(0, 99)

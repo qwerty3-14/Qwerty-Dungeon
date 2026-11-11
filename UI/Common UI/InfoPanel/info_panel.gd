@@ -102,6 +102,7 @@ func clear_data():
 
 func convert_description(description : String) -> String:
 	description = description.replace("<PD>",  "[color=" + Damage.color_code[Damage.Type.PIERCING] + "]piercing damage[/color]")
+	description = description.replace("<PD-2>",  "[color=" + Damage.color_code[Damage.Type.PIERCING] + "]piercing damage[/color]")
 	description = description.replace("<CD>",  "[color=" + Damage.color_code[Damage.Type.CRUSHING] + "]crushing damage[/color]")
 	description = description.replace("<SD>",  "[color=" + Damage.color_code[Damage.Type.SLASHING] + "]slashing damage[/color]")
 	description = description.replace("<VD>",  "damage")
@@ -114,8 +115,8 @@ func convert_description(description : String) -> String:
 	description = description.replace("<L2>",  "Chance")
 	description = description.replace("<L3>",  "Chance")
 	
-	description = description.format({"P>R" : "Your potency must be great than the target's resiliance"})
-	description = description.format({"DM" : "Damage=mgt", "DP" : "Damage=pot", "Actor" : "you", "CL" : "Chance = Luck"})
+	description = description.format({"P>R" : "Your potency must be greater than the target's resiliance", "M>R" : "Your might must be greater than the target's resiliance"})
+	description = description.format({"DM" : "Damage=mgt", "DP" : "Damage=pot", "Actor" : "you", "CL" : "Chance = Luck", "DB" : "Damage is based on your basic attack"})
 	return description
 
 func load_ap(ap_spender : APSpender):

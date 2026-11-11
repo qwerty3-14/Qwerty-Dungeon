@@ -30,11 +30,15 @@ func generate_move_events(combat_object : CombatObject, path : PackedVector2Arra
 		add_child(step_event)
 		path.remove_at(0)
 		output.append(step_event)
+	if combat_object.flyer:
+		var event : FlyerResetRotation = FlyerResetRotation.new(combat_object)
+		add_child(event)
+		output.append(event)
 	return output
 
 func travel_path(combat_object : CombatObject, path : PackedVector2Array = saved_path):
 	Globals.combat_main.set_actor_acted(true)
-	CombatEventManager.add_and_start_combat_events(Globals.a_star_manager.generate_move_events(combat_object, path))
+	CombatEventManager.add_and_start_combat_events(generate_move_events(combat_object, path))
 
 
 	

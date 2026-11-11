@@ -13,8 +13,10 @@ const DAMAGE_POPUP = preload("uid://yeg7fnx3bwgm")
 const TEXT_POPUP = preload("uid://c0ellj02yv8w3")
 const FORECAST_POPUP = preload("uid://bwl1lija18y7r")
 const LINE_ARROW = preload("uid://yoc1t4mcegbj")
+const TILE_WARNING = preload("uid://px0k4yfv2y0f")
 
 @onready var combat_event_effects : Node2D = %CombatEventEffects
+var below_combat_objects : Node2D
 
 func set_skill_info_panel(skill : Skill):
 	%InfoPanel.visible = true
@@ -103,6 +105,11 @@ func higlight_object(tile_pos : Vector2i, group_name : String):
 	group.add_child(object_highlighter)
 	object_highlighter.position = Globals.tile_to_pix_pos(tile_pos)
 
+func warn_tile(tile_pos : Vector2i):
+	var tile_warn := TILE_WARNING.instantiate()
+	below_combat_objects.add_child(tile_warn)
+	tile_warn.position = Globals.tile_to_pix_pos(tile_pos)
+
 func create_or_move_action_forecast(tile_pos : Vector2i, lines : Array[ForecastLine]):
 	if %DamageForecasts.get_child_count() > 0:
 		%DamageForecasts.get_child(0).lines = lines
@@ -139,6 +146,9 @@ func clear_group(group_name : String):
 		get_node(group_name).get_children().map(func(node : Node): node.queue_free())
 	else:
 		pass
+
+func clear_below_combat_opbjects_renders():
+	below_combat_objects.get_children().map(func(node : Node): node.queue_free())
 
 func setup_group(group_name : String):
 	if not has_node(group_name):

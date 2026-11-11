@@ -10,6 +10,9 @@ const WEAPON_ATTACK_DAMAGE = preload("uid://c1lvhgeg2s3xs")
 @export var action : Action
 @export var target_range : TargetRange
 @export var damage_type : Damage.Type = Damage.Type.PIERCING
+@export var bonus_damage : int = 0
+@export var bonus_damage_multiplier : float = 1
+@export var repeats : int = 0
 
 var skill_parent : Skill
 var weapon_attack_damage : WeaponAttackDamage
@@ -17,13 +20,16 @@ var weapon_attack_damage : WeaponAttackDamage
 func _ready() -> void:
 	weapon_attack_damage = WEAPON_ATTACK_DAMAGE.instantiate()
 	weapon_attack_damage.damage_type = damage_type
+	weapon_attack_damage.repeats = repeats
+	weapon_attack_damage.bonus_damage = bonus_damage
+	weapon_attack_damage.bonus_damage_multiplier = bonus_damage_multiplier
 	add_child(weapon_attack_damage)
 	weapon_attack_damage.preparing_forecast.connect(emit_preparing_forcast)
 	if action:
 		action.used.connect(_on_action_used)
 		action.tile_position_clicked.connect(_on_tile_position_clicked)
 		action.cursor_moved.connect(_on_cursor_moved)
-		$WeaponAttackAI.setup(get_parent(), action, target_range, damage_type)
+		$WeaponAttackAI.setup(get_parent(), action, target_range, damage_type, repeats)
 		$WeaponAttackAI.about_to_score.connect(_on_ai_about_to_score)
 	if get_parent() is Skill:
 		skill_parent = get_parent()
@@ -57,7 +63,8 @@ func _on_action_used(_action: Action) -> void:
 func try_to_attack_position(_tile_pos : Vector2i, immediatly : bool = false) -> bool:
 	if target_range.can_target_position(_tile_pos):
 		var co_attacker : CombatObject = skill_parent.actor_parent.get_parent()
-		var wae := WeaponAttackEvent.new(co_attacker, Globals.combat_main.combat_object_at_tile(_tile_pos), Damage.new(skill_parent.actor_parent.might.value, damage_type, action, skill_parent.actor_parent))
+		var amt : int = roundi((skill_parent.actor_parent.might.value + bonus_damage) * bonus_damage_multiplier)
+		var wae := WeaponAttackEvent.new(co_attacker, Globals.combat_main.combat_object_at_tile(_tile_pos), Damage.new(amt, damage_type, action, skill_parent.actor_parent), repeats)
 		
 		CombatEventManager.add_and_start_combat_event(wae, immediatly)
 		return true

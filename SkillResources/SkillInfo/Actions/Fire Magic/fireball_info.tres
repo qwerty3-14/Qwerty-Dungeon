@@ -11,7 +11,7 @@ description = "Deals <FD> in an area
 
 {DP}x3"
 skill_type = 1
-target_range = 8.0
+target_range = 6.5
 aoe = 1.5
 ap_cost = 8
 action_cooldown = 3

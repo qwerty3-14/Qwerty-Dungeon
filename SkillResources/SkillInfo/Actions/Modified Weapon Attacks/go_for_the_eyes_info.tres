@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://sqt5ddesug3k"]
+
+[ext_resource type="Texture2D" uid="uid://bam8jq1cenqp4" path="res://Skills/Actions/Weapon Attacks/GoForTheEyes.png" id="1_cd3lx"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_03r2x"]
+
+[resource]
+script = ExtResource("2_03r2x")
+icon = ExtResource("1_cd3lx")
+display_name = "Go for the eyes"
+description = "Deals <VD>;
+Blinds the target.
+
+{DB}
+{M>R}"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

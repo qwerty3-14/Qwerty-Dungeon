@@ -11,7 +11,7 @@ skill_info = ExtResource("2_wpqgr")
 
 [node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_qgsk6")]
 unique_name_in_owner = true
-attack_range = 8.0
+attack_range = 6.5
 include_self = true
 group_name = "FireballRange"
 action = NodePath("../Action")

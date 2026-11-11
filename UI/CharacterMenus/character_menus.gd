@@ -19,6 +19,7 @@ func _ready() -> void:
 	RuneManager.set_rune_drag_container(%DraggedRuneContainer)
 	RuneManager.set_rune_flow_container(%RuneFlow)
 	#RuneLibrary.debug_generate_one_of_each()
+	#RuneLibrary.debug_generate_one_of_each()
 
 
 func add_actor(actor : Actor, index : int):

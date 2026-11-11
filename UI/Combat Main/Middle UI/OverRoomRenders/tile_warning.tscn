@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://px0k4yfv2y0f"]
+
+[ext_resource type="Script" uid="uid://cppcguscdk0o4" path="res://UI/Combat Main/Middle UI/OverRoomRenders/tile_warning.gd" id="1_lwo2m"]
+
+[node name="TileWarning" type="Node2D" unique_id=1015043126]
+script = ExtResource("1_lwo2m")

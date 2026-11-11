@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://cgftuqlvi6ydq"]
+
+[ext_resource type="Texture2D" uid="uid://cubr5mdairphc" path="res://Skills/Passives/Small.png" id="1_k57so"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_nqlar"]
+
+[resource]
+script = ExtResource("2_nqlar")
+icon = ExtResource("1_k57so")
+display_name = "Small"
+description = "-10 Max hp
++15% dodge chance"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://csnfdiliy1oy7"]
+
+[ext_resource type="Texture2D" uid="uid://4gevk8v6bgnt" path="res://Skills/Actions/Weapon Attacks/Talons.png" id="1_40r2k"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_id3if"]
+
+[resource]
+script = ExtResource("2_id3if")
+icon = ExtResource("1_40r2k")
+display_name = "Talons"
+description = "Deals <PD>
+
+{DM}"
+skill_type = 1
+target_range = 1.0
+ap_cost = 2
+action_type = 1
+skill_path = "uid://cjg5kx8685cgv"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

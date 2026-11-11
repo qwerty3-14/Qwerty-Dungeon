@@ -12,6 +12,7 @@ metadata/_custom_type_script = "uid://cp7q46m67ufv7"
 
 [node name="TargetRange" parent="." unique_id=746520125 instance=ExtResource("3_xh68k")]
 unique_name_in_owner = true
+effected_by_blindness = false
 
 [node name="MovementReciever" parent="." unique_id=9850205 instance=ExtResource("4_oi57p")]
 

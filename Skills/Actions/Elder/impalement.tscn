@@ -12,7 +12,7 @@ metadata/_custom_type_script = "uid://cp7q46m67ufv7"
 
 [node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("3_8j7rd")]
 unique_name_in_owner = true
-attack_range = 8.0
+attack_range = 6.5
 action = NodePath("../Action")
 
 [node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_5sstl")]

@@ -37,6 +37,12 @@ func _ready() -> void:
 	if(get_parent() is Node2D):
 		tile_position = Globals.pix_to_tile_pos(position)
 
+func _process(_delta: float) -> void:
+	if flyer:
+		var sprite_offset : int = roundi(2 * sin(2 * PI * float(Time.get_ticks_msec() % 1000) / 1000))
+		for sprite : Sprite2D in get_children().filter(func(node : Node): return node is Sprite2D):
+			sprite.position.y = sprite_offset
+
 func position_on_tile():
 	position = Globals.tile_to_pix_pos(tile_position)
 	if not flyer:
@@ -106,6 +112,7 @@ func apply_status_effect_resistable(effect : StatusEffect, afflicters_potency : 
 
 func apply_status_effect(effect : StatusEffect):
 	var new_status_name : String = effect.name
+	print(new_status_name)
 	if has_node(new_status_name):
 		var curr_status_effect : StatusEffect = get_node(new_status_name)
 		if effect.stack_duration:

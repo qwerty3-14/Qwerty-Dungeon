@@ -48,7 +48,8 @@ func _on_rune_picked_up(rune : Rune):
 	for tile : Vector2i in rune.shape:
 		var loc : Vector2i = tile + rune.snap_coord
 		var index : int = loc.x + loc.y * tile_bounds.x
-		occupied_tiles[index] = false
+		if index < occupied_tiles.size():
+			occupied_tiles[index] = false
 	rune.picked_up.disconnect(_on_rune_picked_up.bind(rune))
 	hovering_rune = rune
 	add_hovering_rune()

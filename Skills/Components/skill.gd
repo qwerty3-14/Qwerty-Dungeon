@@ -1,3 +1,4 @@
+@icon("uid://gd1q0hx175lt")
 class_name Skill
 extends Node
 
@@ -40,6 +41,11 @@ func setup_actor():
 	actor_parent = get_parent()
 	if actor_parent.get_parent() is CombatObject:
 		combat_object_grandparent = actor_parent.get_parent()
+	for node : Node in get_children():
+		if node is TargetRange:
+			var target_range : TargetRange = node
+			if target_range.effected_by_blindness:
+				target_range.blindable_actor = actor_parent
 	if Globals.finished_singletons_setup:
 		#actor_parent.ready.connect(emit_aquired_by_actor)
 		#actor_parent.ready.connect(_on_aquired_by_actor)

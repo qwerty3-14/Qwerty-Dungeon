@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://d3x4bj8bjeuh1"]
+
+[ext_resource type="Script" uid="uid://brfrj8sg0u8kn" path="res://combat_object.gd" id="1_wj83c"]
+[ext_resource type="Texture2D" uid="uid://byicgvf6yg5tw" path="res://Combat Objects/Scavengers/Silverbeak.png" id="2_tqpxd"]
+[ext_resource type="PackedScene" uid="uid://c2ba4l83aa8j6" path="res://Combat Objects/Generic/actor.tscn" id="3_vk4yf"]
+[ext_resource type="Texture2D" uid="uid://dju3f0mhksng4" path="res://Combat Objects/Generic/PlaceholderPortrait.png" id="4_fcw8l"]
+[ext_resource type="Script" uid="uid://bc2vt1po41ujl" path="res://Combat Objects/Generic/actor_info.gd" id="5_8p8rh"]
+[ext_resource type="PackedScene" uid="uid://croyulrx28nsm" path="res://Skills/Actions/Weapon Attacks/peck_peck_peck.tscn" id="6_8p8rh"]
+[ext_resource type="PackedScene" uid="uid://cxlt41d4gmikc" path="res://Skills/Actions/Weapon Attacks/go_for_the_eyes.tscn" id="7_8p8rh"]
+[ext_resource type="PackedScene" uid="uid://bix2a3lhoqbup" path="res://Skills/Passives/flyer.tscn" id="7_fcw8l"]
+[ext_resource type="PackedScene" uid="uid://b5uw2ff73cubr" path="res://Skills/Passives/small.tscn" id="8_8p8rh"]
+
+[sub_resource type="Resource" id="Resource_0yd1l"]
+script = ExtResource("5_8p8rh")
+base_might = 4
+base_potency = 2
+base_constitution = 2
+base_resilience = 3
+base_intelligence = 1
+base_speed = 12
+base_luck = 12
+icon = ExtResource("2_tqpxd")
+character_name = "Scavenger"
+combat_class = "Silverbeak"
+metadata/_custom_type_script = "uid://bc2vt1po41ujl"
+
+[node name="Silverbeak" type="Node2D" unique_id=1437437030]
+script = ExtResource("1_wj83c")
+blocks_friendlies = true
+flyer = true
+metadata/_custom_type_script = "uid://brfrj8sg0u8kn"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=710579903]
+texture = ExtResource("2_tqpxd")
+
+[node name="Actor" parent="." unique_id=60533830 node_paths=PackedStringArray("hotbar_skills") instance=ExtResource("3_vk4yf")]
+actor_info = SubResource("Resource_0yd1l")
+hotbar_skills = {
+0: NodePath("PeckPeckPeck"),
+1: NodePath("GoForTheEyes"),
+2: NodePath("Flyer"),
+3: NodePath("Small")
+}
+
+[node name="PeckPeckPeck" parent="Actor" unique_id=590678405 instance=ExtResource("6_8p8rh")]
+
+[node name="GoForTheEyes" parent="Actor" unique_id=1863392186 instance=ExtResource("7_8p8rh")]
+
+[node name="Flyer" parent="Actor" unique_id=1633443751 instance=ExtResource("7_fcw8l")]
+
+[node name="Small" parent="Actor" unique_id=1699126215 instance=ExtResource("8_8p8rh")]

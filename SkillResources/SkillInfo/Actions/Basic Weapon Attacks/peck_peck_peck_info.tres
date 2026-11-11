@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://dk75fx75qgp8i"]
+
+[ext_resource type="Texture2D" uid="uid://bdn6jevmndq7m" path="res://Skills/Actions/Weapon Attacks/PeckPeckPeck.png" id="1_5mhls"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_wkybu"]
+
+[resource]
+script = ExtResource("2_wkybu")
+icon = ExtResource("1_5mhls")
+display_name = "Peck Peck Peck"
+description = "Deals <PD-2> 3 times.
+
+{DM}-2"
+skill_type = 1
+ap_cost = 2
+action_type = 1
+skill_path = "uid://croyulrx28nsm"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

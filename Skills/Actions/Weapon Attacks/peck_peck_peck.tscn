@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://croyulrx28nsm"]
+
+[ext_resource type="Script" uid="uid://crs7frkb40cvf" path="res://Skills/Actions/Weapon Attacks/peck_peck_peck.gd" id="1_ryug2"]
+[ext_resource type="PackedScene" uid="uid://b0ovc75aun67a" path="res://Skills/Components/Weapon Attack/weapon_attack.tscn" id="2_5fwrg"]
+[ext_resource type="Resource" uid="uid://dk75fx75qgp8i" path="res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/peck_peck_peck_info.tres" id="2_22pvg"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="3_22pvg"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="4_8yhbv"]
+
+[node name="PeckPeckPeck" type="Node" unique_id=590678405]
+script = ExtResource("1_ryug2")
+skill_info = ExtResource("2_22pvg")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="WeaponAttack" parent="." unique_id=1381722177 node_paths=PackedStringArray("action", "target_range") instance=ExtResource("2_5fwrg")]
+action = NodePath("../Action")
+target_range = NodePath("../TargetRange")
+bonus_damage = -2
+repeats = 2
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("3_22pvg")]
+type = 1
+ap_cost = 2
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("4_8yhbv")]
+action = NodePath("../Action")

@@ -9,7 +9,7 @@ icon = ExtResource("1_eht4g")
 display_name = "Charge"
 description = "Rush toward and deal <VD> to an enemy within 8 tiles.
 
-{DM}"
+{DB}"
 skill_type = 1
 target_range = 8.0
 min_target_range = 2.8

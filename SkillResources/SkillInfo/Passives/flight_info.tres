@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillInfo" format=3 uid="uid://be5sep1qp2gsi"]
+
+[ext_resource type="Texture2D" uid="uid://bmb188xtsy7pj" path="res://Skills/Passives/Flight.png" id="1_iacap"]
+[ext_resource type="Script" uid="uid://cuptxa07etnl8" path="res://SkillResources/skill_info.gd" id="2_hcxtc"]
+
+[resource]
+script = ExtResource("2_hcxtc")
+icon = ExtResource("1_iacap")
+display_name = "Flight"
+description = "Can move through water, debris, chasms, and any character."
+skill_path = "uid://bix2a3lhoqbup"
+metadata/_custom_type_script = "uid://cuptxa07etnl8"

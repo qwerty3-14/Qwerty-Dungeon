@@ -12,6 +12,7 @@ description = "Deals <PD>
 {DM}"
 skill_type = 1
 target_range = 8.0
+min_target_range = 2.0
 ap_cost = 2
 action_type = 1
 skill_path = "uid://bjvg1bvistqhk"

@@ -1,19 +1,20 @@
 extends Node
 class_name TargetRange
 
-const WEAPON_ATTACK_EVENT = preload("uid://kyaxpj5tulfn")
 
 @export var attack_range : float = 1
 @export var min_range : float = 0
 @export var include_self : bool = false
 @export var group_name : String = "AttackRange"
 @export var action : Action
+@export var effected_by_blindness : bool = true
 
 @export var los_block_tiles : Array[Globals.tile_types] = [Globals.tile_types.WALL]
 @export var end_block_tiles : Array[Globals.tile_types] = [Globals.tile_types.WALL, Globals.tile_types.DEBRIS]
 
 var tiles : Array[Vector2i] = []
 var targets : Array[CombatObject] = []
+var blindable_actor : Actor
 
 func _ready() -> void:
 	if action:
@@ -42,7 +43,10 @@ func remove_occupied():
 	tiles = tiles.filter(func(tile : Vector2i) : return not targets.any(func(target : CombatObject) : return target.tile_position == tile))
 
 func find_tiles(tile_pos : Vector2i):
-	tiles = Globals.los_tiles_in_range(tile_pos, attack_range, include_self, min_range, los_block_tiles, end_block_tiles)
+	if blindable_actor and blindable_actor.blinded:
+		tiles = Globals.los_tiles_in_range(tile_pos, 1, include_self, 0, los_block_tiles, end_block_tiles)
+	else:
+		tiles = Globals.los_tiles_in_range(tile_pos, attack_range, include_self, min_range, los_block_tiles, end_block_tiles)
 
 func highlight_tiles():
 	Globals.over_room_renders.highlight_tiles(tiles, group_name)

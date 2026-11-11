@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bix2a3lhoqbup"]
+
+[ext_resource type="Script" uid="uid://bmvcw20uc6bne" path="res://Skills/Passives/flyer.gd" id="1_s66s6"]
+[ext_resource type="Resource" uid="uid://be5sep1qp2gsi" path="res://SkillResources/SkillInfo/Passives/flight_info.tres" id="2_or54t"]
+
+[node name="Flyer" type="Node" unique_id=1633443751]
+script = ExtResource("1_s66s6")
+skill_info = ExtResource("2_or54t")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

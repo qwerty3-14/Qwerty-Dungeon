@@ -12,7 +12,7 @@ Attempts to deplete 1ap.
 
 {DP}"
 skill_type = 1
-target_range = 8.0
+target_range = 6.5
 ap_cost = 3
 action_type = 6
 skill_path = "uid://gssc7sqfnt5t"

@@ -23,3 +23,5 @@ func _on_timeout() -> void:
 
 func _on_start():
 	CombatEventManager.remove_dependent_events(dependent_combat_objects[0])
+	if dependent_combat_objects[0].flyer:
+		dependent_combat_objects[0].rotation = 0

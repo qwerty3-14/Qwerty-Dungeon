@@ -244,10 +244,10 @@ unique_name_in_owner = true
 oversampling_override = 1.0
 title = "Tip"
 initial_position = 1
-size = Vector2i(196, 72)
+size = Vector2i(196, 80)
 always_on_top = true
 min_size = Vector2i(196, 72)
-max_size = Vector2i(196, 72)
+max_size = Vector2i(196, 196)
 dialog_autowrap = true
 
 [connection signal="cursor_tile_position_changed" from="CursorManager" to="." method="_on_cursor_manager_cursor_tile_position_changed"]

@@ -1,6 +1,11 @@
-res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/
+res://SkillResources/SkillInfo/Actions/Modified Weapon Attacks/
 res://Skills/Actions/Weapon Attacks/
+res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/
+res://SkillResources/SkillInfo/Passives/
+res://Skills/Passives/
+res://Rooms/Tests/
 res://Combat Objects/Scavengers/
+res://UI/Combat Main/Middle UI/OverRoomRenders/
 res://SkillResources/SkillInfo/Actions/Meteorology/
 res://Skills/Actions/Meteorology/
 res://Status Effects/
@@ -12,13 +17,8 @@ res://Rune Stuff/Interactives/
 /home/noah/Documents/Godot/Compiled Games/QwertyDungeon/
 res://SkillResources/SkillInfo/Tests/
 res://Skills/Tests/
-res://Rooms/Tests/
 res://Globals/
 res://Resources/Tile Sets/
 res://Rooms/
 res://Combat Events/
-res://UI/StoryWriter/
-res://
-res://SkillResources/SkillInfo/Actions/Alchemy/
-res://Skills/Actions/Alchemy/
 /home/noah/Documents/Godot/Editor Fonts/Fira_Code_v6.2/ttf/

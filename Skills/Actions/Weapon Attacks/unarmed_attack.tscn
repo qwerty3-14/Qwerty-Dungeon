@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://cnpfqiulbjgbc"]
 
 [ext_resource type="Script" uid="uid://be06h7uef4r14" path="res://Skills/Actions/Weapon Attacks/unarmed_attack.gd" id="1_rbf0s"]
-[ext_resource type="Texture2D" uid="uid://kej25hsdpgag" path="res://Skills/Actions/Weapon Attacks/UnarmedAttack.png" id="2_1p16o"]
 [ext_resource type="Resource" uid="uid://c4lis5q6i5a6n" path="res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/unarmed_attack_info.tres" id="2_o8riw"]
 [ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="3_1p16o"]
 [ext_resource type="PackedScene" uid="uid://b0ovc75aun67a" path="res://Skills/Components/Weapon Attack/weapon_attack.tscn" id="3_waken"]
@@ -10,12 +9,6 @@
 [node name="UnarmedAttack" type="Node" unique_id=2139241734]
 script = ExtResource("1_rbf0s")
 skill_info = ExtResource("2_o8riw")
-icon = ExtResource("2_1p16o")
-display_name = "Unarmed Attack"
-description = "Deals <CD>
-
-{DM}"
-tags = Array[String](["Weapon Attack", "Range: 1"])
 
 [node name="WeaponAttack" parent="." unique_id=1381722177 node_paths=PackedStringArray("action", "target_range") instance=ExtResource("3_waken")]
 action = NodePath("../Action")

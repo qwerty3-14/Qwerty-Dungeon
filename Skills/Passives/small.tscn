@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b5uw2ff73cubr"]
+
+[ext_resource type="Script" uid="uid://80t2fjuw6k" path="res://Skills/Passives/small.gd" id="1_2bhnr"]
+[ext_resource type="Resource" uid="uid://cgftuqlvi6ydq" path="res://SkillResources/SkillInfo/Passives/small_info.tres" id="2_l1eet"]
+
+[node name="Small" type="Node" unique_id=1699126215]
+script = ExtResource("1_2bhnr")
+skill_info = ExtResource("2_l1eet")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"

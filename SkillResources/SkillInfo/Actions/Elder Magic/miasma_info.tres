@@ -12,7 +12,7 @@ Miasma lasts for 5 phases dealing <ED> at the end of each.
 
 {DP}"
 skill_type = 1
-target_range = 8.0
+target_range = 6.5
 aoe = 2.9
 ap_cost = 5
 action_cooldown = 5

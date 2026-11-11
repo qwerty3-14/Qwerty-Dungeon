@@ -18,7 +18,7 @@ ap_cost = 2
 
 [node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("4_nl843")]
 unique_name_in_owner = true
-attack_range = 8.0
+attack_range = 6.5
 action = NodePath("../Action")
 
 [node name="SingleTargetAttackAI" parent="." unique_id=863810320 instance=ExtResource("5_ktm8t")]

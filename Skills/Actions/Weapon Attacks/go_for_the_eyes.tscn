@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cxlt41d4gmikc"]
+
+[ext_resource type="Script" uid="uid://bai0gy3d24bfk" path="res://Skills/Actions/Weapon Attacks/go_for_the_eyes.gd" id="1_bpodf"]
+[ext_resource type="Resource" uid="uid://sqt5ddesug3k" path="res://SkillResources/SkillInfo/Actions/Modified Weapon Attacks/go_for_the_eyes_info.tres" id="2_ml4xd"]
+[ext_resource type="PackedScene" uid="uid://38n4pwhivik4" path="res://Skills/Components/Weapon Attack/modified_weapon_attack.tscn" id="4_sw4ex"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="5_r7unw"]
+
+[node name="GoForTheEyes" type="Node" unique_id=1863392186]
+script = ExtResource("1_bpodf")
+skill_info = ExtResource("2_ml4xd")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="ModifiedWeaponAttack" parent="." unique_id=847325741 node_paths=PackedStringArray("action") instance=ExtResource("4_sw4ex")]
+attack_name = "Go for the eyes"
+action = NodePath("../Action")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("5_r7unw")]
+phase_cooldown = 3
+type = 2
+ap_cost = 2
+
+[connection signal="about_to_score" from="ModifiedWeaponAttack" to="." method="_on_modified_weapon_attack_about_to_score"]
+[connection signal="AI_used" from="Action" to="." method="_on_action_ai_used"]
+[connection signal="ended" from="Action" to="." method="_on_action_ended"]
+[connection signal="used" from="Action" to="." method="_on_action_used"]

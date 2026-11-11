@@ -115,7 +115,7 @@ func generate_rune(rune_key : all_runes):
 	var new_rune : Rune = Rune.new()
 	new_rune.popup_text = rune_info_dict[rune_key].rune_name
 	new_rune.frame = rune_info_dict[rune_key].frame
-	new_rune.shape = rune_info_dict[rune_key].shape
+	new_rune.shape = rune_info_dict[rune_key].shape.duplicate_deep()
 	if rune_attr_dict.has(rune_key):
 		var new_attr_rune : AttrRune = AttrRune.new()
 		new_attr_rune.attribute_bonus = AttrBonus.new(rune_attr_dict[rune_key].value, new_rune.popup_text)

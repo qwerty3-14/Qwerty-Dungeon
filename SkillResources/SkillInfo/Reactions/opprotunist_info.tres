@@ -9,7 +9,9 @@ icon = ExtResource("1_qkche")
 display_name = "Opportunist"
 description = "Deals <VD>.
 
-Can only be used when an enemy moves into range."
+Can only be used when an enemy moves into range.
+
+{DB}"
 skill_type = 2
 target_range = -1.0
 ap_cost = 1

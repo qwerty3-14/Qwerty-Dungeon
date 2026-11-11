@@ -16,6 +16,7 @@ func _init(move_me : CombatObject, _move_here : Vector2i) -> void:
 		actor = move_me.get_node("Actor")
 	dependent_combat_objects.append(move_me)
 	move_here = _move_here
+	timeout.connect(_on_timeout)
 
 func _started():
 	_move_start = dependent_combat_objects[0].tile_position
@@ -31,11 +32,16 @@ func _started():
 	
 
 func _process(_delta: float) -> void:
-	if _start_move:
+	if _start_move and not is_stopped():
 		var progress : float = 1 - (time_left / wait_time)
 		dependent_combat_objects[0].position = lerp(Vector2(_move_start), Vector2(move_here), progress) * 16 + Globals.TILE_SIZE * 0.5
-		dependent_combat_objects[0].position.y -= HOP_CURVE.sample(progress) * Globals.TILE_SIDE * 0.3
+		if dependent_combat_objects[0].flyer:
+			dependent_combat_objects[0].rotation = rotate_toward(dependent_combat_objects[0].rotation, PI * 0.2 * sign(move_here.x - _move_start.x), PI * 0.3*_delta)
+		else:
+			dependent_combat_objects[0].position.y -= HOP_CURVE.sample(progress) * Globals.TILE_SIDE * 0.3
 
 
 func _on_timeout() -> void:
 	dependent_combat_objects[0].position_on_tile()
+	#if dependent_combat_objects[0].flyer:
+	#	dependent_combat_objects[0].rotation = 0

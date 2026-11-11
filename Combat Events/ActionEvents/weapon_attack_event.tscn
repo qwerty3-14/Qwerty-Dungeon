@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://kyaxpj5tulfn"]
+[gd_scene format=3 uid="uid://bt7qhpt1tssp3"]
 
 [ext_resource type="Script" uid="uid://b0f1y0uha27cx" path="res://Combat Events/ActionEvents/weapon_attack_event.gd" id="1_aeymi"]
 

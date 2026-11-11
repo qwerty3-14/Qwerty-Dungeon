@@ -70,6 +70,7 @@ func _on_rotation_finished():
 		shape[i].y = old_x
 		area.get_child(i).position = shape[i] * 8
 	queue_redraw()
+	print("hello")
 
 func _draw() -> void:
 	if is_hovering_above:

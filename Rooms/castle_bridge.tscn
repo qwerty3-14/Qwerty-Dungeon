@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://8wombk25u6xe" path="res://Rooms/Components/player_start_point.tscn" id="9_lx3nj"]
 [ext_resource type="PackedScene" uid="uid://cpyo0mlsp58tk" path="res://Rune Stuff/Interactives/rune_loot.tscn" id="10_iyykd"]
 [ext_resource type="PackedScene" uid="uid://quye2o7abb5v" path="res://Combat Objects/Scavengers/scavenger_fencer.tscn" id="13_l0x45"]
+[ext_resource type="Script" uid="uid://bfpu6i8i7k66h" path="res://Rooms/Components/reinforcement_spawn.gd" id="13_wdg7c"]
 [ext_resource type="PackedScene" uid="uid://rtmhqs71boxo" path="res://Combat Objects/Scavengers/scavenger_archer.tscn" id="14_wdg7c"]
 
 [node name="CastleBridge" type="Node2D" unique_id=276378860 node_paths=PackedStringArray("tilemap", "combat_objects_node")]
@@ -82,3 +83,10 @@ position = Vector2(119, 64)
 
 [node name="RuneLoot" parent="CombatObjects/ScavengerArcher" unique_id=1554899566 instance=ExtResource("10_iyykd")]
 rune_key = 31
+
+[node name="ReinforcementSpawn" type="Marker2D" parent="CombatObjects" unique_id=911116521]
+position = Vector2(252, 236)
+script = ExtResource("13_wdg7c")
+packed_combat_object = ExtResource("13_l0x45")
+phase_arriving = 2
+metadata/_custom_type_script = "uid://bfpu6i8i7k66h"

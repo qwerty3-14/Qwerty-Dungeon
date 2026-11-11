@@ -21,6 +21,7 @@ ap_cost = 4
 unique_name_in_owner = true
 attack_range = 12.0
 action = NodePath("../Action")
+effected_by_blindness = false
 los_block_tiles = Array[int]([])
 
 [node name="SingleTargetAttackAI" parent="." unique_id=863810320 instance=ExtResource("5_wm140")]

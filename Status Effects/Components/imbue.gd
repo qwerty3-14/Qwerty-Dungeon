@@ -17,10 +17,10 @@ func _ready() -> void:
 		printerr("parent must be StatusEffect")
 
 func _on_parent_queued_weapon_attack(event : WeaponAttackEvent):
-	event.target_been_hit.connect(_on_target_been_hit)
+	event.target_been_first_hit.connect(_on_target_been_first_hit)
 	event.timeout.connect(_on_timeout.bind(event))
 
-func _on_target_been_hit(target : CombatObject):
+func _on_target_been_first_hit(target : CombatObject):
 	var status := status_effect.instantiate()
 	about_to_apply_status.emit(status, target)
 	if resistable:
@@ -32,7 +32,7 @@ func _on_target_been_hit(target : CombatObject):
 	Globals.actions_menu.reload_status()
 
 func _on_timeout(event : WeaponAttackEvent):
-	event.target_been_hit.disconnect(_on_target_been_hit)
+	event.target_been_first_hit.disconnect(_on_target_been_first_hit)
 	event.timeout.disconnect(_on_timeout.bind(event))
 
 func _on_actor_preparing_forecast(forecast_lines : Array[ForecastLine]):

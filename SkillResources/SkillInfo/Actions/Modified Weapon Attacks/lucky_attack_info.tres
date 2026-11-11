@@ -11,7 +11,7 @@ description = "Spend a lucky charge to deal <VD> without using ap!
 
 Passive: At the start of each phase grants a <L3> of gaining a lucky charge.
 
-{DM}
+{DB}
 {CL}x3%"
 skill_type = 1
 target_range = -1.0

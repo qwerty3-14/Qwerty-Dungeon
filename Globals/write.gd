@@ -25,10 +25,14 @@ func skill_range(r : float) -> String:
 
 func generic_actor_skill_desc(a_description : String, _actor : Actor) -> String:
 	a_description = a_description.replace("<PD>", "[color=" + Damage.color_code[Damage.Type.PIERCING] + "] "+ str(_actor.might.value) +" piercing damage[/color]")
+	a_description = a_description.replace("<PD-2>", "[color=" + Damage.color_code[Damage.Type.PIERCING] + "] "+ str(_actor.might.value-2) +" piercing damage[/color]")
 	a_description = a_description.replace("<CD>", "[color=" + Damage.color_code[Damage.Type.CRUSHING] + "] "+ str(_actor.might.value) +" crushing damage[/color]")
 	a_description = a_description.replace("<SD>", "[color=" + Damage.color_code[Damage.Type.SLASHING] + "] "+ str(_actor.might.value) +" slashing damage[/color]")
 	if _actor.default_weapon_attack:
-		a_description = a_description.replace("<VD>", "[color=" + Damage.color_code[_actor.default_weapon_attack.damage_type] + "] "+ str(_actor.might.value) +" " + Damage.names[_actor.default_weapon_attack.damage_type] + " damage[/color]")
+		if _actor.default_weapon_attack.repeats > 0:
+			a_description = a_description.replace("<VD>", "[color=" + Damage.color_code[_actor.default_weapon_attack.damage_type] + "] "+ str(_actor.might.value + _actor.default_weapon_attack.bonus_damage) + " " + Damage.names[_actor.default_weapon_attack.damage_type] + " damage[/color] " + str(1 + _actor.default_weapon_attack.repeats) + " times")
+		else:
+			a_description = a_description.replace("<VD>", "[color=" + Damage.color_code[_actor.default_weapon_attack.damage_type] + "] "+ str(_actor.might.value + _actor.default_weapon_attack.bonus_damage) + " " + Damage.names[_actor.default_weapon_attack.damage_type] + " damage[/color]")
 	a_description = a_description.replace("<ED>", "[color=" + Damage.color_code[Damage.Type.ELDER] + "] "+ str(_actor.potency.value) +" elder damage[/color]")
 	a_description = a_description.replace("<ED-6>", "[color=" + Damage.color_code[Damage.Type.ELDER] + "] "+ str(_actor.potency.value-6) +" elder damage[/color]")
 	a_description = a_description.replace("<FD>", "[color=" + Damage.color_code[Damage.Type.FIRE] + "] "+ str(_actor.potency.value) +" fire damage[/color]")

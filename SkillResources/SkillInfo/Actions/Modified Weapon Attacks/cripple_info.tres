@@ -10,7 +10,8 @@ display_name = "Cripple"
 description = "Deals <VD>;
 Removes all of the target's mp and prevents them from recovering mp next phase
 
-{DM}"
+{DB}
+{M>R}"
 skill_type = 1
 target_range = -1.0
 ap_cost = 2

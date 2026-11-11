@@ -6,7 +6,7 @@ var cripple_status_icon : Texture2D = preload("uid://bovujxsew4xsb")
 
 
 func _on_queued_weapon_attack(weapon_attack_event : WeaponAttackEvent):
-	weapon_attack_event.target_been_hit.connect(_on_target_hit)
+	weapon_attack_event.target_been_first_hit.connect(_on_target_hit)
 	combat_object_grandparent.queued_weapon_attack.disconnect(_on_queued_weapon_attack)
 
 func _on_target_hit(target : CombatObject):
@@ -18,12 +18,10 @@ func _on_target_hit(target : CombatObject):
 
 
 
-func _on_action_inputs_done() -> void:
+func _on_action_used(_action: Action) -> void:
 	combat_object_grandparent.queued_weapon_attack.connect(_on_queued_weapon_attack)
 
-
-
-func _on_action_used(_action: Action) -> void:
+func _on_action_ai_used(_action: Action, _steps: Array) -> void:
 	combat_object_grandparent.queued_weapon_attack.connect(_on_queued_weapon_attack)
 
 
@@ -39,7 +37,3 @@ func _on_modified_weapon_attack_about_to_score(rival: CombatObject, target_ai: S
 			target_ai.about_to_score_multiplier_SR *= 0.95
 		else:
 			target_ai.about_to_score_damage_modifier_SR += (actor.cur_mp + actor.max_mp) * 0.1
-
-
-func _on_action_ai_used(_action: Action, _steps: Array) -> void:
-	combat_object_grandparent.queued_weapon_attack.connect(_on_queued_weapon_attack)

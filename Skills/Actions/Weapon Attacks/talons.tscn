@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cjg5kx8685cgv"]
+
+[ext_resource type="Script" uid="uid://dkvyvwyxqhyln" path="res://Skills/Actions/Weapon Attacks/talons.gd" id="1_r6n4y"]
+[ext_resource type="Resource" uid="uid://csnfdiliy1oy7" path="res://SkillResources/SkillInfo/Actions/Basic Weapon Attacks/talons_info.tres" id="2_utk4x"]
+[ext_resource type="PackedScene" uid="uid://b0ovc75aun67a" path="res://Skills/Components/Weapon Attack/weapon_attack.tscn" id="3_l8w8t"]
+[ext_resource type="PackedScene" uid="uid://crb3l78y2sa8f" path="res://Skills/Components/action.tscn" id="4_pf0ud"]
+[ext_resource type="PackedScene" uid="uid://6uccfqrg4eod" path="res://Skills/Components/target_range.tscn" id="5_4l3db"]
+
+[node name="Talons" type="Node" unique_id=506595692]
+script = ExtResource("1_r6n4y")
+skill_info = ExtResource("2_utk4x")
+metadata/_custom_type_script = "uid://cp7q46m67ufv7"
+
+[node name="WeaponAttack" parent="." unique_id=1381722177 node_paths=PackedStringArray("action", "target_range") instance=ExtResource("3_l8w8t")]
+action = NodePath("../Action")
+target_range = NodePath("../TargetRange")
+
+[node name="Action" parent="." unique_id=773981582 instance=ExtResource("4_pf0ud")]
+type = 1
+ap_cost = 2
+
+[node name="TargetRange" parent="." unique_id=746520125 node_paths=PackedStringArray("action") instance=ExtResource("5_4l3db")]
+action = NodePath("../Action")
